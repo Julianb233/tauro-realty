@@ -7,6 +7,19 @@ import { isRateLimited, getClientIp } from "@/lib/rate-limit";
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const isAsset =
+    pathname.startsWith("/_next") ||
+    pathname === "/favicon.ico" ||
+    pathname === "/icon" ||
+    pathname === "/apple-icon" ||
+    pathname === "/opengraph-image" ||
+    pathname === "/twitter-image" ||
+    pathname === "/robots.txt" ||
+    pathname === "/sitemap.xml";
+
+  if (pathname !== "/" && !pathname.startsWith("/api") && !isAsset) {
+    return NextResponse.redirect(new URL("/", request.url), 307);
+  }
 
   // --- API routes: rate limiting + CSRF origin check ---
   if (pathname.startsWith("/api")) {
@@ -38,5 +51,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/api/:path*"],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };

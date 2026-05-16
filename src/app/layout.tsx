@@ -1,38 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import dynamic from "next/dynamic";
 import { Playfair_Display, DM_Sans, Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/JsonLd";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
-import { loadTestimonials } from "@/lib/data";
 import { siteUrl } from "@/lib/site-config";
 import "./globals.css";
-
-// Non-critical interactive widgets — lazy-loaded to reduce main bundle size
-const CookieConsent = dynamic(() =>
-  import("@/components/CookieConsent").then((mod) => ({
-    default: mod.CookieConsent,
-  })),
-);
-const ChatWidget = dynamic(() =>
-  import("@/components/ChatWidget").then((mod) => ({
-    default: mod.ChatWidget,
-  })),
-);
-const AccessibilityWidget = dynamic(
-  () => import("@/components/AccessibilityWidget"),
-);
-const ScrollToTop = dynamic(() =>
-  import("@/components/ScrollToTop").then((mod) => ({
-    default: mod.ScrollToTop,
-  })),
-);
-const ServiceWorkerRegistration = dynamic(() =>
-  import("@/components/ServiceWorkerRegistration").then((mod) => ({
-    default: mod.ServiceWorkerRegistration,
-  })),
-);
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -70,40 +42,40 @@ export const metadata: Metadata = {
     canonical: "./",
   },
   title: {
-    default: "Tauro | Premium Philadelphia Real Estate",
-    template: "%s | Tauro",
+    default: "LYL Realty Group | Website Under Construction",
+    template: "%s | LYL Realty Group",
   },
   description:
-    "Tauro is a premium real estate brokerage serving Philadelphia. Find luxury homes, expert agents, and neighborhood guides across Center City, Rittenhouse, Fishtown, and more.",
+    "LYL Realty Group is updating its Philadelphia real estate website. Contact the Philadelphia office for current real estate support.",
   keywords: [
     "Philadelphia real estate",
-    "luxury homes Philadelphia",
-    "real estate brokerage",
-    "Tauro",
     "LYL Realty Group",
+    "real estate brokerage",
+    "Dayhna Carroll",
+    "Germantown Philadelphia real estate",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Tauro Realty",
+    siteName: "LYL Realty Group",
     url: siteUrl,
-    title: "Tauro | Premium Philadelphia Real Estate",
+    title: "LYL Realty Group | Website Under Construction",
     description:
-      "Premium real estate brokerage serving Philadelphia. Luxury homes, expert agents, and neighborhood guides.",
+      "LYL Realty Group is updating its Philadelphia real estate website. Contact the office for current support.",
     images: [
       {
         url: `${siteUrl}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: "Tauro Realty — Premium Philadelphia Real Estate",
+        alt: "LYL Realty Group",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tauro | Premium Philadelphia Real Estate",
+    title: "LYL Realty Group | Website Under Construction",
     description:
-      "Premium real estate brokerage serving Philadelphia. Luxury homes, expert agents, and neighborhood guides.",
+      "LYL Realty Group is updating its Philadelphia real estate website.",
   },
 };
 
@@ -112,8 +84,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const testimonials = await loadTestimonials();
-
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
@@ -145,14 +115,7 @@ export default async function RootLayout({
         <GoogleAnalytics />
         <Analytics />
         <SpeedInsights />
-        <OrganizationJsonLd testimonials={testimonials} />
-        <WebSiteJsonLd />
         {children}
-        <ScrollToTop />
-        <ChatWidget />
-        <AccessibilityWidget />
-        <CookieConsent />
-        <ServiceWorkerRegistration />
       </body>
     </html>
   );

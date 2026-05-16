@@ -4,7 +4,7 @@
  * falling back to the default domain if not set.
  */
 
-const DEFAULT_SITE_URL = "https://taurorealty.com";
+const DEFAULT_SITE_URL = "https://lylrealty.com";
 
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") || DEFAULT_SITE_URL;
