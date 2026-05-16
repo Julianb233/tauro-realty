@@ -2,6 +2,25 @@
 
 This project uses **bd** (beads) for issue tracking. Run `bd onboard` to get started.
 
+## Source-of-Truth Guardrail
+
+For this project, the canonical working copy is on the VPS:
+
+- VPS host: `agency-vps-public`
+- VPS path: `/opt/agency-workspace/tauro`
+- GitHub repo: `Julianb233/tauro-realty`
+- Production alias: `https://taurorealty.com`
+
+Before editing, deploying, or summarizing production state, verify the VPS and GitHub source:
+
+```bash
+ssh agency-vps-public 'cd /opt/agency-workspace/tauro && git fetch origin && git status --short --branch && git rev-parse --short HEAD && git log --oneline -1'
+```
+
+Production deploys must come from the VPS worktree and the intended GitHub branch, normally `main`. Do not deploy a local Mac branch, local preview, or feature branch to production unless Julian explicitly approves that branch as the production source. Local browser previews are for inspection only after the VPS/GitHub source has been identified.
+
+For Tauro/LYL naming: the ready Tauro Realty website lives on `main` in `Julianb233/tauro-realty`. Do not replace it with a construction/holding page unless Julian explicitly says to publish a holding page and confirms the target domain.
+
 ## Quick Reference
 
 ```bash
@@ -37,4 +56,3 @@ bd sync               # Sync with git
 - NEVER stop before pushing - that leaves work stranded locally
 - NEVER say "ready to push when you are" - YOU must push
 - If push fails, resolve and retry until it succeeds
-
