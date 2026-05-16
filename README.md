@@ -1,3 +1,15 @@
+# Deprecated: Tauro public-site codebase
+
+This repository is deprecated for the current Dayhna Carroll / LYL Management public site.
+
+- Active VPS workspace: `/opt/agency-workspace/lyl-management`
+- Active public brand: `LYL Management`
+- Related separate project/brand: `LYL Realty Group`
+- Active production alias: `https://lyl-management.vercel.app`
+- Rule: do not use Tauro naming, copy, metadata, or deployment state as the source of truth for the LYL Management site unless Julian explicitly reactivates this repository.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
