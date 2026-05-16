@@ -1,11 +1,12 @@
 # Deprecated: Tauro public-site codebase
 
-This repository is deprecated for the current Dayhna Carroll / LYL Realty Group public site.
+This repository is deprecated for the current Dayhna Carroll / LYL Management public site.
 
 - Active VPS workspace: `/opt/agency-workspace/lyl-management`
-- Active public brand: `LYL Realty Group`
+- Active public brand: `LYL Management`
+- Related separate project/brand: `LYL Realty Group`
 - Active production alias: `https://lyl-management.vercel.app`
-- Rule: do not use Tauro naming, copy, metadata, or deployment state as the source of truth for the LYL Realty Group site unless Julian explicitly reactivates this repository.
+- Rule: do not use Tauro naming, copy, metadata, or deployment state as the source of truth for the LYL Management site unless Julian explicitly reactivates this repository.
 
 ---
 
