@@ -19,7 +19,7 @@ export default function HealthBadge({ health, summary }: HealthBadgeProps) {
       <div className={clsx("w-4 h-4 rounded-full", config.color, config.glow)} />
       <div>
         <span className={clsx("text-sm font-semibold", config.textColor)}>{config.label}</span>
-        <p className="text-sm text-slate-400 mt-0.5">{summary}</p>
+        <p className="text-sm text-slate-600 mt-0.5">{summary}</p>
       </div>
     </div>
   );

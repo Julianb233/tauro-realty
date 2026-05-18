@@ -2,33 +2,40 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import BottomNav from "@/components/BottomNav";
+import TopNav from "@/components/TopNav";
+import ChatWidget from "@/components/ChatWidget";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0f172a",
+  themeColor: "#0B2440",
 };
 
 export const metadata: Metadata = {
-  title: "Shipping Savior — Progress Portal",
-  description: "Your project dashboard powered by AI Acrobatics",
+  title: "LYL Realty Group — Progress Portal",
+  description: "Your project dashboard for the LYL Realty Group website build. Powered by AI Acrobatics.",
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <main className="min-h-screen pb-24 lg:pb-8">
-          <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-6">
-            {children}
+        <div className="min-h-screen bg-[#c5c3d1] p-1 sm:p-3 md:p-4 lg:p-6">
+          <div className="mx-auto max-w-[1400px] rounded-xl sm:rounded-2xl lg:rounded-3xl bg-[#f5f4f0] p-3 sm:p-4 lg:p-6 shadow-2xl">
+            <TopNav />
+            <main className="min-h-[calc(100vh-4rem)] pb-20 lg:pb-4">
+              {children}
+            </main>
+            <footer className="text-center py-4">
+              <p className="text-xs text-gray-600">Powered by AI Acrobatics</p>
+            </footer>
           </div>
-        </main>
+        </div>
         <BottomNav />
-        <footer className="fixed bottom-0 left-0 right-0 pb-[calc(env(safe-area-inset-bottom)+76px)] lg:pb-4 text-center pointer-events-none">
-          <p className="text-xs text-slate-600">Powered by AI Acrobatics</p>
-        </footer>
+        <ChatWidget />
       </body>
     </html>
   );

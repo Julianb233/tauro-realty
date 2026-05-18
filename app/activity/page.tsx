@@ -111,7 +111,7 @@ export default function ActivityPage() {
                 className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors min-h-[36px] ${
                   filter === opt.value
                     ? "bg-white/10 text-white border border-white/20"
-                    : "text-slate-400 border border-white/5 hover:border-white/15"
+                    : "text-slate-600 border border-white/5 hover:border-white/15"
                 }`}
               >
                 {opt.label}
@@ -124,7 +124,7 @@ export default function ActivityPage() {
       {/* Timeline */}
       <div className="relative">
         {/* Vertical line */}
-        <div className="absolute left-[19px] top-0 bottom-0 w-px bg-white/5" />
+        <div className="absolute left-[19px] lg:left-[99px] top-0 bottom-0 w-px bg-white/5" />
 
         <div className="space-y-3">
           {visible.map((item, i) => {
@@ -132,6 +132,10 @@ export default function ActivityPage() {
             return (
               <ScrollReveal key={`${item.date}-${item.title}`} delay={i * 0.03}>
                 <div className="flex gap-4 relative">
+                  {/* Date column on desktop */}
+                  <div className="hidden lg:flex w-20 flex-shrink-0 items-start justify-end pt-5">
+                    <span className="text-xs text-slate-700 font-medium">{item.date}</span>
+                  </div>
                   {/* Icon */}
                   <div className={`w-10 h-10 rounded-xl ${config.color} flex items-center justify-center flex-shrink-0 z-10`}>
                     {typeIcons[config.icon]}
@@ -142,10 +146,10 @@ export default function ActivityPage() {
                       <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium border ${config.color.replace("/15", "/20")} border-current/20`}>
                         {config.label}
                       </span>
-                      <span className="text-[10px] text-slate-500">{item.date}</span>
+                      <span className="text-[10px] text-slate-700 lg:hidden">{item.date}</span>
                     </div>
                     <h3 className="text-sm font-semibold text-slate-200">{item.title}</h3>
-                    <p className="text-xs text-slate-400 mt-0.5">{item.description}</p>
+                    <p className="text-xs text-slate-600 mt-0.5">{item.description}</p>
                   </GlassCard>
                 </div>
               </ScrollReveal>
@@ -159,7 +163,7 @@ export default function ActivityPage() {
         <div className="text-center">
           <button
             onClick={() => setShowCount((c) => c + ITEMS_PER_PAGE)}
-            className="px-6 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-slate-300 hover:bg-white/10 transition-colors min-h-[44px]"
+            className="px-6 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-slate-600 hover:bg-white/10 transition-colors min-h-[44px]"
           >
             Show more ({filtered.length - showCount} remaining)
           </button>
@@ -168,7 +172,7 @@ export default function ActivityPage() {
 
       {filtered.length === 0 && (
         <GlassCard>
-          <p className="text-sm text-slate-400 text-center py-4">No activity matching this filter.</p>
+          <p className="text-sm text-slate-600 text-center py-4">No activity matching this filter.</p>
         </GlassCard>
       )}
     </div>

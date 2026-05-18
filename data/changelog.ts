@@ -8,143 +8,50 @@ export interface ChangelogEntry {
   items: string[];
 }
 
+// LYL Realty Group changelog — static seed.
+// Live changelog rows for this client (Supabase slug `tauro-realty`) feed
+// the Supabase-driven changelog UI; this file is the read-only fallback.
+
 export const changelog: ChangelogEntry[] = [
-  // REPLACE: Add real changelog entries as work is completed (newest first)
-  // Agents: add a new entry at the TOP of this array after each work session
   {
-    date: "2026-03-30",
-    title: "Progress Portal Launched",
-    description: "Client-facing dashboard deployed with real-time project visibility.",
+    date: "2026-05-18",
+    title: "Content handoff captured — agent roster cleared",
+    description: "Recorded the 5/18 content handoff meeting with Dayhna, Tony, and Noah. Brand and contact details locked, full agent roster wiped from the site pending Noah's refreshed list.",
+    category: "content",
+    items: [
+      "Final brand confirmed: LYL Realty Group (Exit Benchmark and Tauro Realty are retired)",
+      "Confirmed office: 6329 Germantown Ave, Philadelphia, PA 19144 — phone 267-773-8600 — email info@lylrealty.com",
+      "Per Tony Goodman's go-ahead: every active agent removed from the site until a refreshed roster arrives",
+      "Logo treatment locked: all-white logo on dark backgrounds, matching the team T-shirt design",
+      "LYL Management kept fully separate from LYL Realty Group per legal advice — no cross-linking",
+      "Reusable property page + brochure engine (PDF + shareable URL) confirmed inside original quote — kicks off after remaining balance + workflow sign-off",
+      "Listing in motion: 1001 West Allen Lane — Dayhna delivering details for the first property page",
+      "Feedback workflow set: Noah will record annotated Loom walkthroughs flagging placeholder copy",
+      "Brand assets + listing photos flowing through the team Dropbox folder Noah manages",
+    ],
+  },
+  {
+    date: "2026-05-18",
+    title: "Progress portal launched",
+    description: "Dedicated LYL Realty Group dashboard deployed.",
     category: "feature",
     items: [
-      "Built 5-tab portal: Home, Progress, Output, Activity, More",
-      "Real-time milestone tracking with phase-level detail",
-      "Action items with priority badges and due dates",
-      "Dark glass-card UI with scroll-reveal animations",
-      "Mobile-first responsive layout (375px to 1440px)",
+      "Standalone Vercel deployment for LYL Realty Group (not the shared portal)",
+      "Pulls live changelog + action items from Supabase under slug tauro-realty",
+      "Branded with the dark + white treatment locked in on the 5/18 call",
+      "Powered by AI Acrobatics",
     ],
   },
   {
-    date: "2026-03-28",
-    title: "Website Deployed to Production",
-    description: "Full website live on custom domain with performance optimization.",
-    category: "infrastructure",
-    items: [
-      "Vercel production deployment with custom domain",
-      "SSL certificate configured and verified",
-      "Google Analytics and Search Console connected",
-      "PageSpeed score: 95+ on mobile and desktop",
-      "Image optimization pipeline with WebP conversion",
-    ],
-  },
-  {
-    date: "2026-03-25",
-    title: "SEO Foundation Complete",
-    description: "Technical SEO infrastructure configured for search visibility.",
-    category: "seo",
-    items: [
-      "Meta titles and descriptions for all pages",
-      "XML sitemap generated and submitted to Google",
-      "Robots.txt configured with proper directives",
-      "Structured data (JSON-LD) for organization and local business",
-      "Open Graph and Twitter Card meta tags",
-    ],
-  },
-  {
-    date: "2026-03-22",
-    title: "Content Strategy Delivered",
-    description: "12-month content calendar with keyword targets and topic clusters.",
+    date: "2026-05-15",
+    title: "Deal reset + Sunday listing push",
+    description: "Julian and Dayhna walked through the full payment cadence, GHL deferral, and the Sunday $1.2M listing appointment.",
     category: "content",
     items: [
-      "Keyword research: 45 target keywords identified",
-      "Topic cluster architecture with pillar and supporting content",
-      "Monthly publishing schedule with seasonal adjustments",
-      "Competitor content gap analysis completed",
-    ],
-  },
-  {
-    date: "2026-03-20",
-    title: "Core Pages Built",
-    description: "Homepage and essential pages designed, developed, and deployed.",
-    category: "feature",
-    items: [
-      "Homepage with hero, services overview, testimonials, and CTA sections",
-      "About page with team bios and company story",
-      "Services page with detailed service cards",
-      "Contact page with form and embedded map",
-      "FAQ page with expandable accordion sections",
-    ],
-  },
-  {
-    date: "2026-03-18",
-    title: "Design System Established",
-    description: "Brand identity translated into a reusable component library.",
-    category: "design",
-    items: [
-      "Color palette with primary, secondary, and accent colors",
-      "Typography scale with responsive font sizes",
-      "Component library: buttons, cards, forms, navigation",
-      "Responsive grid system with mobile-first breakpoints",
-    ],
-  },
-  {
-    date: "2026-03-15",
-    title: "Project Kickoff Complete",
-    description: "Discovery session, requirements, and initial roadmap delivered.",
-    category: "content",
-    items: [
-      "Discovery questionnaire completed and analyzed",
-      "Business goals and success metrics defined",
-      "Technical requirements documented",
-      "6-month development roadmap created",
-    ],
-  },
-  {
-    date: "2026-03-12",
-    title: "Infrastructure Setup",
-    description: "Development environment and deployment pipeline configured.",
-    category: "infrastructure",
-    items: [
-      "Next.js 14 project initialized with App Router",
-      "Tailwind CSS configured with custom theme",
-      "Vercel deployment connected to GitHub repo",
-      "Environment variables and secrets configured",
-    ],
-  },
-  {
-    date: "2026-03-10",
-    title: "Competitive Analysis",
-    description: "Deep dive into competitor websites, SEO, and positioning.",
-    category: "content",
-    items: [
-      "8 direct competitors analyzed for design and UX patterns",
-      "SEO gap analysis: keywords competitors rank for that we don't",
-      "Content audit: top-performing competitor content identified",
-      "Positioning recommendations with differentiation strategy",
-    ],
-  },
-  {
-    date: "2026-03-08",
-    title: "Wireframes Approved",
-    description: "Mobile-first wireframes for all core pages reviewed and signed off.",
-    category: "design",
-    items: [
-      "8 page wireframes designed in Figma",
-      "Mobile, tablet, and desktop breakpoints covered",
-      "User flow diagrams for key conversion paths",
-      "Client feedback incorporated into final designs",
-    ],
-  },
-  {
-    date: "2026-03-05",
-    title: "Market Research Delivered",
-    description: "Industry landscape, audience profiles, and opportunity analysis.",
-    category: "content",
-    items: [
-      "Industry trends and market size analysis",
-      "3 detailed target audience personas created",
-      "Keyword opportunity matrix with search volume and difficulty",
-      "Content format recommendations based on audience preferences",
+      "$7,500 website + $5,000 GHL setup ($300/mo) honored as the original package",
+      "GHL setup + monthly deferred 8 months FREE — Dayhna decides month 9",
+      "Brand decision: keep LYL Realty Group (no Tauro rebrand) and existing color scheme",
+      "Codebase cleanup queued to strip Tauro/Toro SEO + naming references",
     ],
   },
 ];

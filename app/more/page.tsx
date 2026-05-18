@@ -49,7 +49,7 @@ export default function MorePage() {
       <PageHeader title="More" subtitle="Project resources, links, and settings" />
 
       {/* Navigation Links */}
-      <div className="space-y-2">
+      <div className="space-y-2 lg:grid lg:grid-cols-2 lg:gap-3 lg:space-y-0">
         {menuItems.map((item, i) => (
           <ScrollReveal key={item.label} delay={i * 0.04}>
             <Link href={item.href}>
@@ -62,9 +62,9 @@ export default function MorePage() {
                   </div>
                   <div className="flex-1">
                     <p className="text-sm font-semibold text-slate-200">{item.label}</p>
-                    <p className="text-xs text-slate-400">{item.description}</p>
+                    <p className="text-xs text-slate-600">{item.description}</p>
                   </div>
-                  <svg className="w-4 h-4 text-slate-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <svg className="w-4 h-4 text-slate-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                   </svg>
                 </div>
@@ -78,7 +78,7 @@ export default function MorePage() {
       <ScrollReveal delay={0.2}>
         <div>
           <h2 className="text-base font-semibold text-slate-200 mb-3">Project Hub</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {hubLinks
               .filter((link) => link.url.startsWith("http"))
               .map((link, i) => (
@@ -90,7 +90,7 @@ export default function MorePage() {
                 >
                   <GlassCard hover delay={i * 0.03}>
                     <p className="text-sm font-semibold text-slate-200">{link.label}</p>
-                    <p className="text-xs text-slate-400 mt-0.5">{link.description}</p>
+                    <p className="text-xs text-slate-600 mt-0.5">{link.description}</p>
                   </GlassCard>
                 </a>
               ))}
@@ -98,65 +98,68 @@ export default function MorePage() {
         </div>
       </ScrollReveal>
 
-      {/* How We Work */}
-      <ScrollReveal delay={0.25}>
-        <div>
-          <h2 className="text-base font-semibold text-slate-200 mb-3">How We Work</h2>
-          <GlassCard>
-            <div className="space-y-4 text-sm text-slate-300">
-              <div>
-                <p className="font-semibold text-slate-200 mb-1">Communication</p>
-                <p className="text-xs text-slate-400">
-                  We text you updates when deliverables ship. Check this portal anytime for the latest status.
-                  For questions, reply to any text or book a call.
-                </p>
+      {/* How We Work + Contact — side by side on desktop */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* How We Work */}
+        <ScrollReveal delay={0.25}>
+          <div>
+            <h2 className="text-base font-semibold text-slate-200 mb-3">How We Work</h2>
+            <GlassCard>
+              <div className="space-y-4 text-sm text-slate-600">
+                <div>
+                  <p className="font-semibold text-slate-200 mb-1">Communication</p>
+                  <p className="text-xs text-slate-600">
+                    We text you updates when deliverables ship. Check this portal anytime for the latest status.
+                    For questions, reply to any text or book a call.
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-200 mb-1">Development Cadence</p>
+                  <p className="text-xs text-slate-600">
+                    We work in focused phases — each phase has clear deliverables and gets shipped as a unit.
+                    You will see progress here in real-time as phases complete.
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-200 mb-1">Your Input</p>
+                  <p className="text-xs text-slate-600">
+                    When we need something from you, it will appear in the Action Items page
+                    and we will text you. Faster responses = faster delivery.
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="font-semibold text-slate-200 mb-1">Development Cadence</p>
-                <p className="text-xs text-slate-400">
-                  We work in focused phases — each phase has clear deliverables and gets shipped as a unit.
-                  You will see progress here in real-time as phases complete.
-                </p>
-              </div>
-              <div>
-                <p className="font-semibold text-slate-200 mb-1">Your Input</p>
-                <p className="text-xs text-slate-400">
-                  When we need something from you, it will appear in the Action Items page
-                  and we will text you. Faster responses = faster delivery.
-                </p>
-              </div>
-            </div>
-          </GlassCard>
-        </div>
-      </ScrollReveal>
+            </GlassCard>
+          </div>
+        </ScrollReveal>
 
-      {/* Contact */}
-      <ScrollReveal delay={0.3}>
-        <div>
-          <h2 className="text-base font-semibold text-slate-200 mb-3">Contact</h2>
-          <GlassCard>
-            <div className="space-y-3">
-              <div>
-                <p className="text-sm font-semibold text-slate-200">Julian Bradley</p>
-                <p className="text-xs text-slate-400">AI Acrobatics — Project Lead</p>
-              </div>
-              <div className="flex gap-4">
-                <a href="mailto:julian@aiacrobatics.com" className="text-sm text-blue-400 hover:text-blue-300 min-h-[44px] flex items-center">
-                  julian@aiacrobatics.com
+        {/* Contact */}
+        <ScrollReveal delay={0.3}>
+          <div>
+            <h2 className="text-base font-semibold text-slate-200 mb-3">Contact</h2>
+            <GlassCard>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-sm font-semibold text-slate-200">Julian Bradley</p>
+                  <p className="text-xs text-slate-600">AI Acrobatics — Project Lead</p>
+                </div>
+                <div className="flex gap-4">
+                  <a href="mailto:julian@aiacrobatics.com" className="text-sm text-blue-400 hover:text-blue-300 min-h-[44px] flex items-center">
+                    julian@aiacrobatics.com
+                  </a>
+                </div>
+                <a
+                  href="https://msgsndr.com/widget/booking/76ergSktTpvayx9tldnl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-500/20 text-blue-400 text-sm font-medium hover:bg-blue-500/30 transition-colors min-h-[44px]"
+                >
+                  Book a Call
                 </a>
               </div>
-              <a
-                href="https://calendly.com/julian-aiacrobatics"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-500/20 text-blue-400 text-sm font-medium hover:bg-blue-500/30 transition-colors min-h-[44px]"
-              >
-                Book a Call
-              </a>
-            </div>
-          </GlassCard>
-        </div>
-      </ScrollReveal>
+            </GlassCard>
+          </div>
+        </ScrollReveal>
+      </div>
 
       {/* Footer */}
       <div className="text-center pt-4 pb-8">

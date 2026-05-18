@@ -5,6 +5,7 @@ import GlassCard from "@/components/GlassCard";
 import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
 import { changelog, changelogStats, type ChangelogCategory } from "@/data/changelog";
+import { clientInfo } from "@/data/client-data";
 
 const categoryColors: Record<ChangelogCategory, string> = {
   feature: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
@@ -36,7 +37,7 @@ export default function ChangelogPage() {
       <PageHeader
         badge={`${changelogStats.totalEntries} updates`}
         title="Changelog"
-        subtitle="Everything shipped for Shipping Savior, in reverse chronological order."
+        subtitle={`Everything shipped for ${clientInfo.name}, in reverse chronological order.`}
       />
 
       {/* Stats */}
@@ -44,15 +45,15 @@ export default function ChangelogPage() {
         <div className="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-3 md:gap-4">
           <GlassCard className="min-w-[140px] md:min-w-0 flex-shrink-0">
             <p className="text-2xl font-bold text-emerald-400">{changelogStats.featuresShipped}</p>
-            <p className="text-xs text-slate-400 mt-1">Features Shipped</p>
+            <p className="text-xs text-slate-600 mt-1">Features Shipped</p>
           </GlassCard>
           <GlassCard className="min-w-[140px] md:min-w-0 flex-shrink-0">
             <p className="text-2xl font-bold text-amber-400">{changelogStats.infrastructureUpdates}</p>
-            <p className="text-xs text-slate-400 mt-1">Infra Updates</p>
+            <p className="text-xs text-slate-600 mt-1">Infra Updates</p>
           </GlassCard>
           <GlassCard className="min-w-[140px] md:min-w-0 flex-shrink-0">
             <p className="text-2xl font-bold text-blue-400">{changelogStats.contentDelivered}</p>
-            <p className="text-xs text-slate-400 mt-1">Content Delivered</p>
+            <p className="text-xs text-slate-600 mt-1">Content Delivered</p>
           </GlassCard>
         </div>
       </ScrollReveal>
@@ -65,7 +66,7 @@ export default function ChangelogPage() {
             className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors min-h-[36px] ${
               filter === "all"
                 ? "bg-white/10 text-white border border-white/20"
-                : "text-slate-400 border border-white/5 hover:border-white/15"
+                : "text-slate-600 border border-white/5 hover:border-white/15"
             }`}
           >
             All ({changelog.length})
@@ -80,7 +81,7 @@ export default function ChangelogPage() {
                 className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors min-h-[36px] ${
                   filter === cat
                     ? "bg-white/10 text-white border border-white/20"
-                    : "text-slate-400 border border-white/5 hover:border-white/15"
+                    : "text-slate-600 border border-white/5 hover:border-white/15"
                 }`}
               >
                 {categoryLabels[cat]} ({count})
@@ -95,26 +96,32 @@ export default function ChangelogPage() {
         {filtered.map((entry, i) => (
           <ScrollReveal key={`${entry.date}-${entry.title}`} delay={i * 0.03}>
             <GlassCard>
-              <div className="flex items-start justify-between gap-3 mb-3">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <span
-                    className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium border ${categoryColors[entry.category]}`}
-                  >
-                    {categoryLabels[entry.category]}
-                  </span>
-                  <span className="text-xs text-slate-500">{entry.date}</span>
+              <div className="flex flex-col lg:flex-row lg:gap-6">
+                {/* Date column on desktop */}
+                <div className="lg:w-32 lg:flex-shrink-0 lg:pt-0.5">
+                  <div className="flex items-center gap-2 flex-wrap mb-3 lg:mb-0 lg:flex-col lg:items-start lg:gap-1.5">
+                    <span className="text-xs text-slate-700 lg:text-sm lg:font-medium">{entry.date}</span>
+                    <span
+                      className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium border ${categoryColors[entry.category]}`}
+                    >
+                      {categoryLabels[entry.category]}
+                    </span>
+                  </div>
+                </div>
+                {/* Content column */}
+                <div className="flex-1 min-w-0 lg:border-l lg:border-white/5 lg:pl-6">
+                  <h3 className="text-sm font-semibold text-slate-200 mb-1">{entry.title}</h3>
+                  <p className="text-xs text-slate-600 mb-3">{entry.description}</p>
+                  <ul className="space-y-1.5 lg:columns-2 lg:gap-x-6">
+                    {entry.items.map((item, j) => (
+                      <li key={j} className="flex items-start gap-2 text-xs text-slate-600 break-inside-avoid">
+                        <span className="text-emerald-400 mt-0.5 flex-shrink-0">+</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-              <h3 className="text-sm font-semibold text-slate-200 mb-1">{entry.title}</h3>
-              <p className="text-xs text-slate-400 mb-3">{entry.description}</p>
-              <ul className="space-y-1.5">
-                {entry.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2 text-xs text-slate-300">
-                    <span className="text-emerald-400 mt-0.5 flex-shrink-0">+</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
             </GlassCard>
           </ScrollReveal>
         ))}
@@ -122,7 +129,7 @@ export default function ChangelogPage() {
 
       {filtered.length === 0 && (
         <GlassCard>
-          <p className="text-sm text-slate-400 text-center py-4">No entries match this filter.</p>
+          <p className="text-sm text-slate-600 text-center py-4">No entries match this filter.</p>
         </GlassCard>
       )}
     </div>

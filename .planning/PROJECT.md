@@ -82,7 +82,7 @@ The PPP (Progress Portal Page) is AI Acrobatics' standard client-facing dashboar
 
 ## Context
 
-- **UI Reference:** `/opt/agency-workspace/appsport/` — SafeMove app with light gradient bg, `bg-white/80 backdrop-blur` cards, shadcn/ui, Supabase auth, pink/purple/teal gradients. Julian explicitly chose this as the design reference.
+- **UI Reference:** Light gradient bg, `bg-white/80 backdrop-blur` cards, shadcn/ui, Supabase auth, pink/purple/teal gradients. Julian explicitly chose this design style as the reference.
 - **Current Template:** `/opt/agency-workspace/ppp-template/` — dark navy theme, hardcoded blue/emerald, placeholder "Acme Corp" data, no working chatbot/review, in-page expandable sections only (no subpages)
 - **Client Profiles:** `/opt/agency-workspace/client-profiles/clients/{slug}/PROFILE.md` — contain brand colors, contact info, deliverables, milestones, meetings
 - **Supabase:** Dashboard Daddy project `jrirksdiklqwsaatbhvg` — portal_clients, portal_feed, portal_action_items, portal_deliverables, portal_chat_messages, ppp_notifications tables

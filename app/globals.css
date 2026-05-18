@@ -3,43 +3,79 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #0f172a;
-  --bg-card: rgba(30, 41, 59, 0.7);
-  --accent-blue: #3b82f6;
+  /* Light theme — warm gray + white cards */
+  --bg-outer: #c5c3d1;
+  --bg-container: #f5f4f0;
+  --bg-card: #ffffff;
   --accent-emerald: #10b981;
+  --accent-blue: #3b82f6;
   --accent-amber: #f59e0b;
+  --accent-orange: #f97316;
   --accent-rose: #f43f5e;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
+  --text-primary: #000000;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --border-color: #e5e7eb;
+  --radius: 0.75rem;
 }
 
 body {
-  background: var(--bg-primary);
+  background: var(--bg-outer);
   color: var(--text-primary);
   min-height: 100dvh;
+  font-family: 'Geist', system-ui, -apple-system, sans-serif;
 }
 
+/* Card styles — light, clean, professional */
+.card {
+  @apply bg-white rounded-2xl shadow-sm border border-gray-100;
+}
+
+.card-hover {
+  @apply hover:shadow-md hover:border-gray-200 transition-all duration-300;
+}
+
+/* Legacy glass-card support (for components not yet migrated) */
 .glass-card {
-  @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl;
+  @apply bg-white rounded-2xl shadow-sm border border-gray-100;
 }
 
 .glass-card-hover {
-  @apply hover:bg-white/10 hover:border-white/20 transition-all duration-300;
+  @apply hover:shadow-md hover:border-gray-200 transition-all duration-300;
 }
 
 .gradient-text {
-  @apply bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-emerald-500 to-blue-500 bg-clip-text text-transparent;
 }
 
-.glow-blue {
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+/* Pill-style nav buttons */
+.pill-nav {
+  @apply rounded-full px-4 py-2 text-xs font-medium transition-colors;
 }
 
-.glow-emerald {
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+.pill-nav-active {
+  @apply bg-black text-white;
 }
 
-/* Scrollbar */
+.pill-nav-inactive {
+  @apply text-gray-600 hover:bg-gray-100;
+}
+
+/* Status badges */
+.status-good {
+  @apply bg-emerald-500 text-white rounded-full px-3 py-1 text-xs font-semibold;
+}
+
+.status-attention {
+  @apply bg-orange-500 text-white rounded-full px-3 py-1 text-xs font-semibold;
+}
+
+.status-neutral {
+  @apply bg-gray-200 text-gray-700 rounded-full px-3 py-1 text-xs font-semibold;
+}
+
+/* Scrollbar — subtle for light theme */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.2); }

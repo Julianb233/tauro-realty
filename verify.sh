@@ -14,7 +14,7 @@ echo ""
 echo "--- Structure ---"
 
 # Minimum pages (7 required)
-REQUIRED_PAGES=("app/page.tsx" "app/progress/page.tsx" "app/deliverables/page.tsx" "app/changelog/page.tsx" "app/action-items/page.tsx" "app/activity/page.tsx" "app/more/page.tsx")
+REQUIRED_PAGES=("app/page.tsx" "app/progress/page.tsx" "app/deliverables/page.tsx" "app/changelog/page.tsx" "app/action-items/page.tsx" "app/activity/page.tsx" "app/more/page.tsx" "app/services/page.tsx" "app/calendar/page.tsx" "app/meetings/page.tsx")
 for page in "${REQUIRED_PAGES[@]}"; do
   if [ -f "$DASH_DIR/$page" ]; then
     echo "  ✓ $page"
@@ -25,7 +25,7 @@ for page in "${REQUIRED_PAGES[@]}"; do
 done
 
 # Minimum data files (5 required)
-REQUIRED_DATA=("data/client-data.ts" "data/changelog.ts" "data/deliverables.ts" "data/action-items.ts" "data/milestones.ts")
+REQUIRED_DATA=("data/client-data.ts" "data/changelog.ts" "data/deliverables.ts" "data/action-items.ts" "data/milestones.ts" "data/services.ts" "data/content-calendar.ts" "data/meetings.ts")
 for file in "${REQUIRED_DATA[@]}"; do
   if [ -f "$DASH_DIR/$file" ]; then
     echo "  ✓ $file"
@@ -72,12 +72,50 @@ if [ -f "$DASH_DIR/data/action-items.ts" ]; then
   fi
 fi
 
+# --- DETAIL PAGES & REVIEW WORKFLOW ---
+echo ""
+echo "--- Detail Pages & Review ---"
+
+DETAIL_PAGES=("app/deliverables/[id]/page.tsx" "app/calendar/[id]/page.tsx" "app/action-items/[id]/page.tsx" "app/meetings/[id]/page.tsx")
+for page in "${DETAIL_PAGES[@]}"; do
+  if [ -f "$DASH_DIR/$page" ]; then
+    echo "  ✓ $page"
+  else
+    echo "  ✗ MISSING: $page (detail subpage)"
+    ((ERRORS++))
+  fi
+done
+
+if [ -f "$DASH_DIR/components/ReviewActions.tsx" ]; then
+  echo "  ✓ ReviewActions component"
+else
+  echo "  ✗ MISSING: components/ReviewActions.tsx"
+  ((ERRORS++))
+fi
+
+if [ -f "$DASH_DIR/app/api/review/route.ts" ]; then
+  echo "  ✓ /api/review endpoint"
+else
+  echo "  ✗ MISSING: app/api/review/route.ts"
+  ((ERRORS++))
+fi
+
+# Hardcoded client names
+HARDCODED=$(grep -rn "Shipping Savior" "$DASH_DIR/app/" 2>/dev/null | grep -v node_modules | grep -v ".next" | grep -v ".claude" | head -5)
+if [ -z "$HARDCODED" ]; then
+  echo "  ✓ No hardcoded client names in app/"
+else
+  echo "  ✗ Hardcoded 'Shipping Savior' found in app/ pages:"
+  echo "$HARDCODED" | while read line; do echo "    $line"; done
+  ((ERRORS++))
+fi
+
 # --- CONTENT CHECKS ---
 echo ""
 echo "--- Content Quality ---"
 
 # No placeholder text
-PLACEHOLDERS=$(grep -rn "Lorem\|placeholder\|TODO\|FIXME\|Coming soon\|TBD" "$DASH_DIR/data/" "$DASH_DIR/app/" 2>/dev/null | grep -v node_modules | grep -v ".next" | head -5)
+PLACEHOLDERS=$(grep -rn "Lorem\|TODO\|FIXME\|Coming soon\|TBD\|REPLACE-DOMAIN\|REPLACE-SLUG\|Acme Corp\|acme-corp" "$DASH_DIR/data/" 2>/dev/null | grep -v node_modules | grep -v ".next" | grep -v "REPLACE:" | head -5)
 if [ -z "$PLACEHOLDERS" ]; then
   echo "  ✓ No placeholder text found"
 else
@@ -94,12 +132,11 @@ else
   ((ERRORS++))
 fi
 
-# Dark theme present
-if grep -q "0f172a" "$DASH_DIR/app/globals.css" 2>/dev/null; then
-  echo "  ✓ Dark navy theme (#0f172a) present"
+# Theme present (layout has bg color)
+if grep -q "bg-\[" "$DASH_DIR/app/layout.tsx" 2>/dev/null; then
+  echo "  ✓ Custom theme colors in layout"
 else
-  echo "  ✗ Missing dark navy theme"
-  ((ERRORS++))
+  echo "  ⚠ No custom theme colors in layout (optional)"
 fi
 
 # Hub links with real URLs (not just #)

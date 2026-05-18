@@ -36,12 +36,23 @@ echo "Copying template..."
 cp -r /opt/agency-workspace/ppp-template/ "$TARGET"
 cd "$TARGET"
 
-# Replace placeholders in data files
+# Replace placeholders across ALL data files
 echo "Customizing data files..."
-sed -i "s/Acme Corp/${NAME}/g" data/client-data.ts
-sed -i "s/acme-corp/${SLUG}/g" data/client-data.ts
-sed -i "s/Alex/${CONTACT}/g" data/client-data.ts
-sed -i "s/+15551234567/${PHONE}/g" data/client-data.ts
+for f in data/*.ts; do
+  sed -i "s/Acme Corp/${NAME}/g" "$f"
+  sed -i "s/acme-corp/${SLUG}/g" "$f"
+  sed -i "s/REPLACE-DOMAIN/${SLUG}/g" "$f"
+  sed -i "s/REPLACE-SLUG/${SLUG}/g" "$f"
+  sed -i "s/+15551234567/${PHONE}/g" "$f"
+done
+# Contact name only in client-data (avoid false matches in other files)
+sed -i "s/\"Alex\"/\"${CONTACT}\"/g" data/client-data.ts
+
+# Copy .env.example to .env.local if it doesn't exist
+if [ ! -f ".env.local" ]; then
+  cp .env.example .env.local
+  echo "Created .env.local from .env.example — fill in API keys before deploying"
+fi
 
 # Install dependencies
 echo "Installing dependencies..."

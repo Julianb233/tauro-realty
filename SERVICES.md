@@ -25,10 +25,14 @@ Optional add-on modules that extend the base PPP with specialized features. Add 
 
 ### Chatbot Module (`services/chatbot/`)
 **For:** Any client who needs interactive support
-- `ChatWidget.tsx` — floating AI chatbot with media upload
-- Creates Linear issues from client requests automatically
-- Requires: ANTHROPIC_API_KEY, LINEAR_API_KEY in .env.local
-- See the full chatbot spec in the client-portal skill SKILL.md
+- `ChatWidget.tsx` — floating AI chatbot with media upload + voice
+- **Text chat** → Claude API → auto-creates Linear issues
+- **Photo/video/document** → Gemini Flash → multimodal analysis → Linear issue with visual context
+- **Voice messages** → Whisper/Gemini transcription → codebase-aware Linear issue with file references
+- Cross-posts to client Telegram group when connected
+- Falls back to iMessage notification if Telegram not set up
+- Requires: ANTHROPIC_API_KEY, GOOGLE_AI_API_KEY, LINEAR_API_KEY in .env.local
+- See full chatbot spec in `services/chatbot/CHATBOT-CONFIG.md`
 
 ## How to Add a Module
 

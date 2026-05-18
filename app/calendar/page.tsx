@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import GlassCard from "@/components/GlassCard";
 import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -14,7 +15,7 @@ import {
 } from "@/data/content-calendar";
 
 const statusConfig: Record<ContentStatus, { label: string; color: string; dot: string }> = {
-  draft: { label: "Draft", color: "bg-slate-500/20 text-slate-400 border-slate-500/30", dot: "bg-slate-400" },
+  draft: { label: "Draft", color: "bg-slate-500/20 text-slate-600 border-slate-500/30", dot: "bg-slate-400" },
   "pending-approval": { label: "Needs Approval", color: "bg-amber-500/20 text-amber-400 border-amber-500/30", dot: "bg-amber-400" },
   approved: { label: "Approved", color: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30", dot: "bg-emerald-400" },
   scheduled: { label: "Scheduled", color: "bg-blue-500/20 text-blue-400 border-blue-500/30", dot: "bg-blue-400" },
@@ -86,32 +87,26 @@ function ContentCard({ item, onStatusChange }: { item: ContentItem; onStatusChan
     <div className="p-3 rounded-xl bg-white/5">
       <div className="flex items-start gap-3">
         <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg className="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+          <svg className="w-4 h-4 text-slate-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d={typeIcons[item.type]} />
           </svg>
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
-            {item.previewUrl || item.liveUrl ? (
-              <a
-                href={item.liveUrl || item.previewUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-blue-400 hover:text-blue-300 underline decoration-blue-400/30"
-              >
-                {item.title}
-              </a>
-            ) : (
-              <p className="text-sm font-medium text-slate-200">{item.title}</p>
-            )}
+            <Link
+              href={`/calendar/${item.id}`}
+              className="text-sm font-medium text-slate-200 hover:text-blue-400 transition-colors"
+            >
+              {item.title}
+            </Link>
           </div>
 
-          <p className="text-xs text-slate-400 mt-1">{item.description}</p>
+          <p className="text-xs text-slate-600 mt-1">{item.description}</p>
 
           <div className="flex items-center gap-2 flex-wrap mt-2">
-            <span className="text-[10px] text-slate-500">{formatDate(item.scheduledDate)}</span>
+            <span className="text-[10px] text-slate-700">{formatDate(item.scheduledDate)}</span>
             <span className="text-[10px] text-slate-600">|</span>
-            <span className="text-[10px] text-slate-500">{platformLabels[item.platform]}</span>
+            <span className="text-[10px] text-slate-700">{platformLabels[item.platform]}</span>
             <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium border ${config.color}`}>
               {config.label}
             </span>
@@ -167,7 +162,7 @@ function ContentCard({ item, onStatusChange }: { item: ContentItem; onStatusChan
                     href={item.previewUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white/5 text-slate-400 text-xs font-medium hover:bg-white/10 transition-colors min-h-[36px]"
+                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white/5 text-slate-600 text-xs font-medium hover:bg-white/10 transition-colors min-h-[36px]"
                   >
                     Preview
                   </a>
@@ -182,7 +177,7 @@ function ContentCard({ item, onStatusChange }: { item: ContentItem; onStatusChan
                     value={noteText}
                     onChange={(e) => setNoteText(e.target.value)}
                     placeholder="What changes are needed?"
-                    className="flex-1 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-rose-500/40"
+                    className="flex-1 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-200 placeholder:text-slate-700 focus:outline-none focus:border-rose-500/40"
                   />
                   <button
                     disabled={loading || !noteText.trim()}
@@ -262,29 +257,29 @@ export default function CalendarPage() {
       {/* Stats */}
       <ScrollReveal>
         <GlassCard>
-          <div className="flex items-center gap-6 text-sm flex-wrap">
+          <div className="flex items-center gap-4 sm:gap-6 text-sm flex-wrap lg:flex-nowrap">
             <div>
               <span className="text-2xl font-bold text-emerald-400">{stats.published}</span>
-              <span className="text-slate-400 ml-1.5">published</span>
+              <span className="text-slate-600 ml-1.5">published</span>
             </div>
             <div className="h-6 w-px bg-white/10 hidden sm:block" />
             <div>
               <span className="text-2xl font-bold text-blue-400">{stats.scheduled}</span>
-              <span className="text-slate-400 ml-1.5">scheduled</span>
+              <span className="text-slate-600 ml-1.5">scheduled</span>
             </div>
             <div className="h-6 w-px bg-white/10 hidden sm:block" />
             {stats.pendingApproval > 0 && (
               <>
                 <div>
                   <span className="text-2xl font-bold text-amber-400">{stats.pendingApproval}</span>
-                  <span className="text-slate-400 ml-1.5">needs approval</span>
+                  <span className="text-slate-600 ml-1.5">needs approval</span>
                 </div>
                 <div className="h-6 w-px bg-white/10 hidden sm:block" />
               </>
             )}
             <div>
-              <span className="text-2xl font-bold text-slate-400">{stats.drafts}</span>
-              <span className="text-slate-400 ml-1.5">drafts</span>
+              <span className="text-2xl font-bold text-slate-600">{stats.drafts}</span>
+              <span className="text-slate-600 ml-1.5">drafts</span>
             </div>
           </div>
         </GlassCard>
@@ -312,8 +307,8 @@ export default function CalendarPage() {
             </div>
             <div className="space-y-1">
               {needsApproval.slice(0, 3).map((item) => (
-                <p key={item.id} className="text-xs text-slate-400">
-                  <span className="text-slate-300">{item.title}</span>
+                <p key={item.id} className="text-xs text-slate-600">
+                  <span className="text-slate-600">{item.title}</span>
                   {" — "}{formatDate(item.scheduledDate)} on {platformLabels[item.platform]}
                 </p>
               ))}
@@ -323,16 +318,16 @@ export default function CalendarPage() {
       )}
 
       {/* View Toggle */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 lg:gap-3">
         <button
           onClick={() => setView("timeline")}
-          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors min-h-[36px] ${view === "timeline" ? "bg-blue-500/20 text-blue-400" : "bg-white/5 text-slate-500 hover:text-slate-300"}`}
+          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors min-h-[36px] ${view === "timeline" ? "bg-blue-500/20 text-blue-400" : "bg-white/5 text-slate-700 hover:text-slate-600"}`}
         >
           Timeline
         </button>
         <button
           onClick={() => setView("needs-approval")}
-          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors min-h-[36px] ${view === "needs-approval" ? "bg-amber-500/20 text-amber-400" : "bg-white/5 text-slate-500 hover:text-slate-300"}`}
+          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors min-h-[36px] ${view === "needs-approval" ? "bg-amber-500/20 text-amber-400" : "bg-white/5 text-slate-700 hover:text-slate-600"}`}
         >
           Needs Approval {needsApproval.length > 0 && `(${needsApproval.length})`}
         </button>
@@ -346,9 +341,9 @@ export default function CalendarPage() {
               <div className="glass-card rounded-2xl border border-white/10 overflow-hidden">
                 <div className="p-5 md:p-6 border-b border-white/5">
                   <h2 className="text-base font-semibold text-slate-200">{month}</h2>
-                  <p className="text-xs text-slate-500 mt-0.5">{items.length} item{items.length !== 1 ? "s" : ""}</p>
+                  <p className="text-xs text-slate-700 mt-0.5">{items.length} item{items.length !== 1 ? "s" : ""}</p>
                 </div>
-                <div className="px-5 md:px-6 py-4 space-y-2">
+                <div className="px-5 md:px-6 py-4 grid grid-cols-1 lg:grid-cols-2 gap-2">
                   {items.map((item) => (
                     <ContentCard key={item.id} item={item} onStatusChange={handleStatusChange} />
                   ))}
@@ -365,10 +360,10 @@ export default function CalendarPage() {
                   <div className="flex items-center gap-2">
                     <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                     <h2 className="text-base font-semibold text-slate-200">Published</h2>
-                    <span className="text-xs text-slate-500">({published.length})</span>
+                    <span className="text-xs text-slate-700">({published.length})</span>
                   </div>
                 </div>
-                <div className="px-5 md:px-6 py-4 space-y-2">
+                <div className="px-5 md:px-6 py-4 grid grid-cols-1 lg:grid-cols-2 gap-2">
                   {published.map((item) => (
                     <ContentCard key={item.id} item={item} onStatusChange={handleStatusChange} />
                   ))}
@@ -385,7 +380,7 @@ export default function CalendarPage() {
           <div className="glass-card rounded-2xl border border-amber-500/20 overflow-hidden">
             <div className="p-5 md:p-6 border-b border-white/5">
               <h2 className="text-base font-semibold text-slate-200">Approval Queue</h2>
-              <p className="text-xs text-slate-400 mt-0.5">Review each item and approve or request changes. Approved items will be automatically scheduled for publishing.</p>
+              <p className="text-xs text-slate-600 mt-0.5">Review each item and approve or request changes. Approved items will be automatically scheduled for publishing.</p>
             </div>
             <div className="px-5 md:px-6 py-4 space-y-3">
               {needsApproval.length > 0 ? (
@@ -393,7 +388,7 @@ export default function CalendarPage() {
                   <ContentCard key={item.id} item={item} onStatusChange={handleStatusChange} />
                 ))
               ) : (
-                <p className="text-sm text-slate-500 text-center py-8">Nothing needs approval right now.</p>
+                <p className="text-sm text-slate-700 text-center py-8">Nothing needs approval right now.</p>
               )}
             </div>
           </div>

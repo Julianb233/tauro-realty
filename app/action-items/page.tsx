@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import GlassCard from "@/components/GlassCard";
 import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -10,7 +11,7 @@ import { actionItems, getPendingActionItems, type ActionPriority } from "@/data/
 const priorityConfig: Record<ActionPriority, { color: string; label: string }> = {
   high: { color: "bg-rose-500/20 text-rose-400 border-rose-500/30", label: "High" },
   medium: { color: "bg-amber-500/20 text-amber-400 border-amber-500/30", label: "Medium" },
-  low: { color: "bg-slate-500/20 text-slate-400 border-slate-500/30", label: "Low" },
+  low: { color: "bg-slate-500/20 text-slate-600 border-slate-500/30", label: "Low" },
 };
 
 const statusConfig = {
@@ -52,7 +53,7 @@ export default function ActionItemsPage() {
               <p className="text-sm font-semibold text-slate-200">
                 {pendingCount} item{pendingCount !== 1 ? "s" : ""} need{pendingCount === 1 ? "s" : ""} your attention
               </p>
-              <p className="text-xs text-slate-400 mt-0.5">
+              <p className="text-xs text-slate-600 mt-0.5">
                 Faster responses = faster delivery. Tap any item to see step-by-step instructions.
               </p>
             </div>
@@ -61,7 +62,7 @@ export default function ActionItemsPage() {
       </ScrollReveal>
 
       {/* Items */}
-      <div className="space-y-3">
+      <div className="space-y-3 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0">
         {sorted.map((item, i) => {
           const isExpanded = expandedId === item.id;
           const prio = priorityConfig[item.priority];
@@ -83,13 +84,13 @@ export default function ActionItemsPage() {
                         <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium border ${status.color}`}>
                           {status.label}
                         </span>
-                        <span className="text-[10px] text-slate-500">Due: {item.dueDate}</span>
+                        <span className="text-[10px] text-slate-700">Due: {item.dueDate}</span>
                       </div>
                       <h3 className="text-sm font-semibold text-slate-200">{item.title}</h3>
-                      <p className="text-xs text-slate-400 mt-1">{item.description}</p>
+                      <p className="text-xs text-slate-600 mt-1">{item.description}</p>
                     </div>
                     <svg
-                      className={`w-4 h-4 text-slate-500 transition-transform flex-shrink-0 mt-1 ${isExpanded ? "rotate-180" : ""}`}
+                      className={`w-4 h-4 text-slate-700 transition-transform flex-shrink-0 mt-1 ${isExpanded ? "rotate-180" : ""}`}
                       fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -104,10 +105,10 @@ export default function ActionItemsPage() {
                     className="px-5 md:px-6 pb-5 md:pb-6"
                   >
                     <div className="pt-4 border-t border-white/5">
-                      <p className="text-xs font-semibold text-slate-300 mb-3">How to complete this:</p>
+                      <p className="text-xs font-semibold text-slate-600 mb-3">How to complete this:</p>
                       <ol className="space-y-2">
                         {item.instructions.map((step, j) => (
-                          <li key={j} className="flex items-start gap-2.5 text-xs text-slate-300">
+                          <li key={j} className="flex items-start gap-2.5 text-xs text-slate-600">
                             <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-500/15 text-blue-400 flex items-center justify-center text-[10px] font-bold mt-0.5">
                               {j + 1}
                             </span>
@@ -115,6 +116,15 @@ export default function ActionItemsPage() {
                           </li>
                         ))}
                       </ol>
+                      <Link
+                        href={`/action-items/${item.id}`}
+                        className="inline-flex items-center gap-1.5 mt-4 px-3 py-1.5 rounded-lg bg-blue-500/15 text-blue-400 text-xs font-medium hover:bg-blue-500/25 transition-colors"
+                      >
+                        Open Full Details
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                      </Link>
                     </div>
                   </motion.div>
                 )}

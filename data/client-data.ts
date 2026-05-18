@@ -1,64 +1,54 @@
 // ============================================================
-// CLIENT DATA — Replace these values for each new client
-// Run: bash setup.sh <slug> "<name>" "<phone>" to auto-replace
+// CLIENT DATA — LYL Realty Group
+// Customized 2026-05-18 (AI-10116) from ppp-template
+// Internal Supabase slug: tauro-realty (DO NOT rename without migration)
 // ============================================================
 
 export const clientInfo = {
-  // REPLACE: Client business name
-  name: "Acme Corp",
-  // REPLACE: URL-safe slug (lowercase, hyphens)
-  slug: "acme-corp",
+  name: "LYL Realty Group",
+  slug: "tauro-realty",
   contact: {
-    // REPLACE: Primary contact first name
-    name: "Alex",
-    // REPLACE: Primary contact phone
-    phone: "+15551234567",
+    name: "Dayhna",
+    phone: "+12154983546",
   },
-  // REPLACE: Client's website domain
-  domain: "acme-corp.com",
-  // REPLACE: Deployed portal URL (after Vercel deploy)
-  portalDomain: "acme-corp-portal.vercel.app",
+  domain: "lylrealty.com",
+  portalDomain: "lyl-realty-portal.vercel.app",
   agency: "AI Acrobatics",
   agencyContact: "julian@aiacrobatics.com",
 };
 
 export const stats = [
-  // REPLACE: Key metrics relevant to this client's project
-  { label: "Pages Built", value: "8", trend: "up" as const },
-  { label: "Features Shipped", value: "5", trend: "up" as const },
-  { label: "Phases Complete", value: "3/4", trend: "up" as const },
-  { label: "Uptime", value: "99.9%", trend: "up" as const },
+  { label: "Brand", value: "Locked", trend: "up" as const },
+  { label: "Office Info", value: "Confirmed", trend: "up" as const },
+  { label: "Agent Roster", value: "Cleared", trend: "up" as const },
+  { label: "Phase", value: "Content Handoff", trend: "up" as const },
 ];
 
 export const hubLinks = [
-  // REPLACE: Links relevant to this client's project
-  { label: "Live Website", url: "https://acme-corp.com", icon: "globe", description: "Production website" },
-  { label: "Product Roadmap", url: "/progress", icon: "map", description: "Development phases and milestones" },
-  { label: "Deliverables", url: "/deliverables", icon: "package", description: "Everything built and shipped" },
-  { label: "Changelog", url: "/changelog", icon: "list", description: "Detailed update history" },
+  { label: "Next Steps Doc", url: "https://docs.google.com/document/d/18JrhzYVOlVixmFXlWphR4a2FEvDuyMkpYBjbL2IG5_U/edit", icon: "document", description: "What we need from you + the path forward" },
+  { label: "Next Steps Diagram", url: "https://whimsical.com/lyl-realty-group-next-steps-path-17atVEenpumHp3Qd9dmUdD", icon: "map", description: "Visual map of every phase + dependency" },
+  { label: "Team Drive Folder", url: "https://drive.google.com/drive/folders/1W5gyTW-pSEF99tn_QS9g4znOrGpbu_pc", icon: "package", description: "Shared Google Drive: contracts, briefs, deliverables, meeting notes, assets" },
+  { label: "Live Website", url: "https://lylrealty.com", icon: "globe", description: "Production website (DNS cutover pending)" },
   { label: "Action Items", url: "/action-items", icon: "clipboard", description: "What we need from you" },
-  { label: "Book a Call", url: "https://calendly.com/julian-aiacrobatics", icon: "phone", description: "Schedule with Julian" },
+  { label: "Meeting Notes", url: "/meetings", icon: "document", description: "Recorded calls + summaries" },
+  { label: "Changelog", url: "/changelog", icon: "list", description: "Detailed update history" },
+  { label: "Book a Call", url: "https://msgsndr.com/widget/booking/76ergSktTpvayx9tldnl", icon: "phone", description: "Schedule with Julian" },
 ];
 
 export const snapshot = {
-  // REPLACE: Current month
-  month: "March 2026",
-  // REPLACE: Project health — "great" | "good" | "attention" | "blocked"
+  month: "May 2026",
   health: "great" as const,
-  // REPLACE: One-line summary of current status
-  summary: "Phase 1 complete — website launched, SEO foundations in place, content pipeline active.",
+  summary: "Content handoff complete with Noah — brand and contact info locked, agent roster cleared, ready for fresh team list + first property page.",
   highlights: [
-    // REPLACE: 4 key highlights for this month
-    { label: "Completed", value: "3 phases", icon: "check" },
-    { label: "Content", value: "12 pages published", icon: "document" },
-    { label: "SEO", value: "45 keywords tracked", icon: "chart" },
-    { label: "Performance", value: "95+ PageSpeed", icon: "lightning" },
+    { label: "Final brand", value: "LYL Realty Group", icon: "check" },
+    { label: "Office info", value: "Confirmed on site", icon: "check" },
+    { label: "Agent roster", value: "Cleared for fresh list", icon: "check" },
+    { label: "Brochure engine", value: "Inside original quote", icon: "lightning" },
   ],
   nextMonthFocus: [
-    // REPLACE: 2-3 priorities for next month
-    "Launch email marketing automation",
-    "Publish 4 new blog articles targeting priority keywords",
-    "Set up CRM lead tracking pipeline",
+    "Receive refreshed agent roster from Noah (12 fields per agent) and republish team page",
+    "Build out first property page for 1001 West Allen Lane once Dayhna delivers listing details",
+    "Finalize content approval workflow (Dayhna + Tony) so the brochure engine can ship",
   ],
 };
 
@@ -72,77 +62,34 @@ export interface ActivityEntry {
 }
 
 export const recentActivity: ActivityEntry[] = [
-  // REPLACE: Real project activity entries (newest first)
   {
-    date: "Mar 30",
+    date: "May 18",
+    title: "Content handoff call with Noah",
+    type: "planning",
+    description: "30-minute call with Dayhna, Tony, and Noah locking final brand, contact info, agent-roster reset, and the workflow for property pages + brochures.",
+  },
+  {
+    date: "May 18",
+    title: "Agent roster cleared from the site",
+    type: "content",
+    description: "Per Tony Goodman's go-ahead, every active agent profile was removed from the codebase. Site will republish once Noah delivers the refreshed roster.",
+  },
+  {
+    date: "May 18",
     title: "Progress portal launched",
     type: "deploy",
-    description: "Client-facing dashboard deployed with real-time project visibility, action items, and changelog.",
+    description: "Dedicated LYL Realty Group portal deployed so you can see decisions, action items, deliverables, and meeting notes in one place.",
   },
   {
-    date: "Mar 28",
-    title: "Website deployed to production",
-    type: "deploy",
-    description: "Full website live on custom domain with SSL, analytics, and performance optimization.",
-  },
-  {
-    date: "Mar 25",
-    title: "SEO foundation configured",
-    type: "infrastructure",
-    description: "Meta tags, sitemap, robots.txt, structured data, and Google Search Console verified.",
-  },
-  {
-    date: "Mar 22",
-    title: "Content strategy finalized",
+    date: "May 15",
+    title: "Deal reset + Sunday listing push",
     type: "planning",
-    description: "12-month content calendar with keyword targets, topic clusters, and publishing schedule.",
+    description: "Julian + Dayhna re-walked the $7,500 site + $5,000 GHL package, payment cadence, and the Sunday $1.2M listing appointment.",
   },
   {
-    date: "Mar 20",
-    title: "Homepage and core pages built",
-    type: "feature",
-    description: "Homepage, About, Services, Contact, and FAQ pages designed and developed.",
-  },
-  {
-    date: "Mar 18",
-    title: "Brand identity and design system",
+    date: "May 15",
+    title: "Brand direction confirmed — keep LYL Realty Group",
     type: "design",
-    description: "Color palette, typography, component library, and responsive layouts established.",
-  },
-  {
-    date: "Mar 15",
-    title: "Project kickoff and requirements",
-    type: "planning",
-    description: "Discovery session complete. Requirements documented, timeline agreed, roadmap created.",
-  },
-  {
-    date: "Mar 12",
-    title: "Domain and hosting configured",
-    type: "infrastructure",
-    description: "Domain DNS pointed, Vercel project created, CI/CD pipeline connected to GitHub.",
-  },
-  {
-    date: "Mar 10",
-    title: "Competitive analysis delivered",
-    type: "content",
-    description: "Analysis of 8 competitors with SEO gaps, content opportunities, and positioning recommendations.",
-  },
-  {
-    date: "Mar 8",
-    title: "Initial wireframes approved",
-    type: "design",
-    description: "Mobile-first wireframes for all 8 core pages reviewed and approved by client.",
-  },
-  {
-    date: "Mar 5",
-    title: "Project setup and infrastructure",
-    type: "infrastructure",
-    description: "Next.js project initialized, Tailwind configured, deployment pipeline set up.",
-  },
-  {
-    date: "Mar 3",
-    title: "Market research complete",
-    type: "content",
-    description: "Industry analysis, target audience profiles, and keyword research delivered.",
+    description: "Decision locked: no Tauro rebrand, keep existing brand and color scheme. Codebase cleanup of Tauro/Toro naming queued.",
   },
 ];
