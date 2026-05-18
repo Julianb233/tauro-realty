@@ -1,5 +1,11 @@
 "use client";
 
+// Deliverables page — reads from static data/deliverables.ts.
+// Detail pages (/deliverables/[id]) use array-index routing that depends on
+// the static array order, so deliverables stay static for now.
+// Convex deliverables are written but not used as primary source here until
+// the detail-page router is refactored to use Convex IDs (tracked separately).
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
