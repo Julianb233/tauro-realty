@@ -217,7 +217,7 @@ export default function ShareButton({
               className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-foreground transition-colors hover:bg-gold/10 hover:text-gold"
             >
               {copied ? (
-                <Check className="h-4 w-4 text-emerald-500" aria-hidden="true" />
+                <Check className="h-4 w-4 text-gold" aria-hidden="true" />
               ) : (
                 <Link2 className="h-4 w-4" aria-hidden="true" />
               )}

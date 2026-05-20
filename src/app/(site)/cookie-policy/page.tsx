@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Cookie Policy",
   description:
-    "Learn about the cookies used on the Tauro Realty website, including essential cookies, analytics (GA4), and how to manage your cookie preferences.",
+    "Learn about the cookies used on the LYL Realty Group website, including essential cookies, analytics (GA4), and how to manage your cookie preferences.",
 };
 
 export default function CookiePolicyPage() {
@@ -34,8 +34,8 @@ export default function CookiePolicyPage() {
           <div className="space-y-12 text-midnight/70">
             {/* Intro */}
             <p className="text-base leading-relaxed">
-              This Cookie Policy explains what cookies are, how Tauro Realty
-              (&quot;Tauro,&quot; &quot;we,&quot; &quot;us,&quot; or
+              This Cookie Policy explains what cookies are, how LYL Realty Group
+              (&quot;LYL Realty Group,&quot; &quot;we,&quot; &quot;us,&quot; or
               &quot;our&quot;) uses cookies on our website, and your choices
               regarding cookies.
             </p>
@@ -87,7 +87,7 @@ export default function CookiePolicyPage() {
                       <tbody>
                         <tr className="border-b border-midnight/5">
                           <td className="p-3 font-mono">
-                            tauro-cookie-consent
+                            lyl-cookie-consent
                           </td>
                           <td className="p-3">
                             Stores your cookie consent preferences
@@ -214,13 +214,13 @@ export default function CookiePolicyPage() {
                   </li>
                 </ul>
                 <p>
-                  Tauro does not sell personal information. To exercise your
+                  LYL Realty Group does not sell personal information. To exercise your
                   CCPA rights, please contact us at{" "}
                   <a
-                    href="mailto:privacy@taurorealty.com"
+                    href="mailto:privacy@lylrealty.com"
                     className="text-gold hover:underline"
                   >
-                    privacy@taurorealty.com
+                    privacy@lylrealty.com
                   </a>
                   .
                 </p>
@@ -256,25 +256,25 @@ export default function CookiePolicyPage() {
                 </p>
                 <div className="mt-4 space-y-1">
                   <p>
-                    <strong className="text-midnight">Tauro Realty</strong>
+                    <strong className="text-midnight">LYL Realty Group</strong>
                   </p>
                   <p>Philadelphia, PA</p>
                   <p>
                     Email:{" "}
                     <a
-                      href="mailto:privacy@taurorealty.com"
+                      href="mailto:privacy@lylrealty.com"
                       className="text-gold hover:underline"
                     >
-                      privacy@taurorealty.com
+                      privacy@lylrealty.com
                     </a>
                   </p>
                   <p>
                     Phone:{" "}
                     <a
-                      href="tel:+12158394172"
+                      href="tel:+12677738600"
                       className="text-gold hover:underline"
                     >
-                      (215) 839-4172
+                      (267) 773-8600
                     </a>
                   </p>
                 </div>

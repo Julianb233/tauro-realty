@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Learn how Tauro Realty collects, uses, and protects your personal information. Our privacy practices for Philadelphia real estate services, property inquiries, and website usage.",
+    "Learn how LYL Realty Group collects, uses, and protects your personal information. Our privacy practices for Philadelphia real estate services, property inquiries, and website usage.",
 };
 
 export default function PrivacyPage() {
@@ -33,7 +33,7 @@ export default function PrivacyPage() {
           <div className="space-y-12 text-midnight/70">
             {/* Intro */}
             <p className="text-base leading-relaxed">
-              Tauro Realty (&quot;Tauro,&quot; &quot;we,&quot; &quot;us,&quot; or
+              LYL Realty Group (&quot;LYL Realty Group,&quot; &quot;we,&quot; &quot;us,&quot; or
               &quot;our&quot;) is committed to protecting your privacy. This
               Privacy Policy explains how we collect, use, disclose, and
               safeguard your information when you visit our website, submit
@@ -107,7 +107,7 @@ export default function PrivacyPage() {
                     you&apos;ve opted into
                   </li>
                   <li>
-                    Connect you with the most suitable Tauro agent for your needs
+                    Connect you with the most suitable LYL Realty Group agent for your needs
                   </li>
                   <li>
                     Improve our website, services, and overall client experience
@@ -131,7 +131,7 @@ export default function PrivacyPage() {
                 </p>
                 <ul className="list-disc space-y-2 pl-6">
                   <li>
-                    <strong className="text-midnight">Tauro Agents:</strong> To
+                    <strong className="text-midnight">LYL Realty Group Agents:</strong> To
                     facilitate property showings, transactions, and personalized
                     service.
                   </li>
@@ -144,7 +144,7 @@ export default function PrivacyPage() {
                   <li>
                     <strong className="text-midnight">Legal Requirements:</strong>{" "}
                     When required by law, subpoena, or legal process, or to
-                    protect the rights and safety of Tauro and its clients.
+                    protect the rights and safety of LYL Realty Group and its clients.
                   </li>
                   <li>
                     <strong className="text-midnight">Business Transfers:</strong>{" "}
@@ -214,25 +214,25 @@ export default function PrivacyPage() {
                 </p>
                 <div className="mt-4 space-y-1">
                   <p>
-                    <strong className="text-midnight">Tauro Realty</strong>
+                    <strong className="text-midnight">LYL Realty Group</strong>
                   </p>
                   <p>Philadelphia, PA</p>
                   <p>
                     Email:{" "}
                     <a
-                      href="mailto:info@taurorealty.com"
+                      href="mailto:info@lylrealty.com"
                       className="text-gold hover:underline"
                     >
-                      info@taurorealty.com
+                      info@lylrealty.com
                     </a>
                   </p>
                   <p>
                     Phone:{" "}
                     <a
-                      href="tel:+12158394172"
+                      href="tel:+12677738600"
                       className="text-gold hover:underline"
                     >
-                      (215) 839-4172
+                      (267) 773-8600
                     </a>
                   </p>
                 </div>

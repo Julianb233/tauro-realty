@@ -5,7 +5,7 @@ import { X, Mail } from "lucide-react";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { useFocusTrap } from "@/hooks/useFocusTrap";
 
-const STORAGE_KEY = "tauro-newsletter-dismissed";
+const STORAGE_KEY = "lyl-newsletter-dismissed";
 const DELAY_MS = 30_000; // 30 seconds
 
 export function NewsletterSlideIn() {

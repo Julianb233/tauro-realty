@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Fair Housing Statement",
   description:
-    "Tauro Realty is committed to compliance with all federal, state, and local fair housing laws. We are dedicated to providing equal housing opportunity for all.",
+    "LYL Realty Group is committed to compliance with all federal, state, and local fair housing laws. We are dedicated to providing equal housing opportunity for all.",
 };
 
 export default function FairHousingPage() {
@@ -77,7 +77,7 @@ export default function FairHousingPage() {
               Our Commitment
             </h3>
             <p className="text-muted-foreground">
-              Tauro Realty is committed to compliance with all federal, state, and
+              LYL Realty Group is committed to compliance with all federal, state, and
               local fair housing laws. We are dedicated to upholding the spirit
               and the letter of these laws. We encourage and support affirmative
               advertising and marketing programs in which there are no barriers
@@ -167,9 +167,9 @@ export default function FairHousingPage() {
 
             <div className="mt-10 rounded-lg border border-border bg-card p-6">
               <p className="text-sm text-muted-foreground">
-                Tauro Realty supports the fair housing poster display
+                LYL Realty Group supports the fair housing poster display
                 requirements by making it available for viewing on this page. In
-                accordance with federal law, Tauro Realty prohibits any
+                accordance with federal law, LYL Realty Group prohibits any
                 preference, limitation, or discrimination based on race, color,
                 religion, sex, handicap, familial status, national origin, sexual
                 orientation, gender identity, or any other protected

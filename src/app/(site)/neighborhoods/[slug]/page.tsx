@@ -40,9 +40,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const neighborhood = await loadNeighborhoodBySlug(slug);
-  if (!neighborhood) return { title: "Neighborhood Not Found | Tauro" };
+  if (!neighborhood) return { title: "Neighborhood Not Found | LYL Realty Group" };
   const title = `${neighborhood.name} Homes for Sale`;
-  const description = `Explore homes for sale in ${neighborhood.name}, Philadelphia. ${neighborhood.tagline} Browse listings, local insights, and market data with Tauro Real Estate.`;
+  const description = `Explore homes for sale in ${neighborhood.name}, Philadelphia. ${neighborhood.tagline} Browse listings, local insights, and market data with LYL Realty Group.`;
   return {
     title,
     description,
@@ -216,7 +216,7 @@ export default async function NeighborhoodDetailPage({ params }: { params: Promi
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <p className="font-label text-sm font-semibold uppercase tracking-[0.2em] text-gold">Ready to Explore?</p>
           <h2 className="mt-2 font-heading text-3xl font-bold text-foreground sm:text-4xl">Interested in {neighborhood.name}?</h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">Connect with a Tauro agent who specializes in {neighborhood.name} to find your perfect Philadelphia home.</p>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">Connect with a LYL Realty Group agent who specializes in {neighborhood.name} to find your perfect Philadelphia home.</p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link href="/contact" className="shimmer-gold inline-flex items-center gap-2 rounded-lg bg-gold px-8 py-3 text-sm font-semibold text-near-black transition-all hover:bg-gold-light hover:shadow-lg">
               Contact an Agent<ArrowRight className="size-4" />

@@ -13,9 +13,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Why Join Tauro | Agent Opportunity",
+  title: "Why Join LYL Realty Group | Agent Opportunity",
   description:
-    "Discover why top Philadelphia real estate agents choose Tauro. Industry-leading commissions, cutting-edge tools, mentorship, and an agent-first culture built for your success.",
+    "Discover why top Philadelphia real estate agents choose LYL Realty Group. Industry-leading commissions, cutting-edge tools, mentorship, and an agent-first culture built for your success.",
 };
 
 /* ------------------------------------------------------------------ */
@@ -52,7 +52,7 @@ const benefits = [
     icon: Users,
     title: "Lead Generation",
     description:
-      "Inbound leads from Tauro's premium web presence, targeted social media campaigns, and deep community partnerships keep your pipeline full. No cold calling required — though we encourage ambitious agents to prospect as well.",
+      "Inbound leads from LYL Realty Group's premium web presence, targeted social media campaigns, and deep community partnerships keep your pipeline full. No cold calling required — though we encourage ambitious agents to prospect as well.",
   },
   {
     icon: Award,
@@ -71,13 +71,13 @@ const benefits = [
 const testimonials = [
   {
     quote:
-      "Switching to Tauro was the best career decision I've made. The support system here is unmatched.",
+      "Switching to LYL Realty Group was the best career decision I've made. The support system here is unmatched.",
     name: "Sarah M.",
     role: "5-Year Agent",
   },
   {
     quote:
-      "I doubled my production in my first year at Tauro. The leads and training made all the difference.",
+      "I doubled my production in my first year at LYL Realty Group. The leads and training made all the difference.",
     name: "James R.",
     role: "Top Producer",
   },
@@ -94,7 +94,7 @@ const careerPaths = [
     step: 1,
     title: "New Agent",
     description:
-      "Hit the ground running with our intensive bootcamp, a dedicated mentor, and your first deals supported by the full Tauro team.",
+      "Hit the ground running with our intensive bootcamp, a dedicated mentor, and your first deals supported by the full LYL team.",
   },
   {
     step: 2,
@@ -112,7 +112,7 @@ const careerPaths = [
     step: 4,
     title: "Team Lead",
     description:
-      "Build and lead your own team within Tauro. Recruit, mentor, and earn overrides while we handle operations and compliance.",
+      "Build and lead your own team within LYL Realty Group. Recruit, mentor, and earn overrides while we handle operations and compliance.",
   },
 ];
 
@@ -135,7 +135,7 @@ export default function WhyJoinPage() {
             Build Your Career With Philadelphia&apos;s Fastest-Growing Brokerage
           </h1>
           <p className="mt-5 max-w-xl text-lg text-white/90">
-            At Tauro, we believe agents deserve more — better splits, better
+            At LYL Realty Group, we believe agents deserve more — better splits, better
             tools, and a culture that puts your growth first. Join a team where
             your ambition is matched by real support.
           </p>
@@ -165,7 +165,7 @@ export default function WhyJoinPage() {
               The Numbers
             </p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-white sm:text-4xl">
-              Tauro at a Glance
+              LYL Realty Group at a Glance
             </h2>
           </div>
 
@@ -192,10 +192,10 @@ export default function WhyJoinPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
-              The Tauro Advantage
+              The LYL Realty Group Advantage
             </p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-foreground sm:text-4xl">
-              What Sets Tauro Apart
+              What Sets LYL Realty Group Apart
             </h2>
           </div>
 
@@ -261,7 +261,7 @@ export default function WhyJoinPage() {
               Your Future
             </p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-foreground sm:text-4xl">
-              Your Growth Path at Tauro
+              Your Growth Path at LYL Realty Group
             </h2>
           </div>
 
@@ -307,7 +307,7 @@ export default function WhyJoinPage() {
           </div>
           <p className="mt-6 flex items-center justify-center gap-2 text-muted-foreground">
             <Phone className="size-4" />
-            Or call us at (215) 839-4172 to learn more
+            Or call us at (267) 773-8600 to learn more
           </p>
         </div>
       </section>

@@ -46,7 +46,7 @@ export function MarketDataSection({
                 <div className="mt-3 flex items-center justify-center gap-1.5">
                   {isPriceChange && (
                     <span
-                      className={`text-lg ${isPositive ? "text-emerald-400" : "text-red-400"}`}
+                      className={`text-lg ${isPositive ? "text-gold" : "text-red-400"}`}
                     >
                       {isPositive ? "\u2191" : "\u2193"}
                     </span>
@@ -56,7 +56,7 @@ export function MarketDataSection({
                     className={`font-heading text-2xl font-bold ${
                       isPriceChange
                         ? isPositive
-                          ? "text-emerald-400"
+                          ? "text-gold"
                           : "text-red-400"
                         : "text-gold"
                     }`}

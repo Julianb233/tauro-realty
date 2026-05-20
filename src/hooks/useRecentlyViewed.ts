@@ -2,7 +2,7 @@
 
 import { useCallback, useSyncExternalStore } from "react";
 
-const STORAGE_KEY = "tauro_recently_viewed";
+const STORAGE_KEY = "lyl_recently_viewed";
 const MAX_ITEMS = 8;
 
 export interface RecentlyViewedItem {

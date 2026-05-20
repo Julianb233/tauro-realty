@@ -27,7 +27,7 @@ function ConfirmContent() {
 
   const states = {
     success: {
-      icon: <CheckCircle className="size-16 text-green-400" />,
+      icon: <CheckCircle className="size-16 text-gold" />,
       title: "Subscription Confirmed!",
       description:
         "You're all set! You'll receive our monthly Philadelphia real estate newsletter with new listings, market reports, and neighborhood guides.",

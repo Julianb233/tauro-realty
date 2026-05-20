@@ -155,7 +155,7 @@ function AgentContactForm({ agent, variant }: { agent: Agent; variant: "sidebar"
 
         <div>
           <label htmlFor="cf-phone" className={labelCls}>Phone <span className="text-gold">*</span></label>
-          <input id="cf-phone" name="phone" type="tel" required autoComplete="tel" value={form.phone} onChange={handleChange} placeholder="(215) 839-4172" className={inputCls} />
+          <input id="cf-phone" name="phone" type="tel" required autoComplete="tel" value={form.phone} onChange={handleChange} placeholder="(267) 773-8600" className={inputCls} />
         </div>
 
         <div>

@@ -34,7 +34,10 @@ export default function StaggerReveal({
 
         if (cancelled) return;
 
-        const items = ref.current?.querySelectorAll(selector);
+        const items =
+          selector === "> *"
+            ? ref.current?.children
+            : ref.current?.querySelectorAll(selector);
         if (!items?.length) return;
 
         gsap.set(items, { opacity: 0, y: 30 });

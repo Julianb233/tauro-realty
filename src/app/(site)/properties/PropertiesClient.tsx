@@ -180,8 +180,8 @@ export default function PropertiesClient({
       <div className="border-b border-border bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
           <div className="min-w-0">
-            <h1 className="font-heading text-2xl font-bold text-foreground sm:text-3xl">Properties</h1>
-            <p className="mt-1 text-xs text-muted-foreground sm:text-sm">
+            <h1 className="font-heading text-2xl font-bold text-near-black sm:text-3xl">Properties</h1>
+            <p className="mt-1 text-xs text-gray-600 sm:text-sm">
               {filtered.length} {filtered.length === 1 ? "listing" : "listings"} available
             </p>
           </div>
@@ -193,7 +193,7 @@ export default function PropertiesClient({
                 className={cn(
                   "inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm font-medium transition-colors",
                   justSaved
-                    ? "border-green-300 bg-green-50 text-green-700"
+                    ? "border-gold/40 bg-gold/10 text-midnight"
                     : "border-gold/30 bg-gold/10 text-gold hover:bg-gold/20"
                 )}
               >
@@ -202,8 +202,8 @@ export default function PropertiesClient({
               </button>
             )}
           <div className="flex items-center gap-1 rounded-lg border border-border p-1">
-            <button onClick={() => setView("grid")} className={cn("rounded-md p-2.5 transition-colors", view === "grid" ? "bg-gold text-near-black" : "text-muted-foreground hover:text-foreground")} aria-label="Grid view"><LayoutGrid className="h-4 w-4" /></button>
-            <button onClick={() => setView("map")} className={cn("rounded-md p-2.5 transition-colors", view === "map" ? "bg-gold text-near-black" : "text-muted-foreground hover:text-foreground")} aria-label="Map view"><Map className="h-4 w-4" /></button>
+            <button onClick={() => setView("grid")} className={cn("rounded-md p-2.5 transition-colors", view === "grid" ? "bg-gold text-near-black" : "text-gray-500 hover:text-near-black")} aria-label="Grid view"><LayoutGrid className="h-4 w-4" /></button>
+            <button onClick={() => setView("map")} className={cn("rounded-md p-2.5 transition-colors", view === "map" ? "bg-gold text-near-black" : "text-gray-500 hover:text-near-black")} aria-label="Map view"><Map className="h-4 w-4" /></button>
           </div>
           </div>
         </div>
@@ -217,7 +217,7 @@ export default function PropertiesClient({
             </div>
           ) : (
             <div className="py-16 text-center sm:py-20">
-              <p className="text-base text-muted-foreground sm:text-lg">No properties match your filters.</p>
+              <p className="text-base text-gray-600 sm:text-lg">No properties match your filters.</p>
               <button onClick={clearFilters} className="mt-4 min-h-[44px] text-sm font-medium text-gold hover:text-gold-light">Clear all filters</button>
             </div>
           )
@@ -239,7 +239,7 @@ export default function PropertiesClient({
 
         {/* MLS Disclaimer */}
         <div className="mt-10 border-t border-border pt-6">
-          <p className="text-xs leading-relaxed text-muted-foreground">
+          <p className="text-xs leading-relaxed text-gray-600">
             Listing information deemed reliable but not guaranteed. All
             measurements are approximate. Data sourced from Bright MLS.
             Information is provided exclusively for consumers&apos; personal,

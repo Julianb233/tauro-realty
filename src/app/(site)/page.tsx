@@ -5,11 +5,12 @@ import StatsBar from "@/components/stats-bar";
 import FeaturedProperties from "@/components/featured-properties";
 import NeighborhoodShowcase from "@/components/neighborhood-showcase";
 import AreasWeServe from "@/components/areas-we-serve";
-import WhyTauro from "@/components/why-tauro";
+import WhyLyl from "@/components/why-lyl";
 import VideoShowcase from "@/components/VideoShowcase";
 import Testimonials from "@/components/testimonials";
 import FeaturedAgentSpotlight from "@/components/FeaturedAgentSpotlight";
 import HomepageCTAs from "@/components/homepage-ctas";
+import { siteBrand } from "@/lib/site-config";
 
 // Client components — lazy-loaded to reduce initial JS bundle and improve INP
 const SeasonalBanner = dynamic(() => import("@/components/SeasonalBanner"));
@@ -24,9 +25,9 @@ const NewsletterCTA = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: "Premium Philadelphia Real Estate",
+  title: siteBrand.category,
   description:
-    "Discover luxury homes in Philadelphia with Tauro. Browse premium properties, explore neighborhoods, and connect with top agents across Center City, Rittenhouse, Fishtown, and more.",
+    "Discover luxury homes in Philadelphia with LYL Realty Group. Browse premium properties, explore neighborhoods, and connect with expert agents across Center City, Rittenhouse, Fishtown, and more.",
 };
 
 export default function HomePage() {
@@ -40,7 +41,7 @@ export default function HomePage() {
       <div className="gold-divider mx-auto max-w-7xl" />
       <NeighborhoodShowcase />
       <AreasWeServe />
-      <WhyTauro />
+      <WhyLyl />
       <VideoShowcase />
       <div className="gold-divider mx-auto max-w-7xl" />
       <FeaturedAgentSpotlight />

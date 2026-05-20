@@ -28,12 +28,12 @@ export interface LeadPayload {
 }
 
 export const GHL_TAG_MAP: Record<LeadPayload["type"], string[]> = {
-  contact: ["website-contact", "tauro-lead"],
-  showing: ["showing-request", "tauro-lead", "buyer"],
-  seller: ["seller-lead", "tauro-lead", "seller"],
+  contact: ["website-contact", "lyl-realty-lead"],
+  showing: ["showing-request", "lyl-realty-lead", "buyer"],
+  seller: ["seller-lead", "lyl-realty-lead", "seller"],
   "agent-application": ["agent-application", "recruitment"],
-  "agent-contact": ["agent-contact", "tauro-lead"],
-  open_house_rsvp: ["open-house-rsvp", "tauro-lead"],
+  "agent-contact": ["agent-contact", "lyl-realty-lead"],
+  open_house_rsvp: ["open-house-rsvp", "lyl-realty-lead"],
 };
 
 export const GHL_FIELD_MAP: Record<string, string> = {
@@ -83,7 +83,7 @@ export function mapLeadToGhlContact(data: LeadPayload) {
     phone: data.phone,
     tags,
     customFields,
-    source: "Tauro Website",
+    source: "LYL Realty Website",
   };
 }
 

@@ -11,7 +11,7 @@ interface AuthModalProps {
   onClose: () => void;
 }
 
-const STORAGE_KEY = "tauro_user";
+const STORAGE_KEY = "lyl_user";
 
 export interface StoredUser {
   email: string;
@@ -110,7 +110,7 @@ export function AuthModal({ open, onClose }: AuthModalProps) {
         loggedInAt: new Date().toISOString(),
       };
       storeUser(user);
-      window.dispatchEvent(new Event("tauro-auth-change"));
+      window.dispatchEvent(new Event("lyl-auth-change"));
       onClose();
     } finally {
       setLoading(false);
@@ -126,7 +126,7 @@ export function AuthModal({ open, onClose }: AuthModalProps) {
       loggedInAt: new Date().toISOString(),
     };
     storeUser(user);
-    window.dispatchEvent(new Event("tauro-auth-change"));
+    window.dispatchEvent(new Event("lyl-auth-change"));
     setLoading(false);
     onClose();
   }
@@ -158,7 +158,7 @@ export function AuthModal({ open, onClose }: AuthModalProps) {
           <p className="mt-1 text-sm text-muted-foreground">
             {mode === "login"
               ? "Sign in to sync your favorites and saved searches"
-              : "Join Tauro to save properties and get alerts"}
+              : "Join LYL Realty Group to save properties and get alerts"}
           </p>
         </div>
 

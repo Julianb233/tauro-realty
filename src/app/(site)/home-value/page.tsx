@@ -48,7 +48,7 @@ const valueProps = [
   {
     icon: Clock,
     title: "24-Hour Response",
-    description: "A Tauro agent will deliver your personalized market analysis within one business day.",
+    description: "A LYL Realty Group agent will deliver your personalized market analysis within one business day.",
   },
   {
     icon: MapPin,
@@ -68,7 +68,7 @@ const steps = [
     icon: BarChart3,
     number: "02",
     title: "We Analyze the Market",
-    description: "A Tauro agent researches comparable sales, market trends, and neighborhood data.",
+    description: "A LYL Realty Group agent researches comparable sales, market trends, and neighborhood data.",
   },
   {
     icon: FileText,
@@ -159,7 +159,7 @@ export default function HomeValuePage() {
             <span className="text-gold">Find Out in 24 Hours.</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-white/90">
-            Get a no-obligation market analysis from a Tauro agent who knows your
+            Get a no-obligation market analysis from a LYL Realty Group agent who knows your
             neighborhood.
           </p>
         </div>
@@ -202,7 +202,7 @@ export default function HomeValuePage() {
               Request Your Valuation
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-              Tell us about your property and a Tauro agent will deliver a
+              Tell us about your property and a LYL Realty Group agent will deliver a
               personalized market analysis within 24 hours.
             </p>
           </div>
@@ -216,7 +216,7 @@ export default function HomeValuePage() {
                 Valuation Request Received!
               </h3>
               <p className="mt-3 max-w-sm text-muted-foreground">
-                A Tauro agent will analyze your property and deliver a
+                A LYL Realty Group agent will analyze your property and deliver a
                 comprehensive market report within 24 hours.
               </p>
               <div className="mt-8 flex gap-3">
@@ -351,7 +351,7 @@ export default function HomeValuePage() {
                   autoComplete="tel"
                   value={form.phone}
                   onChange={handleChange}
-                  placeholder="(215) 839-4172"
+                  placeholder="(267) 773-8600"
                     className="w-full rounded-lg border border-border/40 bg-white px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-gold/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/20"
                 />
               </div>

@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 
-const STORAGE_KEY = "tauro-a11y-prefs";
+const STORAGE_KEY = "lyl-a11y-prefs";
 
 interface A11yPrefs {
   fontSize: number; // 0 = default, 1 = large, 2 = x-large
@@ -12,7 +12,7 @@ interface A11yPrefs {
 
 const defaultPrefs: A11yPrefs = {
   fontSize: 0,
-  highContrast: false,
+  highContrast: true,
   reduceMotion: false,
 };
 
@@ -57,16 +57,12 @@ function applyPrefs(prefs: A11yPrefs) {
 
 export default function AccessibilityWidget() {
   const [open, setOpen] = useState(false);
-  const [prefs, setPrefs] = useState<A11yPrefs>(defaultPrefs);
-  const [mounted, setMounted] = useState(false);
+  const [prefs, setPrefs] = useState<A11yPrefs>(() => loadPrefs());
 
-  // Load and apply prefs on mount
+  // Apply prefs on mount and whenever a control changes.
   useEffect(() => {
-    const stored = loadPrefs();
-    setPrefs(stored);
-    applyPrefs(stored);
-    setMounted(true);
-  }, []);
+    applyPrefs(prefs);
+  }, [prefs]);
 
   const updatePrefs = useCallback((next: A11yPrefs) => {
     setPrefs(next);
@@ -106,8 +102,6 @@ export default function AccessibilityWidget() {
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [open]);
-
-  if (!mounted) return null;
 
   return (
     <div className="fixed bottom-6 left-6 z-[9998] no-print">

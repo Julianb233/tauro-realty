@@ -20,9 +20,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqAccordion } from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Buyer's Guide | Tauro Realty",
+  title: "Buyer's Guide | LYL Realty Group",
   description:
-    "Your complete guide to buying a home in Philadelphia. Learn the step-by-step process, first-time buyer tips, financing options, and how Tauro Realty helps you find the perfect home.",
+    "Your complete guide to buying a home in Philadelphia. Learn the step-by-step process, first-time buyer tips, financing options, and how LYL Realty Group helps you find the perfect home.",
 };
 
 const buyingSteps = [
@@ -37,7 +37,7 @@ const buyingSteps = [
     step: 2,
     title: "Find the Right Real Estate Agent",
     description:
-      "Partner with an agent who knows Philadelphia inside and out. Tauro agents specialize in Philly neighborhoods from Center City to Chestnut Hill, giving you hyperlocal insight on property values, school districts, and market trends that online searches can't match.",
+      "Partner with an agent who knows Philadelphia inside and out. LYL agents specialize in Philly neighborhoods from Center City to Chestnut Hill, giving you hyperlocal insight on property values, school districts, and market trends that online searches can't match.",
     timeline: "1–3 days",
   },
   {
@@ -133,7 +133,7 @@ const buyerFaqs = [
   {
     question: "Do I need a real estate agent to buy a home?",
     answer:
-      "While not legally required, having an experienced buyer's agent is strongly recommended. Your agent provides market expertise, negotiation skills, and guidance through complex paperwork—at no cost to you, since the seller typically pays both agents' commissions. A Tauro agent's local Philadelphia knowledge is especially valuable in navigating neighborhood dynamics and pricing.",
+      "While not legally required, having an experienced buyer's agent is strongly recommended. Your agent provides market expertise, negotiation skills, and guidance through complex paperwork—at no cost to you, since the seller typically pays both agents' commissions. A LYL agent's local Philadelphia knowledge is especially valuable in navigating neighborhood dynamics and pricing.",
   },
   {
     question: "What credit score do I need to buy a home?",
@@ -160,7 +160,7 @@ export default function BuyersGuidePage() {
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/80">
             From pre-approval to closing day, navigate every step of the home
-            buying process with confidence. Tauro agents are with you the entire
+            buying process with confidence. LYL agents are with you the entire
             way.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -534,7 +534,7 @@ export default function BuyersGuidePage() {
               </h2>
               <p className="mt-4 max-w-lg leading-relaxed text-white/70">
                 Whether you&apos;re a first-time buyer or a seasoned investor,
-                Tauro agents are ready to help you find the perfect Philadelphia
+                LYL agents are ready to help you find the perfect Philadelphia
                 home. Get personalized guidance from day one.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -584,18 +584,18 @@ export default function BuyersGuidePage() {
                   T
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">Tauro Realty Team</p>
+                  <p className="text-sm font-semibold text-white">LYL Realty Group Team</p>
                   <p className="mt-0.5 text-xs text-white/50">Philadelphia&apos;s Premier Real Estate Experts</p>
                   <div className="mt-2 flex items-center gap-4">
                     <a
-                      href="tel:+12155551234"
+                      href="tel:+12677738600"
                       className="inline-flex items-center gap-1.5 text-xs text-gold transition-colors hover:text-gold-light"
                     >
                       <Phone className="size-3" />
                       Contact Us
                     </a>
                     <a
-                      href="mailto:info@taurorealty.com"
+                      href="mailto:info@lylrealty.com"
                       className="inline-flex items-center gap-1.5 text-xs text-gold transition-colors hover:text-gold-light"
                     >
                       <Mail className="size-3" />

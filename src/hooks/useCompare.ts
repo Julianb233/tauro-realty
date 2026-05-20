@@ -2,7 +2,7 @@
 
 import { useCallback, useSyncExternalStore } from "react";
 
-const STORAGE_KEY = "tauro_compare";
+const STORAGE_KEY = "lyl_compare";
 const MAX_ITEMS = 3;
 
 // ---- tiny pub/sub so every hook instance stays in sync ----
@@ -32,6 +32,7 @@ function writeIds(ids: string[]) {
 
 // snapshot reference must be stable when data hasn't changed
 let cachedSnapshot: string[] = [];
+const EMPTY: string[] = [];
 function getSnapshot(): string[] {
   const next = readIds();
   if (
@@ -45,7 +46,7 @@ function getSnapshot(): string[] {
 }
 
 function getServerSnapshot(): string[] {
-  return [];
+  return EMPTY;
 }
 
 export function useCompare() {

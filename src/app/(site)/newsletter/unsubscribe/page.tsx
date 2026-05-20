@@ -46,13 +46,13 @@ function UnsubscribeContent() {
       <div className="flex min-h-[60vh] items-center justify-center px-4">
         <div className="max-w-md text-center">
           <div className="mb-6 flex justify-center">
-            <CheckCircle className="size-16 text-green-400" />
+            <CheckCircle className="size-16 text-gold" />
           </div>
           <h1 className="mb-4 font-heading text-3xl font-bold text-near-black">
             Welcome Back!
           </h1>
           <p className="mb-8 text-muted-foreground">
-            You've been resubscribed to the Tauro Realty newsletter.
+            You've been resubscribed to the LYL Realty Group newsletter.
           </p>
           <Link
             href="/"
@@ -67,7 +67,7 @@ function UnsubscribeContent() {
 
   const states = {
     success: {
-      icon: <CheckCircle className="size-16 text-green-400" />,
+      icon: <CheckCircle className="size-16 text-gold" />,
       title: "Unsubscribed",
       description:
         "You've been removed from our newsletter. You won't receive any more emails from us.",

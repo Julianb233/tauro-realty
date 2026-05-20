@@ -205,12 +205,12 @@ export default function GlobalError({
           }}
         >
           Need help? Call{" "}
-          <a href="tel:+12158394172" style={{ color: "rgba(201, 169, 110, 0.8)", textDecoration: "underline", textUnderlineOffset: "4px" }}>
-            (215) 839-4172
+          <a href="tel:+12677738600" style={{ color: "rgba(201, 169, 110, 0.8)", textDecoration: "underline", textUnderlineOffset: "4px" }}>
+            (267) 773-8600
           </a>
           {" "}or email{" "}
-          <a href="mailto:info@taurorealty.com" style={{ color: "rgba(201, 169, 110, 0.8)", textDecoration: "underline", textUnderlineOffset: "4px" }}>
-            info@taurorealty.com
+          <a href="mailto:info@lylrealty.com" style={{ color: "rgba(201, 169, 110, 0.8)", textDecoration: "underline", textUnderlineOffset: "4px" }}>
+            info@lylrealty.com
           </a>
         </p>
 

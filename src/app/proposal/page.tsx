@@ -6,7 +6,7 @@ import { useState } from "react";
 /*  Constants                                                          */
 /* ------------------------------------------------------------------ */
 
-const PAYMENT_URL = "https://www.fanbasis.com/agency-checkout/Aiacrobatics/TAURO";
+const PAYMENT_URL = "https://www.fanbasis.com/agency-checkout/Aiacrobatics/LYL";
 const CONTACT_EMAIL = "julian@aiacrobatics.com";
 const CONTACT_PHONE = "619-848-0945";
 
@@ -18,7 +18,7 @@ const scopePillars = [
   {
     icon: "🌐",
     title: "Custom Website",
-    summary: "Premium Next.js site with your Tauro brand, property listings, neighborhood pages, and lead capture.",
+    summary: "Premium Next.js site with your LYL Realty Group brand, property listings, neighborhood pages, and lead capture.",
     items: [
       "8+ custom pages (Home, Properties, Agents, Neighborhoods, Contact, etc.)",
       "Property listing grid with filters and detail pages",
@@ -207,7 +207,7 @@ export default function ProposalPage() {
       <nav className="fixed top-0 right-0 left-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
           <span className="font-heading text-xl font-bold tracking-wide text-gold">
-            TAURO
+            LYL
           </span>
           <div className="hidden gap-6 text-sm text-muted-foreground md:flex">
             <a href="#scope" className="transition-colors hover:text-gold">Scope</a>
@@ -242,7 +242,7 @@ export default function ProposalPage() {
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
             A premium website, CRM system, and marketing engine built to
-            position Tauro as Philadelphia&apos;s most recognizable luxury
+            position LYL Realty Group as Philadelphia&apos;s most recognizable luxury
             brokerage.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -395,7 +395,7 @@ export default function ProposalPage() {
             <div className="absolute -top-3 right-6 rounded-full bg-gold px-4 py-1 text-xs font-bold text-near-black">
               YOUR PRICE
             </div>
-            <p className="text-sm font-medium text-gold">Tauro Build Package</p>
+            <p className="text-sm font-medium text-gold">LYL Realty Group Build Package</p>
             <p className="mt-2 font-heading text-5xl font-bold text-foreground">
               $5,500
             </p>
@@ -527,7 +527,7 @@ export default function ProposalPage() {
         <div className="mx-auto max-w-2xl">
           <h2 className="font-heading text-3xl font-bold md:text-4xl">
             Ready to Build{" "}
-            <span className="text-gold">Tauro</span>?
+            <span className="text-gold">LYL Realty Group</span>?
           </h2>
           <p className="mt-4 text-muted-foreground">
             Secure your build slot and let&apos;s create the digital presence

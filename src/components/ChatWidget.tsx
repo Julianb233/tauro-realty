@@ -161,7 +161,7 @@ export function ChatWidget() {
             {
               role: "assistant",
               content:
-                "I'm having trouble connecting right now. Please call us at **(215) 839-4172** or visit /contact.",
+                "I'm having trouble connecting right now. Please call us at **(267) 773-8600** or visit /contact.",
             },
           ]);
         }
@@ -171,7 +171,7 @@ export function ChatWidget() {
           {
             role: "assistant",
             content:
-              "I'm having trouble connecting right now. Please call us at **(215) 839-4172** or visit /contact.",
+              "I'm having trouble connecting right now. Please call us at **(267) 773-8600** or visit /contact.",
           },
         ]);
       } finally {
@@ -207,7 +207,7 @@ export function ChatWidget() {
         <button
           onClick={() => setOpen(true)}
           className="fixed bottom-6 right-6 z-[9997] flex h-12 w-12 items-center justify-center rounded-full bg-midnight text-gold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
-          aria-label="Chat with Tauro AI"
+          aria-label="Chat with LYL AI"
         >
           <MessageCircle className="size-5" strokeWidth={2} />
         </button>
@@ -221,8 +221,8 @@ export function ChatWidget() {
             <div className="flex items-center gap-3">
               <div className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-gold/30 bg-midnight">
                 <Image
-                  src="/tauro-logo-white.png"
-                  alt="Tauro"
+                  src="/brand/lyl-realty-group-logo-cropped.png"
+                  alt="LYL Realty Group"
                   fill
                   className="object-contain p-1"
                   sizes="40px"
@@ -230,15 +230,15 @@ export function ChatWidget() {
               </div>
               <div>
                 <h3 className="flex items-center gap-1.5 text-sm font-semibold text-white">
-                  Tauro AI
+                  LYL AI
                   <span className="inline-flex items-center rounded-full bg-gold/20 px-1.5 py-0.5 text-[10px] font-medium text-gold">
                     PRO
                   </span>
                 </h3>
                 <div className="flex items-center gap-1.5">
                   <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-gold/100" />
                   </span>
                   <p className="text-[11px] text-white/90">
                     {loading ? "Typing a response..." : "Online now"}
@@ -268,7 +268,7 @@ export function ChatWidget() {
           </div>
 
           {/* Messages area */}
-          <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-gradient-to-b from-cream/40 to-white">
+          <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-gradient-to-b from-cream/80 to-white text-midnight">
             {/* Welcome state */}
             {messages.length === 0 && (
               <div className="space-y-4">
@@ -294,12 +294,12 @@ export function ChatWidget() {
                     <button
                       key={action.label}
                       onClick={() => sendMessage(action.prompt)}
-                      className="group flex items-center gap-2.5 rounded-xl border border-border/40 bg-white p-3.5 text-left transition-all hover:border-gold/50 hover:shadow-md hover:shadow-gold/5 hover:-translate-y-0.5"
+                      className="group flex items-center gap-2.5 rounded-xl border border-midnight/20 bg-white p-3.5 text-left text-midnight shadow-sm transition-all hover:-translate-y-0.5 hover:border-gold/60 hover:shadow-md hover:shadow-gold/10"
                     >
                       <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gold/10 transition-colors group-hover:bg-gold/20">
                         <action.icon className="size-4 text-gold" />
                       </div>
-                      <span className="text-xs font-medium text-foreground/70 group-hover:text-foreground">
+                      <span className="text-xs font-semibold leading-tight text-midnight/80 group-hover:text-midnight">
                         {action.label}
                       </span>
                     </button>
@@ -323,7 +323,7 @@ export function ChatWidget() {
                   className={`max-w-[80%] rounded-2xl px-4 py-3 text-[13px] leading-relaxed ${
                     msg.role === "user"
                       ? "bg-midnight text-white rounded-br-md"
-                      : "bg-white text-foreground shadow-sm border border-border/20 rounded-bl-md"
+                      : "bg-white text-midnight shadow-sm border border-midnight/15 rounded-bl-md"
                   }`}
                 >
                   {renderContent(msg.content)}
@@ -337,7 +337,7 @@ export function ChatWidget() {
                 <div className="mr-2 mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/10">
                   <Sparkles className="size-3.5 text-gold" />
                 </div>
-                <div className="flex items-center gap-1.5 rounded-2xl bg-white px-4 py-3 shadow-sm border border-border/20">
+                <div className="flex items-center gap-1.5 rounded-2xl bg-white px-4 py-3 shadow-sm border border-midnight/15">
                   <div className="flex gap-1">
                     <span className="h-2 w-2 rounded-full bg-gold/60 animate-bounce [animation-delay:0ms]" />
                     <span className="h-2 w-2 rounded-full bg-gold/60 animate-bounce [animation-delay:150ms]" />
@@ -351,10 +351,10 @@ export function ChatWidget() {
           </div>
 
           {/* Input area */}
-          <div className="border-t border-border/20 bg-white px-3 py-3">
+          <div className="border-t border-midnight/15 bg-white px-3 py-3">
             <form
               onSubmit={handleSubmit}
-              className="flex items-end gap-2 rounded-xl border border-border/40 bg-cream/30 px-3 py-2 transition-colors focus-within:border-gold/50 focus-within:ring-2 focus-within:ring-gold/10"
+              className="flex items-end gap-2 rounded-xl border border-midnight/20 bg-cream/70 px-3 py-2 transition-colors focus-within:border-gold/60 focus-within:ring-2 focus-within:ring-gold/10"
             >
               <textarea
                 ref={inputRef}
@@ -369,7 +369,7 @@ export function ChatWidget() {
                 placeholder="Ask me anything about Philly real estate..."
                 disabled={loading}
                 rows={1}
-                className="flex-1 resize-none bg-transparent text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none disabled:opacity-50"
+                className="flex-1 resize-none bg-transparent text-sm text-midnight placeholder:text-midnight/45 focus:outline-none disabled:opacity-50"
                 style={{ maxHeight: "80px" }}
               />
               <button
@@ -381,7 +381,7 @@ export function ChatWidget() {
                 <Send className="size-3.5" />
               </button>
             </form>
-            <p className="mt-1.5 text-center text-[10px] text-muted-foreground/40">
+            <p className="mt-1.5 text-center text-[10px] text-midnight/45">
               AI assistant — for formal advice, contact our team directly
             </p>
           </div>

@@ -15,10 +15,10 @@ const authListeners = new Set<() => void>();
 function subscribeAuth(cb: () => void) {
   authListeners.add(cb);
   const handler = () => authListeners.forEach((l) => l());
-  window.addEventListener("tauro-auth-change", handler);
+  window.addEventListener("lyl-auth-change", handler);
   return () => {
     authListeners.delete(cb);
-    window.removeEventListener("tauro-auth-change", handler);
+    window.removeEventListener("lyl-auth-change", handler);
   };
 }
 function getAuthSnapshot(): StoredUser | null {
@@ -43,7 +43,7 @@ export function Navbar() {
 
   const handleSignOut = useCallback(() => {
     clearStoredUser();
-    window.dispatchEvent(new Event("tauro-auth-change"));
+    window.dispatchEvent(new Event("lyl-auth-change"));
   }, []);
 
   // Escape key closes overlay
@@ -71,12 +71,15 @@ export function Navbar() {
           "fixed top-0 z-50 w-full transition-all duration-300",
           scrolled
             ? "border-b border-white/10 bg-midnight/95 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.15)]"
-            : "bg-transparent"
+            : "bg-gradient-to-b from-midnight/80 via-midnight/45 to-transparent backdrop-blur-[2px]"
         )}
       >
         <nav aria-label="Main navigation" className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50 focus-visible:ring-offset-2">
+          <Link
+            href="/"
+            className="flex items-center rounded-md px-1.5 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50 focus-visible:ring-offset-2 focus-visible:ring-offset-midnight"
+          >
             <Logo size="sm" variant="light" />
           </Link>
 
@@ -108,11 +111,11 @@ export function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden items-center gap-3 lg:flex">
             <a
-              href="tel:+12158394172"
+              href="tel:+12677738600"
               className="flex items-center gap-1.5 rounded-md text-sm text-white transition-all duration-300 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50 focus-visible:ring-offset-2"
             >
               <Phone className="size-4" />
-              <span>(215) 839-4172</span>
+              <span>(267) 773-8600</span>
             </a>
 
             <ThemeToggle className="text-white" />
@@ -141,7 +144,7 @@ export function Navbar() {
             )}
 
             <Link
-              href="/contact"
+              href="/book-tour"
               className="shimmer-gold inline-flex items-center justify-center rounded-lg bg-gold px-4 py-2 text-sm font-label uppercase tracking-wide text-near-black transition-all duration-300 hover:bg-gold-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50 focus-visible:ring-offset-2"
             >
               Schedule a Showing
@@ -228,18 +231,18 @@ export function Navbar() {
               </button>
             )}
             <Link
-              href="/contact"
+              href="/book-tour"
               className="shimmer-gold rounded-md bg-gold px-8 py-3 font-label text-lg font-semibold text-near-black transition-colors hover:bg-gold-light"
               onClick={() => setMobileOpen(false)}
             >
               Schedule a Showing
             </Link>
             <a
-              href="tel:+12158394172"
+              href="tel:+12677738600"
               className="flex items-center gap-2 text-sm text-white hover:text-gold"
             >
               <Phone className="size-4" />
-              (215) 839-4172
+              (267) 773-8600
             </a>
           </div>
         </div>

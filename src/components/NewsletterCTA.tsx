@@ -12,7 +12,7 @@ interface NewsletterCTAProps {
 
 /**
  * Newsletter CTA section for homepage, blog posts, and content pages.
- * Matches the Tauro brand: midnight/gold/cream palette.
+ * Matches the LYL Realty Group brand: midnight/gold/cream palette.
  */
 export function NewsletterCTA({ variant = "homepage", source }: NewsletterCTAProps) {
   if (variant === "inline") {

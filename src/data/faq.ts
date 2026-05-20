@@ -7,7 +7,7 @@ export const buyerFaqs: FaqItem[] = [
   {
     question: "How much do I need for a down payment?",
     answer:
-      "It depends on the loan type. Conventional mortgages typically require 3-20% down. FHA loans require as little as 3.5%, and VA loans offer 0% down for eligible veterans. Pennsylvania also has first-time buyer assistance programs that can help with down payment and closing costs. A Tauro agent can connect you with trusted lenders who specialize in these programs.",
+      "It depends on the loan type. Conventional mortgages typically require 3-20% down. FHA loans require as little as 3.5%, and VA loans offer 0% down for eligible veterans. Pennsylvania also has first-time buyer assistance programs that can help with down payment and closing costs. A LYL agent can connect you with trusted lenders who specialize in these programs.",
   },
   {
     question: "How long does the home buying process take?",
@@ -45,32 +45,32 @@ export const sellerFaqs: FaqItem[] = [
   {
     question: "How much is my home worth?",
     answer:
-      "Home value depends on location, condition, recent comparable sales, and current market conditions. A Tauro agent will prepare a Comparative Market Analysis (CMA) that examines recent sales of similar homes in your neighborhood to determine an accurate market value. Get a free, no-obligation valuation on our home value page.",
+      "Home value depends on location, condition, recent comparable sales, and current market conditions. A LYL agent will prepare a Comparative Market Analysis (CMA) that examines recent sales of similar homes in your neighborhood to determine an accurate market value. Get a free, no-obligation valuation on our home value page.",
   },
   {
     question: "When is the best time to sell a home in Philadelphia?",
     answer:
-      "Spring (March through May) and early fall (September through October) typically see the highest buyer activity in Philadelphia. However, well-priced homes in desirable neighborhoods sell year-round. Listing during lower-inventory periods can mean less competition. Your Tauro agent will analyze current market conditions to recommend the optimal timing for your specific situation.",
+      "Spring (March through May) and early fall (September through October) typically see the highest buyer activity in Philadelphia. However, well-priced homes in desirable neighborhoods sell year-round. Listing during lower-inventory periods can mean less competition. Your LYL agent will analyze current market conditions to recommend the optimal timing for your specific situation.",
   },
   {
-    question: "How does Tauro determine my listing price?",
+    question: "How does LYL Realty Group determine my listing price?",
     answer:
-      "Tauro agents prepare a detailed Comparative Market Analysis (CMA) that examines recently sold homes, active listings, expired listings, and market absorption rates in your neighborhood. We factor in your home's unique features, condition, and upgrades to recommend a strategic price that attracts maximum buyer interest while protecting your bottom line.",
+      "LYL agents prepare a detailed Comparative Market Analysis (CMA) that examines recently sold homes, active listings, expired listings, and market absorption rates in your neighborhood. We factor in your home's unique features, condition, and upgrades to recommend a strategic price that attracts maximum buyer interest while protecting your bottom line.",
   },
   {
     question: "Is staging really worth the investment?",
     answer:
-      "Yes. According to the National Association of Realtors, staged homes sell 73% faster and for 6-10% more than non-staged homes. Even simple improvements like decluttering, fresh paint, and strategic furniture placement make a significant difference. Tauro provides staging consultations to help you prioritize the highest-impact changes.",
+      "Yes. According to the National Association of Realtors, staged homes sell 73% faster and for 6-10% more than non-staged homes. Even simple improvements like decluttering, fresh paint, and strategic furniture placement make a significant difference. LYL Realty Group provides staging consultations to help you prioritize the highest-impact changes.",
   },
   {
-    question: "What does Tauro charge in commission?",
+    question: "What does LYL Realty Group charge in commission?",
     answer:
-      "Tauro offers competitive commission rates tailored to your property and situation. Our commission covers professional photography, 3D tours, targeted digital marketing, MLS listing, open houses, and expert negotiation. We believe in transparent pricing and will discuss all costs upfront during your listing consultation.",
+      "LYL Realty Group offers competitive commission rates tailored to your property and situation. Our commission covers professional photography, 3D tours, targeted digital marketing, MLS listing, open houses, and expert negotiation. We believe in transparent pricing and will discuss all costs upfront during your listing consultation.",
   },
   {
     question: "What disclosures am I required to make as a seller?",
     answer:
-      "Pennsylvania law requires sellers to complete a Seller's Disclosure Statement covering known material defects, including structural issues, water damage, lead paint (for homes built before 1978), environmental hazards, and property boundary disputes. Full disclosure protects you from future legal liability. Your Tauro agent will guide you through every required form.",
+      "Pennsylvania law requires sellers to complete a Seller's Disclosure Statement covering known material defects, including structural issues, water damage, lead paint (for homes built before 1978), environmental hazards, and property boundary disputes. Full disclosure protects you from future legal liability. Your LYL agent will guide you through every required form.",
   },
   {
     question: "How long will it take to sell my home?",
@@ -81,23 +81,23 @@ export const sellerFaqs: FaqItem[] = [
 
 export const generalFaqs: FaqItem[] = [
   {
-    question: "What makes Tauro different from other brokerages?",
+    question: "What makes LYL Realty Group different from other brokerages?",
     answer:
-      "Tauro combines hyperlocal Philadelphia market expertise with premium marketing, data-driven pricing, and concierge-level service. With $2.1B+ in total sales volume and a 98% client satisfaction rate, our agents deliver results. Every listing receives professional photography, 3D tours, targeted digital campaigns, and hands-on negotiation support.",
+      "LYL Realty Group combines hyperlocal Philadelphia market expertise with premium marketing, data-driven pricing, and concierge-level service. With $2.1B+ in total sales volume and a 98% client satisfaction rate, our agents deliver results. Every listing receives professional photography, 3D tours, targeted digital campaigns, and hands-on negotiation support.",
   },
   {
     question: "What is the current Philadelphia real estate market like?",
     answer:
-      "Philadelphia's real estate market offers diverse opportunities across its many neighborhoods. From the historic row homes of Society Hill to the modern condos of Fishtown, each area has its own micro-market dynamics. Inventory levels, median prices, and days on market vary significantly by neighborhood. Contact a Tauro agent for a current market briefing tailored to your area of interest.",
+      "Philadelphia's real estate market offers diverse opportunities across its many neighborhoods. From the historic row homes of Society Hill to the modern condos of Fishtown, each area has its own micro-market dynamics. Inventory levels, median prices, and days on market vary significantly by neighborhood. Contact a LYL agent for a current market briefing tailored to your area of interest.",
   },
   {
-    question: "How do I get started with Tauro?",
+    question: "How do I get started with LYL Realty Group?",
     answer:
       "Getting started is easy. You can contact us through our website, call our office, or visit us in person. For buyers, we'll schedule a consultation to discuss your goals, timeline, and budget, then match you with an agent who specializes in your target neighborhoods. For sellers, we'll arrange a free home valuation and listing consultation.",
   },
   {
-    question: "What areas does Tauro serve?",
+    question: "What areas does LYL Realty Group serve?",
     answer:
-      "Tauro serves all of Philadelphia and the surrounding suburbs, including neighborhoods like Center City, Rittenhouse Square, Fishtown, Northern Liberties, Graduate Hospital, South Philadelphia, Chestnut Hill, Mount Airy, Manayunk, and the Main Line. Our agents are neighborhood specialists who live and work in the communities they serve.",
+      "LYL Realty Group serves all of Philadelphia and the surrounding suburbs, including neighborhoods like Center City, Rittenhouse Square, Fishtown, Northern Liberties, Graduate Hospital, South Philadelphia, Chestnut Hill, Mount Airy, Manayunk, and the Main Line. Our agents are neighborhood specialists who live and work in the communities they serve.",
   },
 ];

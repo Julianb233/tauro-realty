@@ -10,7 +10,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Our Agents",
   description:
-    "Meet the Tauro Realty team of expert Philadelphia real estate agents. Local market specialists across Rittenhouse, Center City, Fishtown, and all neighborhoods. Find your perfect agent today.",
+    "Meet the LYL Realty Group team of expert Philadelphia real estate agents. Local market specialists across Rittenhouse, Center City, Fishtown, and all neighborhoods. Find your perfect agent today.",
 };
 
 export default async function AgentsPage() {
@@ -27,7 +27,7 @@ export default async function AgentsPage() {
           <div className="mb-4 h-px w-16 bg-gold/60" />
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-gold">Our Team</p>
           <h1 className="mt-3 font-heading text-4xl font-bold text-white sm:text-5xl lg:text-6xl">Philadelphia&apos;s <em>Finest</em> Real Estate Professionals</h1>
-          <p className="mt-4 max-w-xl text-lg text-white/90">Each Tauro agent is hand-selected for their market expertise, negotiation skill, and unwavering commitment to client success.</p>
+          <p className="mt-4 max-w-xl text-lg text-white/90">Each LYL Realty Group agent is hand-selected for their market expertise, negotiation skill, and unwavering commitment to client success.</p>
           <div className="mt-8 flex gap-8">
             <div><p className="font-heading text-2xl font-bold text-gold">{totalSold}+</p><p className="mt-1 text-xs uppercase tracking-wider text-white/90">Properties Sold</p></div>
             <div><p className="font-heading text-2xl font-bold text-gold">$500M+</p><p className="mt-1 text-xs uppercase tracking-wider text-white/90">Total Volume</p></div>
@@ -44,7 +44,7 @@ export default async function AgentsPage() {
       <section className="bg-cream pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-border/40 bg-white p-12 text-center">
-            <h2 className="font-heading text-3xl font-bold text-foreground">Interested in Joining Tauro?</h2>
+            <h2 className="font-heading text-3xl font-bold text-foreground">Interested in Joining LYL Realty Group?</h2>
             <p className="mx-auto mt-4 max-w-lg text-muted-foreground">We&apos;re always looking for exceptional agents who share our commitment to excellence.</p>
             <Link href="/join" className="shimmer-gold mt-8 inline-flex items-center gap-2 rounded-lg bg-gold px-8 py-3 text-sm font-semibold text-near-black transition-colors hover:bg-gold-light">Learn More<ArrowRight className="size-4" /></Link>
           </div>

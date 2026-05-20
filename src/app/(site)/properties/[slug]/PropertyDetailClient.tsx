@@ -205,7 +205,7 @@ export default function PropertyDetailClient({
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `tauro-${property.slug}.pdf`;
+      a.download = `lyl-realty-${property.slug}.pdf`;
       a.click();
       URL.revokeObjectURL(url);
     } catch {
@@ -316,9 +316,9 @@ export default function PropertyDetailClient({
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "2px solid #C9A96E", paddingBottom: "12px", marginBottom: "20px" }}>
           <Logo size="md" variant="dark" />
           <div style={{ textAlign: "right", fontSize: "10pt" }}>
-            <div style={{ fontWeight: 600 }}>Tauro Realty</div>
-            <div>info@taurorealty.com</div>
-            <div>(215) 839-4172</div>
+            <div style={{ fontWeight: 600 }}>LYL Realty Group</div>
+            <div>info@lylrealty.com</div>
+            <div>(267) 773-8600</div>
           </div>
         </div>
 
@@ -384,7 +384,7 @@ export default function PropertyDetailClient({
             <QRCodeSVG url={listingUrl} size={80} />
           </div>
           <div style={{ textAlign: "right" }}>
-            <p style={{ fontSize: "10pt", fontWeight: 600, margin: 0 }}>taurorealty.com</p>
+            <p style={{ fontSize: "10pt", fontWeight: 600, margin: 0 }}>lylrealty.com</p>
             <p style={{ fontSize: "8pt", color: "#888", margin: "2px 0 0" }}>{listingUrl}</p>
           </div>
         </div>
@@ -415,8 +415,8 @@ export default function PropertyDetailClient({
                 <div className="w-full max-w-md rounded-2xl border border-gold/30 bg-white/95 p-8 shadow-2xl backdrop-blur-sm">
                   {earlyAccessSuccess ? (
                     <div className="text-center">
-                      <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600/20">
-                        <Check className="h-7 w-7 text-emerald-500" />
+                      <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gold/15">
+                        <Check className="h-7 w-7 text-gold" />
                       </div>
                       <h3 className="font-heading text-xl font-bold">You are on the list!</h3>
                       <p className="mt-2 text-sm text-muted-foreground">
@@ -579,7 +579,7 @@ export default function PropertyDetailClient({
                 <span
                   className={cn(
                     "rounded-md px-2.5 py-1 text-xs font-semibold uppercase tracking-wide",
-                    property.status === "Active" && "bg-emerald-600/20 text-emerald-400",
+                    property.status === "Active" && "bg-gold/15 text-gold",
                     property.status === "New" && "bg-gold/20 text-gold",
                     property.status === "Open House" && "bg-blue-600/20 text-blue-400",
                     property.status === "Pending" && "bg-orange-500/20 text-orange-400",
@@ -852,8 +852,8 @@ export default function PropertyDetailClient({
             <div id="schedule" className="rounded-xl border border-border bg-card p-6">
               {submitSuccess ? (
                 <div className="text-center">
-                  <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600/20">
-                    <Check className="h-6 w-6 text-emerald-400" />
+                  <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-gold/15">
+                    <Check className="h-6 w-6 text-gold" />
                   </div>
                   <h3 className="font-heading text-lg font-bold">Request Submitted</h3>
                   <p className="mt-2 text-sm text-muted-foreground">

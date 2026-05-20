@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
     // Track download (best-effort, non-blocking)
     trackBrochureDownload(property.slug).catch(() => {});
 
-    const filename = `tauro-${property.slug}.pdf`;
+    const filename = `lyl-realty-${property.slug}.pdf`;
     // Slice to exact bounds — Buffer may share a larger ArrayBuffer
     const arrayBuffer = pdfBuffer.buffer.slice(pdfBuffer.byteOffset, pdfBuffer.byteOffset + pdfBuffer.byteLength) as ArrayBuffer;
     return new Response(arrayBuffer, {

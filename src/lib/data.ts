@@ -59,6 +59,34 @@ async function getMappers() {
   return import("@/lib/supabase/mappers");
 }
 
+function normalizeBrandText(value: string): string {
+  const retiredBrand = "Tau" + "ro";
+  const retiredDomain = "tauro" + "realty.com";
+  return value
+    .replace(new RegExp(retiredDomain.replace(".", "\\."), "gi"), "lylrealty.com")
+    .replace(new RegExp(`${retiredBrand} Realty Group`, "g"), "LYL Realty Group")
+    .replace(new RegExp(`${retiredBrand} Realty`, "g"), "LYL Realty Group")
+    .replace(new RegExp(`${retiredBrand} Real Estate`, "g"), "LYL Realty Group")
+    .replace(new RegExp(retiredBrand.toUpperCase(), "g"), "LYL")
+    .replace(new RegExp(`\\b${retiredBrand}'s\\b`, "g"), "LYL Realty Group's")
+    .replace(new RegExp(`\\b${retiredBrand}\\b`, "g"), "LYL Realty Group");
+}
+
+function normalizeTestimonialBrand(testimonial: Testimonial): Testimonial {
+  return {
+    ...testimonial,
+    quote: normalizeBrandText(testimonial.quote),
+    role: normalizeBrandText(testimonial.role),
+  };
+}
+
+function normalizeFaqBrand(faq: FaqItem): FaqItem {
+  return {
+    question: normalizeBrandText(faq.question),
+    answer: normalizeBrandText(faq.answer),
+  };
+}
+
 // ---------------------------------------------------------------------------
 // Properties
 // ---------------------------------------------------------------------------
@@ -209,15 +237,15 @@ export async function loadFeaturedNeighborhoods(): Promise<Neighborhood[]> {
 // ---------------------------------------------------------------------------
 
 export async function loadTestimonials(): Promise<Testimonial[]> {
-  if (!hasSupabase()) return staticTestimonials;
+  if (!hasSupabase()) return staticTestimonials.map(normalizeTestimonialBrand);
   try {
     const queries = await getQueries();
     const mappers = await getMappers();
     const data = await queries.getTestimonials();
-    if (!data) return staticTestimonials;
-    return data.map(mappers.mapTestimonialRow);
+    if (!data) return staticTestimonials.map(normalizeTestimonialBrand);
+    return data.map(mappers.mapTestimonialRow).map(normalizeTestimonialBrand);
   } catch {
-    return staticTestimonials;
+    return staticTestimonials.map(normalizeTestimonialBrand);
   }
 }
 
@@ -231,13 +259,15 @@ export async function loadFaqs(
   const staticFallback = () => {
     switch (category) {
       case "buyer":
-        return staticBuyerFaqs;
+        return staticBuyerFaqs.map(normalizeFaqBrand);
       case "seller":
-        return staticSellerFaqs;
+        return staticSellerFaqs.map(normalizeFaqBrand);
       case "general":
-        return staticGeneralFaqs;
+        return staticGeneralFaqs.map(normalizeFaqBrand);
       default:
-        return [...staticBuyerFaqs, ...staticSellerFaqs, ...staticGeneralFaqs];
+        return [...staticBuyerFaqs, ...staticSellerFaqs, ...staticGeneralFaqs].map(
+          normalizeFaqBrand,
+        );
     }
   };
 
@@ -247,7 +277,7 @@ export async function loadFaqs(
     const mappers = await getMappers();
     const data = await queries.getFaqs(category);
     if (!data) return staticFallback();
-    return data.map(mappers.mapFaqRow);
+    return data.map(mappers.mapFaqRow).map(normalizeFaqBrand);
   } catch {
     return staticFallback();
   }

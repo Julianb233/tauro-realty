@@ -29,7 +29,7 @@ const whySell = [
     icon: Star,
     title: "Dedicated Agent",
     description:
-      "Your personal Tauro agent from listing to close",
+      "Your personal LYL agent from listing to close",
   },
 ];
 
@@ -47,7 +47,7 @@ const steps = [
   {
     number: "3",
     title: "Meet Your Agent",
-    description: "Connect with a Tauro specialist for your neighborhood",
+    description: "Connect with a LYL specialist for your neighborhood",
   },
 ];
 
@@ -74,10 +74,10 @@ export default function SellPage() {
             Sell with Confidence
           </p>
           <h1 className="mt-3 font-heading text-4xl font-bold text-white sm:text-5xl">
-            List Your Home <em>with Tauro</em>
+            List Your Home <em>with LYL Realty Group</em>
           </h1>
           <p className="mt-4 max-w-xl text-lg text-white/90">
-            Get the most from your Philadelphia property with Tauro&apos;s premium
+            Get the most from your Philadelphia property with LYL Realty Group&apos;s premium
             marketing, expert pricing, and dedicated agent support.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -131,7 +131,7 @@ export default function SellPage() {
                 Request Your Free Home Valuation
               </h2>
               <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground">
-                Fill out the form below and a Tauro agent will provide a
+                Fill out the form below and a LYL agent will provide a
                 personalized market analysis within 24 hours — no obligation.
               </p>
             </div>

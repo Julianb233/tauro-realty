@@ -48,10 +48,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { neighborhood: slug } = await params;
   const neighborhood = await loadNeighborhoodBySlug(slug);
-  if (!neighborhood) return { title: "Neighborhood Not Found | Tauro Realty" };
+  if (!neighborhood) return { title: "Neighborhood Not Found | LYL Realty Group" };
 
-  const title = `${neighborhood.name} Luxury Real Estate | Homes for Sale | Tauro Realty Philadelphia`;
-  const description = `Explore luxury real estate in ${neighborhood.name}, Philadelphia. Browse premium homes for sale, view market data, neighborhood insights, and connect with Tauro Realty's ${neighborhood.name} specialists.`;
+  const title = `${neighborhood.name} Luxury Real Estate | Homes for Sale | LYL Realty Group Philadelphia`;
+  const description = `Explore luxury real estate in ${neighborhood.name}, Philadelphia. Browse premium homes for sale, view market data, neighborhood insights, and connect with LYL Realty Group's ${neighborhood.name} specialists.`;
   const canonicalUrl = `${siteUrl}/homes-for-sale-in-${neighborhood.slug}`;
 
   return {
@@ -64,7 +64,7 @@ export async function generateMetadata({
       title,
       description,
       url: canonicalUrl,
-      siteName: "Tauro Realty",
+      siteName: "LYL Realty Group",
       images: [
         {
           url: neighborhood.image,
@@ -132,7 +132,7 @@ export default async function LocationLandingPage({
     "@context": "https://schema.org",
     "@type": "RealEstateListing",
     name: `${neighborhood.name} Luxury Real Estate — Homes for Sale`,
-    description: `Browse luxury homes for sale in ${neighborhood.name}, Philadelphia. Premium listings, market data, and local expertise from Tauro Realty.`,
+    description: `Browse luxury homes for sale in ${neighborhood.name}, Philadelphia. Premium listings, market data, and local expertise from LYL Realty Group.`,
     url: `${siteUrl}/homes-for-sale-in-${neighborhood.slug}`,
     image: neighborhood.image,
     areaServed: {
@@ -146,9 +146,9 @@ export default async function LocationLandingPage({
     },
     provider: {
       "@type": "RealEstateAgent",
-      name: "Tauro Realty",
+      name: "LYL Realty Group",
       url: siteUrl,
-      telephone: "+12158394172",
+      telephone: "+12677738600",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Philadelphia",
@@ -368,7 +368,7 @@ export default async function LocationLandingPage({
         neighborhoodName={neighborhood.name}
       />
 
-      {/* Why Tauro */}
+      {/* Why LYL Realty Group */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="font-label text-sm font-semibold uppercase tracking-[0.2em] text-gold">
@@ -432,7 +432,7 @@ export default async function LocationLandingPage({
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-white/90">
             Whether you&apos;re seeking a historic townhome, a modern condo, or a
-            luxury single-family residence, Tauro Realty has the {neighborhood.name}{" "}
+            luxury single-family residence, LYL Realty Group has the {neighborhood.name}{" "}
             expertise to make it happen.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

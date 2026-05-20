@@ -20,7 +20,7 @@ export default function HeroSearchBar() {
 
   return (
     <form onSubmit={handleSubmit} role="search" aria-label="Property search" className="mx-auto mt-10 max-w-2xl">
-      <div className="glass-gold flex items-center rounded-xl p-1.5 shadow-2xl">
+      <div className="flex items-center rounded-xl border border-gold/35 bg-midnight/85 p-1.5 shadow-2xl shadow-black/35 backdrop-blur-md">
         <div className="flex flex-1 items-center gap-2 px-3 sm:px-4">
           <Search className="size-5 shrink-0 text-gold" aria-hidden="true" />
           <input
@@ -28,7 +28,7 @@ export default function HeroSearchBar() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search neighborhood, address, ZIP..."
-            className="w-full min-w-0 bg-transparent py-3 text-sm text-white placeholder:text-white/50 focus-visible:outline-none"
+            className="w-full min-w-0 bg-transparent py-3 text-sm font-medium text-white placeholder:text-white/80 focus-visible:outline-none"
             aria-label="Search by neighborhood, address, or ZIP code"
           />
         </div>

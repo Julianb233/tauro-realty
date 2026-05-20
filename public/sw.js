@@ -1,13 +1,11 @@
-// Tauro Service Worker — basic offline support + static asset caching
-const CACHE_NAME = "tauro-v1";
+// LYL Realty Group Service Worker — basic offline support + static asset caching
+const CACHE_NAME = "lyl-v2";
 const OFFLINE_URL = "/offline.html";
 
 // Static assets to precache
 const PRECACHE_ASSETS = [
   OFFLINE_URL,
-  "/tauro-logo.png",
-  "/tauro-logo-dark.png",
-  "/tauro-logo-white.png",
+  "/brand/lyl-realty-group-logo-cropped.png",
 ];
 
 // Install — precache critical assets

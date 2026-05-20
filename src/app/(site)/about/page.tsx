@@ -17,11 +17,12 @@ import { GoogleReviewBadge } from "@/components/GoogleReviewBadge";
 import { AsSeenInStrip } from "@/components/SocialProof";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BLUR_LANDSCAPE } from "@/lib/blur-placeholder";
+import { siteBrand } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "About Tauro | Philadelphia's Premier Real Estate Brokerage",
+  title: "About LYL Realty Group | Philadelphia's Premier Real Estate Brokerage",
   description:
-    "Tauro is Philadelphia's premier real estate brokerage redefining luxury property services. From Rittenhouse Square to Fishtown, we serve every corner of the city with local expertise and premium service.",
+    "LYL Realty Group is Philadelphia's premier real estate brokerage redefining luxury property services. From Rittenhouse Square to Fishtown, we serve every corner of the city with local expertise and premium service.",
 };
 
 const values = [
@@ -122,7 +123,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-6">
           <FadeInView direction="up">
             <h2 className="font-heading text-center text-2xl font-bold text-white md:text-3xl">
-              Tauro by the Numbers
+              LYL Realty Group by the Numbers
             </h2>
           </FadeInView>
           <AboutStaggerReveal className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
@@ -151,12 +152,12 @@ export default function AboutPage() {
       <section className="mx-auto max-w-4xl px-6 py-20">
         <FadeInView direction="up">
           <h2 className="font-heading text-3xl font-bold md:text-4xl">
-            The Tauro Difference
+            The LYL Realty Group Difference
           </h2>
         </FadeInView>
         <div className="mt-8 space-y-6 text-muted-foreground leading-relaxed">
           <p>
-            Founded in the heart of Philadelphia, Tauro was born from a simple
+            Founded in the heart of Philadelphia, LYL Realty Group was born from a simple
             belief: the city&apos;s real estate market deserves better. Better
             service, better technology, better results. We saw an industry ripe
             for transformation and built a brokerage that raises the standard at
@@ -203,7 +204,7 @@ export default function AboutPage() {
               home. We are deeply committed to the communities we serve. From
               sponsoring local youth sports leagues in South Philly to partnering
               with neighborhood revitalization programs in Brewerytown and Point
-              Breeze, Tauro invests in the city that built us.
+              Breeze, LYL Realty Group invests in the city that built us.
             </p>
             <p>
               We believe in Philadelphia&apos;s future. As the city continues to
@@ -331,7 +332,7 @@ export default function AboutPage() {
           <div className="space-y-6">
             <div className="rounded-xl border border-border/40 bg-card/50 p-6">
               <p className="font-heading text-lg font-semibold text-gold">
-                Tauro Realty
+                LYL Realty Group
               </p>
               <p className="mt-2 text-muted-foreground">
                 1500 Walnut Street, Suite 500<br />
@@ -339,26 +340,25 @@ export default function AboutPage() {
               </p>
               <div className="mt-4 space-y-2">
                 <a
-                  href="tel:+12158394172"
+                  href="tel:+12677738600"
                   className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-gold"
                 >
                   <Phone className="h-4 w-4" />
-                  (215) 839-4172
+                  (267) 773-8600
                 </a>
                 <a
-                  href="mailto:info@taurorealty.com"
+                  href="mailto:info@lylrealty.com"
                   className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-gold"
                 >
                   <Mail className="h-4 w-4" />
-                  info@taurorealty.com
+                  info@lylrealty.com
                 </a>
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Located in the heart of Center City on historic Walnut Street, our
-              office is steps from Rittenhouse Square — one of Philadelphia&apos;s
-              most coveted neighborhoods. Stop by for a consultation or schedule
-              a virtual meeting with one of our agents.
+              Located at {siteBrand.address.street} in {siteBrand.address.city},
+              our office gives clients a direct local base for Philadelphia
+              consultations, showings, and virtual meetings with our agents.
             </p>
             <Link
               href="/contact"
@@ -369,14 +369,14 @@ export default function AboutPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-border/40">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.6!2d-75.168!3d39.949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c63c30a0e2b5%3A0x5c6be7d4e2a8a4f0!2s1500%20Walnut%20St%2C%20Philadelphia%2C%20PA%2019102!5e0!3m2!1sen!2sus!4v1"
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(`${siteBrand.address.street}, ${siteBrand.address.city}, ${siteBrand.address.region} ${siteBrand.address.postalCode}`)}&output=embed`}
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: 300 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Tauro Realty office location — 1500 Walnut St, Philadelphia"
+              title={`LYL Realty Group office location - ${siteBrand.address.street}, ${siteBrand.address.city}`}
             />
           </div>
         </div>

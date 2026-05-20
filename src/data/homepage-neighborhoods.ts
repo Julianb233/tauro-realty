@@ -25,7 +25,7 @@ export const homepageNeighborhoods: HomepageNeighborhood[] = [
     name: "Fishtown",
     slug: "fishtown",
     description: "Creative energy meets industrial charm in Philly\u2019s hottest neighborhood.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80",
     listings: 35,
   },
   {

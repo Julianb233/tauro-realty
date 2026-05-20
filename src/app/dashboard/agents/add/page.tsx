@@ -237,7 +237,7 @@ export default function AddAgentPage() {
                 name="phone"
                 type="tel"
                 required
-                placeholder="(215) 555-0100"
+                placeholder="(267) 773-8600"
                 className={inputClass}
               />
             </div>

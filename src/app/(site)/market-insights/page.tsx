@@ -23,7 +23,7 @@ import {
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Philadelphia Market Insights | Tauro Realty",
+  title: "Philadelphia Market Insights | LYL Realty Group",
   description:
     "Data-driven Philadelphia real estate market statistics, neighborhood price trends, and insights to help you make smarter buying and selling decisions.",
 };
@@ -173,7 +173,7 @@ export default function MarketInsightsPage() {
                 <p
                   className={`mt-2 text-xs font-medium ${
                     stat.trendPositive
-                      ? "text-emerald-400"
+                      ? "text-gold"
                       : "text-amber-400"
                   }`}
                 >
@@ -411,7 +411,7 @@ export default function MarketInsightsPage() {
             Want to Know What Your Home Is Worth?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            Get a detailed market analysis of your property from a local Tauro
+            Get a detailed market analysis of your property from a local LYL Realty Group
             agent -- free and with no obligation.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -436,7 +436,7 @@ export default function MarketInsightsPage() {
       <div className="bg-white py-6">
         <p className="mx-auto max-w-4xl px-4 text-center text-xs italic text-muted-foreground">
           Data is approximate and based on publicly available MLS records.
-          Contact a Tauro agent for the most current information.
+          Contact a LYL Realty Group agent for the most current information.
         </p>
       </div>
     </>

@@ -470,8 +470,8 @@ function formatPrice(price: number): string {
 function PageFooter({ address }: { address: string }) {
   return (
     <View style={styles.pageFooter}>
-      <Text style={styles.footerLogo}>TAURO</Text>
-      <Text style={styles.footerSite}>{address} | taurorealty.com</Text>
+      <Text style={styles.footerLogo}>LYL</Text>
+      <Text style={styles.footerSite}>{address} | lylrealty.com</Text>
     </View>
   );
 }
@@ -495,10 +495,10 @@ export default function BrochurePDF({
 
   return (
     <Document
-      title={`${property.address} — Tauro Real Estate`}
-      author="Tauro Real Estate"
+      title={`${property.address} — LYL Realty Group`}
+      author="LYL Realty Group"
       subject="Property Brochure"
-      creator="taurorealty.com"
+      creator="lylrealty.com"
     >
       {/* ── Page 1: Hero ─────────────────────────────────────────────────── */}
       <Page size="LETTER" style={[styles.page, styles.heroPage]}>
@@ -511,7 +511,7 @@ export default function BrochurePDF({
         <View style={styles.heroContent}>
           {/* Logo */}
           <View>
-            <Text style={styles.heroLogo}>TAURO</Text>
+            <Text style={styles.heroLogo}>LYL</Text>
             <Text style={styles.heroLogoSub}>REAL ESTATE</Text>
           </View>
 
@@ -569,7 +569,7 @@ export default function BrochurePDF({
             <Text style={styles.pageHeaderTitle}>Property Details</Text>
             <Text style={styles.pageHeaderAddress}>{fullAddress}</Text>
           </View>
-          <Text style={styles.logoSmall}>TAURO</Text>
+          <Text style={styles.logoSmall}>LYL</Text>
         </View>
 
         {/* Photo grid */}
@@ -643,7 +643,7 @@ export default function BrochurePDF({
             <Text style={styles.pageHeaderTitle}>Location & Neighborhood</Text>
             <Text style={styles.pageHeaderAddress}>{fullAddress}</Text>
           </View>
-          <Text style={styles.logoSmall}>TAURO</Text>
+          <Text style={styles.logoSmall}>LYL</Text>
         </View>
 
         {/* Map */}
@@ -713,7 +713,7 @@ export default function BrochurePDF({
             <Text style={styles.pageHeaderTitle}>Your Agent</Text>
             <Text style={styles.pageHeaderAddress}>{fullAddress}</Text>
           </View>
-          <Text style={styles.logoSmall}>TAURO</Text>
+          <Text style={styles.logoSmall}>LYL</Text>
         </View>
 
         {/* Agent card */}
@@ -728,7 +728,7 @@ export default function BrochurePDF({
 
           <View style={styles.agentInfo}>
             <Text style={styles.agentName}>{property.agent.name}</Text>
-            <Text style={styles.agentTitle}>Listing Agent — Tauro Real Estate</Text>
+            <Text style={styles.agentTitle}>Listing Agent — LYL Realty Group</Text>
 
             <View style={styles.agentContactRow}>
               <Text style={styles.agentContactLabel}>PHONE</Text>
@@ -740,7 +740,7 @@ export default function BrochurePDF({
             </View>
             <View style={[styles.agentContactRow, { marginBottom: 12 }]}>
               <Text style={styles.agentContactLabel}>WEB</Text>
-              <Text style={styles.agentContactValue}>taurorealty.com</Text>
+              <Text style={styles.agentContactValue}>lylrealty.com</Text>
             </View>
           </View>
         </View>
@@ -777,7 +777,7 @@ export default function BrochurePDF({
               🏠 Equal Housing Opportunity — We are committed to the letter and spirit of U.S. policy for the achievement of equal housing opportunity throughout the Nation.
             </Text>
             <Text style={styles.mlsNote}>
-              This brochure is for informational purposes only. All information deemed reliable but not guaranteed. Prices subject to change without notice. © {new Date().getFullYear()} Tauro Real Estate. All rights reserved.
+              This brochure is for informational purposes only. All information deemed reliable but not guaranteed. Prices subject to change without notice. © {new Date().getFullYear()} LYL Realty Group. All rights reserved.
             </Text>
           </View>
 

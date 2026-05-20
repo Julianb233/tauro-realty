@@ -98,7 +98,7 @@ export function NewsletterForm({ source: _source, showName: _showName, showInter
       </form>
       <Turnstile onVerify={handleCaptcha} onExpire={handleCaptchaExpire} className="mt-2" />
       {status === "success" && (
-        <p role="status" className="text-xs text-green-400">{message}</p>
+        <p role="status" className="text-xs text-gold">{message}</p>
       )}
       {status === "error" && (
         <p role="alert" className="text-xs text-red-400">{message}</p>

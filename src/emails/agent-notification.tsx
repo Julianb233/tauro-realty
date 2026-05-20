@@ -50,7 +50,7 @@ export function renderAgentNotification({
           <!-- Header -->
           <tr>
             <td style="border-top:4px solid #C9A84C;padding:40px 40px 20px;text-align:center;">
-              <h1 style="margin:0;font-family:Georgia,'Playfair Display',serif;color:#C9A84C;font-size:28px;letter-spacing:4px;font-weight:700;">TAURO</h1>
+              <h1 style="margin:0;font-family:Georgia,'Playfair Display',serif;color:#C9A84C;font-size:28px;letter-spacing:4px;font-weight:700;">LYL</h1>
               <p style="margin:8px 0 0;font-family:'DM Sans',Arial,sans-serif;color:#999999;font-size:12px;letter-spacing:1px;">LYL Realty Group</p>
             </td>
           </tr>
@@ -80,7 +80,7 @@ export function renderAgentNotification({
               <table role="presentation" cellpadding="0" cellspacing="0" style="margin:32px 0 0;">
                 <tr>
                   <td style="background-color:#C9A84C;border-radius:6px;">
-                    <a href="https://taurorealty.com/dashboard/leads" style="display:inline-block;padding:12px 28px;color:#1A1A1A;font-family:'DM Sans',Arial,sans-serif;font-size:14px;font-weight:600;text-decoration:none;">View in Dashboard</a>
+                    <a href="https://lylrealty.com/dashboard/leads" style="display:inline-block;padding:12px 28px;color:#1A1A1A;font-family:'DM Sans',Arial,sans-serif;font-size:14px;font-weight:600;text-decoration:none;">View in Dashboard</a>
                   </td>
                 </tr>
               </table>
@@ -90,8 +90,8 @@ export function renderAgentNotification({
           <tr><td style="padding:0 40px;"><hr style="border:none;border-top:1px solid #333333;margin:0;" /></td></tr>
           <tr>
             <td style="padding:24px 40px 40px;text-align:center;">
-              <p style="margin:0;color:#666666;font-family:'DM Sans',Arial,sans-serif;font-size:12px;line-height:1.6;">Tauro Realty | Philadelphia, PA</p>
-              <p style="margin:8px 0 0;color:#666666;font-family:'DM Sans',Arial,sans-serif;font-size:11px;">This is an automated notification from the Tauro lead management system.</p>
+              <p style="margin:0;color:#666666;font-family:'DM Sans',Arial,sans-serif;font-size:12px;line-height:1.6;">LYL Realty Group | Philadelphia, PA</p>
+              <p style="margin:8px 0 0;color:#666666;font-family:'DM Sans',Arial,sans-serif;font-size:11px;">This is an automated notification from the LYL Realty Group lead management system.</p>
             </td>
           </tr>
         </table>

@@ -75,7 +75,7 @@ export default function LoginPage() {
       <div className="mb-6 flex flex-col items-center gap-3">
         <Logo size="md" variant="light" />
         <h1 className="font-heading text-xl text-[#F8F6F1]">
-          Tauro Agent Portal
+          LYL Realty Group Agent Portal
         </h1>
       </div>
 
@@ -99,7 +99,7 @@ export default function LoginPage() {
               setFieldErrors((prev) => ({ ...prev, email: undefined }));
             }}
             className="w-full rounded-lg border border-[#2A2A3E] bg-[#12121F] px-4 py-2.5 text-sm text-[#F8F6F1] placeholder-[#6B7280] outline-none transition focus-visible:border-[#C9A96E] focus-visible:ring-1 focus-visible:ring-[#C9A96E]"
-            placeholder="agent@tauro.com"
+            placeholder="agent@lylrealty.com"
           />
           {fieldErrors.email && (
             <p className="text-xs text-red-400">{fieldErrors.email}</p>
