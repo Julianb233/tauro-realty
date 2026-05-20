@@ -96,7 +96,7 @@ export function renderMonthlyNewsletter(props: MonthlyNewsletterProps): string {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tauro Realty - ${month} ${year} Newsletter</title>
+  <title>LYL Realty Group - ${month} ${year} Newsletter</title>
   <!--[if !mso]><!-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!--<![endif]-->
@@ -110,7 +110,7 @@ export function renderMonthlyNewsletter(props: MonthlyNewsletterProps): string {
           <!-- Header -->
           <tr>
             <td style="border-top:4px solid #C9A84C;padding:40px 40px 20px;text-align:center;">
-              <h1 style="margin:0;font-family:Georgia,'Playfair Display',serif;color:#C9A84C;font-size:28px;letter-spacing:4px;font-weight:700;">TAURO</h1>
+              <h1 style="margin:0;font-family:Georgia,'Playfair Display',serif;color:#C9A84C;font-size:28px;letter-spacing:4px;font-weight:700;">LYL</h1>
               <p style="margin:8px 0 0;font-family:'DM Sans',Arial,sans-serif;color:#999999;font-size:12px;letter-spacing:1px;">${month} ${year} Newsletter</p>
             </td>
           </tr>
@@ -153,7 +153,7 @@ export function renderMonthlyNewsletter(props: MonthlyNewsletterProps): string {
               <table role="presentation" cellpadding="0" cellspacing="0" style="margin:16px 0 0;">
                 <tr>
                   <td style="background-color:#C9A84C;border-radius:6px;">
-                    <a href="https://taurorealty.com/properties" style="display:inline-block;padding:12px 28px;color:#1A1A1A;font-family:'DM Sans',Arial,sans-serif;font-size:14px;font-weight:600;text-decoration:none;">View All Properties</a>
+                    <a href="https://lylrealty.com/properties" style="display:inline-block;padding:12px 28px;color:#1A1A1A;font-family:'DM Sans',Arial,sans-serif;font-size:14px;font-weight:600;text-decoration:none;">View All Properties</a>
                   </td>
                 </tr>
               </table>
@@ -173,7 +173,7 @@ export function renderMonthlyNewsletter(props: MonthlyNewsletterProps): string {
               <table role="presentation" cellpadding="0" cellspacing="0" align="center">
                 <tr>
                   <td style="background-color:#C9A84C;border-radius:6px;">
-                    <a href="https://taurorealty.com/contact" style="display:inline-block;padding:12px 28px;color:#1A1A1A;font-family:'DM Sans',Arial,sans-serif;font-size:14px;font-weight:600;text-decoration:none;">Get in Touch</a>
+                    <a href="https://lylrealty.com/contact" style="display:inline-block;padding:12px 28px;color:#1A1A1A;font-family:'DM Sans',Arial,sans-serif;font-size:14px;font-weight:600;text-decoration:none;">Get in Touch</a>
                   </td>
                 </tr>
               </table>
@@ -184,14 +184,14 @@ export function renderMonthlyNewsletter(props: MonthlyNewsletterProps): string {
           <tr><td style="padding:0 40px;"><hr style="border:none;border-top:1px solid #333333;margin:0;" /></td></tr>
           <tr>
             <td style="padding:24px 40px 40px;text-align:center;">
-              <p style="margin:0;color:#666666;font-family:'DM Sans',Arial,sans-serif;font-size:12px;line-height:1.6;">Tauro Realty | Philadelphia, PA</p>
+              <p style="margin:0;color:#666666;font-family:'DM Sans',Arial,sans-serif;font-size:12px;line-height:1.6;">LYL Realty Group | Philadelphia, PA</p>
               <p style="margin:8px 0 0;color:#666666;font-family:'DM Sans',Arial,sans-serif;font-size:11px;">
-                You received this email because you subscribed to the Tauro Realty newsletter.
+                You received this email because you subscribed to the LYL Realty Group newsletter.
               </p>
               <p style="margin:8px 0 0;">
                 <a href="${unsubscribeUrl}" style="color:#999999;font-family:'DM Sans',Arial,sans-serif;font-size:11px;text-decoration:underline;">Unsubscribe</a>
                 <span style="color:#666666;font-family:'DM Sans',Arial,sans-serif;font-size:11px;"> | </span>
-                <a href="https://taurorealty.com/newsletter/preferences" style="color:#999999;font-family:'DM Sans',Arial,sans-serif;font-size:11px;text-decoration:underline;">Manage Preferences</a>
+                <a href="https://lylrealty.com/newsletter/preferences" style="color:#999999;font-family:'DM Sans',Arial,sans-serif;font-size:11px;text-decoration:underline;">Manage Preferences</a>
               </p>
             </td>
           </tr>

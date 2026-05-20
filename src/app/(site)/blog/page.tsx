@@ -10,7 +10,7 @@ import { BLUR_LANDSCAPE, BLUR_SQUARE } from "@/lib/blur-placeholder";
 export const metadata: Metadata = {
   title: "Journal | Insights on Philadelphia Real Estate",
   description:
-    "Expert insights, market analysis, and neighborhood guides from the Tauro team. Stay informed about Philadelphia real estate trends, buying strategies, and lifestyle.",
+    "Expert insights, market analysis, and neighborhood guides from the LYL Realty Group team. Stay informed about Philadelphia real estate trends, buying strategies, and lifestyle.",
 };
 
 function formatDate(dateStr: string): string {
@@ -52,7 +52,7 @@ export default function BlogPage({
         )}
         <div className="relative z-10 mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-gold">
-            The Tauro Journal
+            The LYL Realty Group Journal
           </p>
           <h1 className="mt-3 max-w-4xl font-heading text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
             Insights on Philadelphia Real Estate
@@ -142,7 +142,7 @@ export default function BlogPage({
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-white/90">
             Join our mailing list for exclusive market reports, neighborhood
-            spotlights, and expert analysis from the Tauro team.
+            spotlights, and expert analysis from the LYL Realty Group team.
           </p>
           <div className="mt-8 flex items-center justify-center gap-4">
             <Link

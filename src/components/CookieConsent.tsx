@@ -20,7 +20,6 @@ export function CookieConsent() {
   useEffect(() => {
     const existing = getCookieConsent();
     if (!existing) {
-      // Small delay so it doesn't flash on page load
       const timer = setTimeout(() => setVisible(true), 800);
       return () => clearTimeout(timer);
     }
@@ -62,131 +61,95 @@ export function CookieConsent() {
       role="dialog"
       aria-modal="true"
       aria-label="Cookie consent"
-      className="fixed inset-x-0 bottom-0 z-[9998] p-4 sm:p-6"
+      className="fixed bottom-3 right-3 z-[9998] w-[calc(100vw-1.5rem)] max-w-md sm:bottom-5 sm:right-5"
     >
-      <div className="mx-auto max-w-4xl rounded-2xl border border-white/10 bg-midnight/80 p-6 shadow-2xl backdrop-blur-xl sm:p-8">
+      <div className="rounded-lg border border-gold/25 bg-midnight/94 p-3 shadow-2xl backdrop-blur-xl">
         {!showPrefs ? (
-          <>
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
-              <div className="flex-1">
-                <h2 className="font-heading text-lg font-bold text-white">
-                  We value your privacy
-                </h2>
-                <p className="mt-2 text-sm leading-relaxed text-white/90">
-                  We use cookies to enhance your browsing experience, analyze
-                  site traffic, and personalize content. You can choose to accept
-                  all cookies, reject non-essential ones, or manage your
-                  preferences.{" "}
-                  <Link
-                    href="/cookie-policy"
-                    className="text-gold underline underline-offset-2 hover:text-gold-light"
-                  >
-                    Cookie Policy
-                  </Link>
-                </p>
-              </div>
+          <div className="flex flex-col gap-3">
+            <div className="min-w-0 flex-1">
+              <h2 className="font-heading text-sm font-bold text-white">
+                Cookies
+              </h2>
+              <p className="mt-1 text-[11px] leading-relaxed text-white/82">
+                Essential cookies keep the site working. Optional analytics stay off unless accepted.{" "}
+                <Link
+                  href="/cookie-policy"
+                  className="text-gold underline underline-offset-2 hover:text-gold-light"
+                >
+                  Cookie Policy
+                </Link>
+                .
+              </p>
             </div>
 
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <button
-                onClick={handleAcceptAll}
-                className="inline-flex items-center justify-center rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-near-black transition-colors hover:bg-gold-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-midnight"
-              >
-                Accept All
-              </button>
+            <div className="grid grid-cols-3 gap-2">
               <button
                 onClick={handleReject}
-                className="inline-flex items-center justify-center rounded-lg border border-white/20 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-midnight"
+                className="inline-flex min-h-9 items-center justify-center rounded-md border border-white/25 px-3 text-[11px] font-semibold text-white transition-colors hover:border-white/45 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
               >
-                Reject Non-Essential
+                Reject
+              </button>
+              <button
+                onClick={handleAcceptAll}
+                className="inline-flex min-h-9 items-center justify-center rounded-md bg-gold px-3 text-[11px] font-semibold text-near-black transition-colors hover:bg-gold-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              >
+                Accept
               </button>
               <button
                 onClick={() => setShowPrefs(true)}
-                className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white/90 underline underline-offset-2 transition-colors hover:text-white focus-visible:outline-none"
+                className="inline-flex min-h-9 items-center justify-center rounded-md px-2 text-[11px] font-semibold text-white/90 underline underline-offset-2 transition-colors hover:text-white focus-visible:outline-none"
               >
-                Manage Preferences
+                Manage
               </button>
             </div>
-          </>
+          </div>
         ) : (
           <>
-            <h2 className="font-heading text-lg font-bold text-white">
+            <h2 className="font-heading text-base font-bold text-white">
               Cookie Preferences
             </h2>
-            <p className="mt-2 text-sm text-white/90">
-              Choose which cookies you allow. Essential cookies cannot be
-              disabled as they are required for the site to function.
+            <p className="mt-1 text-xs leading-relaxed text-white/85 sm:text-sm">
+              Essential cookies stay on. Analytics and marketing only run when
+              allowed.
             </p>
 
-            <div className="mt-5 space-y-4">
-              {/* Essential - always on */}
-              <label className="flex items-center justify-between rounded-lg border border-white/10 p-4">
-                <div>
-                  <p className="text-sm font-semibold text-white">
-                    Essential Cookies
-                  </p>
-                  <p className="mt-0.5 text-xs text-white/90">
-                    Required for the website to function. Cannot be disabled.
-                  </p>
-                </div>
-                <input
-                  type="checkbox"
-                  checked
-                  disabled
-                  className="h-5 w-5 accent-gold"
-                />
+            <div className="mt-3 grid gap-2 sm:grid-cols-3">
+              <label className="flex items-center justify-between rounded-md border border-white/10 p-3">
+                <span className="text-xs font-semibold text-white">Essential</span>
+                <input type="checkbox" checked disabled className="h-4 w-4 accent-gold" />
               </label>
-
-              {/* Analytics */}
-              <label className="flex cursor-pointer items-center justify-between rounded-lg border border-white/10 p-4 transition-colors hover:border-white/20">
-                <div>
-                  <p className="text-sm font-semibold text-white">
-                    Analytics Cookies
-                  </p>
-                  <p className="mt-0.5 text-xs text-white/90">
-                    Help us understand how visitors use our site (Google
-                    Analytics).
-                  </p>
-                </div>
+              <label className="flex cursor-pointer items-center justify-between rounded-md border border-white/10 p-3 hover:border-white/25">
+                <span className="text-xs font-semibold text-white">Analytics</span>
                 <input
                   type="checkbox"
                   checked={analytics}
                   onChange={(e) => setAnalytics(e.target.checked)}
-                  className="h-5 w-5 accent-gold"
+                  className="h-4 w-4 accent-gold"
                 />
               </label>
-
-              {/* Marketing */}
-              <label className="flex cursor-pointer items-center justify-between rounded-lg border border-white/10 p-4 transition-colors hover:border-white/20">
-                <div>
-                  <p className="text-sm font-semibold text-white">
-                    Marketing Cookies
-                  </p>
-                  <p className="mt-0.5 text-xs text-white/90">
-                    Used for personalized ads and retargeting across platforms.
-                  </p>
-                </div>
+              <label className="flex cursor-pointer items-center justify-between rounded-md border border-white/10 p-3 hover:border-white/25">
+                <span className="text-xs font-semibold text-white">Marketing</span>
                 <input
                   type="checkbox"
                   checked={marketing}
                   onChange={(e) => setMarketing(e.target.checked)}
-                  className="h-5 w-5 accent-gold"
+                  className="h-4 w-4 accent-gold"
                 />
               </label>
             </div>
 
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <button
-                onClick={handleSavePreferences}
-                className="inline-flex items-center justify-center rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-near-black transition-colors hover:bg-gold-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-midnight"
-              >
-                Save Preferences
-              </button>
+            <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:justify-end">
               <button
                 onClick={() => setShowPrefs(false)}
-                className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white/90 underline underline-offset-2 transition-colors hover:text-white focus-visible:outline-none"
+                className="inline-flex min-h-10 items-center justify-center rounded-md px-4 text-xs font-semibold text-white/90 underline underline-offset-2 hover:text-white focus-visible:outline-none"
               >
                 Back
+              </button>
+              <button
+                onClick={handleSavePreferences}
+                className="inline-flex min-h-10 items-center justify-center rounded-md bg-gold px-4 text-xs font-semibold text-near-black hover:bg-gold-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              >
+                Save Preferences
               </button>
             </div>
           </>

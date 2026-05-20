@@ -109,7 +109,7 @@ export default function JoinPage() {
 
   return (
     <>
-      <Breadcrumbs items={[{ label: "Join Tauro", href: "/join" }]} />
+      <Breadcrumbs items={[{ label: "Join LYL Realty Group", href: "/join" }]} />
       {/* -- Hero -------------------------------------------------- */}
       <section className="relative overflow-hidden bg-foreground pb-20 pt-32">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40" />
@@ -118,7 +118,7 @@ export default function JoinPage() {
             Apply Now
           </p>
           <h1 className="mt-3 font-heading text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-            Join the Tauro Team
+            Join the LYL Team
           </h1>
           <p className="mt-4 max-w-xl text-lg text-white/90">
             We&apos;re building Philadelphia&apos;s most elite real estate team. If
@@ -129,7 +129,7 @@ export default function JoinPage() {
             href="/why-join"
             className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-gold-light"
           >
-            Learn why agents choose Tauro
+            Learn why agents choose LYL Realty Group
             <ArrowRight className="size-4" />
           </Link>
         </div>
@@ -146,7 +146,7 @@ export default function JoinPage() {
                   Ready to Make a Move?
                 </h2>
                 <p className="mt-4 text-muted-foreground">
-                  At Tauro, we look for agents who are passionate about delivering
+                  At LYL Realty Group, we look for agents who are passionate about delivering
                   exceptional client experiences. Whether you&apos;re a seasoned
                   top-producer or a newly licensed agent hungry to grow, we provide the
                   platform, tools, and support to take your career to the next level.
@@ -179,7 +179,7 @@ export default function JoinPage() {
                   href="/why-join"
                   className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-gold-light"
                 >
-                  Why Join Tauro
+                  Why Join LYL Realty Group
                   <ArrowRight className="size-4" />
                 </Link>
               </div>
@@ -196,7 +196,7 @@ export default function JoinPage() {
                     Application Submitted!
                   </h3>
                   <p className="mt-3 max-w-sm text-muted-foreground">
-                    Thank you for your interest in joining Tauro. Our team lead will
+                    Thank you for your interest in joining LYL Realty Group. Our team lead will
                     review your application and reach out within 2-3 business days.
                   </p>
                   <button
@@ -292,7 +292,7 @@ export default function JoinPage() {
                       autoComplete="tel"
                       value={form.phone}
                       onChange={handleChange}
-                      placeholder="(215) 839-4172"
+                      placeholder="(267) 773-8600"
                       className="w-full rounded-lg border border-border/40 bg-white px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-gold/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/20"
                     />
                   </div>
@@ -355,7 +355,7 @@ export default function JoinPage() {
                   {/* Why Join */}
                   <div>
                     <label htmlFor="whyJoin" className="mb-1.5 block text-sm font-medium text-foreground">
-                      Why do you want to join Tauro?
+                      Why do you want to join LYL Realty Group?
                     </label>
                     <textarea
                       id="whyJoin"
@@ -363,7 +363,7 @@ export default function JoinPage() {
                       rows={4}
                       value={form.whyJoin}
                       onChange={handleChange}
-                      placeholder="Tell us about your goals and what excites you about Tauro..."
+                      placeholder="Tell us about your goals and what excites you about LYL Realty Group..."
                       className="w-full resize-none rounded-lg border border-border/40 bg-white px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-gold/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/20"
                     />
                   </div>

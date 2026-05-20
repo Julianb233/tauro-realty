@@ -3,7 +3,7 @@ import { Logo } from "@/components/logo";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Brand | Tauro",
+  title: "Brand | LYL Realty Group",
   robots: { index: false, follow: false },
 };
 
@@ -16,7 +16,7 @@ export default function BrandPage() {
           Brand Assets
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-base text-[#1A1A2E]/60">
-          The official Tauro Realty logo shown at three sizes on both light and
+          The official LYL Realty Group logo shown at three sizes on both light and
           dark backgrounds.
         </p>
       </header>

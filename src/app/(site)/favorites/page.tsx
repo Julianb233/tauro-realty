@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Saved Properties",
-  description: "View your saved properties on Tauro Realty.",
+  description: "View your saved properties on LYL Realty Group.",
 };
 
 export default function FavoritesPage() {

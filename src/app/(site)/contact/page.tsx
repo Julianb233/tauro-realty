@@ -4,56 +4,61 @@ import { useState } from "react";
 import { Mail, Phone, MapPin, Clock, ArrowRight, ChevronDown } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { siteBrand } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
+
+const officeAddress = `${siteBrand.address.street}, ${siteBrand.address.city}, ${siteBrand.address.region} ${siteBrand.address.postalCode}`;
+const officeMapHref = `https://maps.google.com/?q=${encodeURIComponent(officeAddress)}`;
+const officeMapEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(officeAddress)}&output=embed`;
 
 const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "(215) 839-4172",
-    href: "tel:+12158394172",
+    value: siteBrand.displayPhone,
+    href: `tel:${siteBrand.phone}`,
   },
   {
     icon: Mail,
     label: "Email",
-    value: "info@taurorealty.com",
-    href: "mailto:info@taurorealty.com",
+    value: siteBrand.email,
+    href: `mailto:${siteBrand.email}`,
   },
   {
     icon: MapPin,
     label: "Office",
-    value: "1500 Walnut St, Suite 500, Philadelphia, PA 19102",
-    href: "https://maps.google.com/?q=1500+Walnut+St+Philadelphia+PA+19102",
+    value: officeAddress,
+    href: officeMapHref,
   },
   {
     icon: Clock,
     label: "Hours",
-    value: "Mon\u2013Fri 9am\u20137pm \u00b7 Sat 10am\u20135pm \u00b7 Sun by appointment",
+    value: "Mon-Fri 9:30am-5:30pm · Sat-Sun by appointment",
     href: null,
   },
 ];
 
 const officeHours = [
-  { day: "Monday", hours: "9:00 AM \u2013 7:00 PM" },
-  { day: "Tuesday", hours: "9:00 AM \u2013 7:00 PM" },
-  { day: "Wednesday", hours: "9:00 AM \u2013 7:00 PM" },
-  { day: "Thursday", hours: "9:00 AM \u2013 7:00 PM" },
-  { day: "Friday", hours: "9:00 AM \u2013 7:00 PM" },
-  { day: "Saturday", hours: "10:00 AM \u2013 5:00 PM" },
+  { day: "Monday", hours: "9:30 AM - 5:30 PM" },
+  { day: "Tuesday", hours: "9:30 AM - 5:30 PM" },
+  { day: "Wednesday", hours: "9:30 AM - 5:30 PM" },
+  { day: "Thursday", hours: "9:30 AM - 5:30 PM" },
+  { day: "Friday", hours: "9:30 AM - 5:30 PM" },
+  { day: "Saturday", hours: "By Appointment" },
   { day: "Sunday", hours: "By Appointment" },
 ];
 
 const faqs = [
   {
     q: "How do I schedule a property showing?",
-    a: "You can schedule a showing by calling us at (215) 839-4172, filling out the contact form above, or visiting any property listing page and clicking 'Schedule a Tour.' Our agents are available seven days a week.",
+    a: `You can schedule a showing by calling us at ${siteBrand.displayPhone}, filling out the contact form above, or using the Book a Tour page. Weekend tours are available by appointment.`,
   },
   {
     q: "What areas of Philadelphia do you serve?",
     a: "We specialize in premium properties throughout Philadelphia including Rittenhouse Square, Society Hill, Fishtown, Northern Liberties, Center City, Chestnut Hill, Manayunk, and the surrounding Main Line suburbs.",
   },
   {
-    q: "How much does it cost to work with a Tauro agent?",
+    q: "How much does it cost to work with a LYL Realty Group agent?",
     a: "For buyers, our services are typically free \u2014 the seller pays the commission. For sellers, we offer competitive commission structures. Contact us for a personalized consultation.",
   },
   {
@@ -109,7 +114,7 @@ export default function ContactPage() {
             Get in Touch
           </p>
           <h1 className="mt-3 font-heading text-4xl font-bold text-white sm:text-5xl">
-            Contact Tauro
+            Contact LYL Realty Group
           </h1>
           <p className="mt-4 max-w-xl text-lg text-white/90">
             Whether you&apos;re buying, selling, or just exploring, we&apos;re here to
@@ -168,7 +173,7 @@ export default function ContactPage() {
                 <div className="mt-6 flex items-center gap-3 border-t border-border/40 pt-5">
                   <span className="text-xs font-medium text-muted-foreground">Follow us:</span>
                   <a
-                    href="https://instagram.com/taurorealty"
+                    href="https://instagram.com/lylrealtygroup"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
@@ -177,7 +182,7 @@ export default function ContactPage() {
                     <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                   </a>
                   <a
-                    href="https://facebook.com/taurorealty"
+                    href="https://facebook.com/lylrealtygroup"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
@@ -186,10 +191,10 @@ export default function ContactPage() {
                     <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                   </a>
                   <a
-                    href="https://linkedin.com/company/taurorealty"
+                    href="https://www.youtube.com/@lylrealtygroup"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="LinkedIn"
+                    aria-label="YouTube"
                     className="flex size-9 items-center justify-center rounded-lg bg-gold/10 text-gold transition-colors hover:bg-gold hover:text-near-black"
                   >
                     <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
@@ -261,10 +266,10 @@ export default function ContactPage() {
               Visit Our Office
             </h2>
             <p className="mt-2 text-muted-foreground">
-              1500 Walnut Street, Suite 500 &middot; Philadelphia, PA 19102
+              {officeAddress}
             </p>
             <a
-              href="https://maps.google.com/?q=1500+Walnut+St+Philadelphia+PA+19102"
+              href={officeMapHref}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-gold hover:text-gold-light"
@@ -275,8 +280,8 @@ export default function ContactPage() {
           </div>
           <div className="overflow-hidden rounded-2xl border border-border/40 shadow-lg">
             <iframe
-              title="Tauro Realty office location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.65!2d-75.168!3d39.9498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c63c0adee0d5%3A0x3c1e7e8d0c0e3c3e!2s1500+Walnut+St%2C+Philadelphia%2C+PA+19102!5e0!3m2!1sen!2sus!4v1"
+              title="LYL Realty Group office location"
+              src={officeMapEmbed}
               width="100%"
               height="400"
               style={{ border: 0 }}
@@ -297,7 +302,7 @@ export default function ContactPage() {
               Frequently Asked Questions
             </h2>
             <p className="mt-2 text-muted-foreground">
-              Quick answers to common questions about working with Tauro.
+              Quick answers to common questions about working with LYL Realty Group.
             </p>
           </div>
           <div className="rounded-2xl border border-border/40 bg-white px-6">

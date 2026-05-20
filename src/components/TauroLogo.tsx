@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 type SizeVariant = "sm" | "md" | "lg" | "xl";
 type ColorVariant = "light" | "dark" | "gold";
 
-interface TauroLogoProps {
+interface LylLogoProps {
   size?: SizeVariant;
   variant?: ColorVariant;
   className?: string;
@@ -24,10 +24,10 @@ const colorMap: Record<ColorVariant, { primary: string; accent: string; mask: st
 };
 
 /**
- * Tauro Realty premium logo — Zorro-inspired masked bull design.
+ * LYL Realty Group premium logo — Zorro-inspired masked bull design.
  * Bold horns, dramatic eye mask, premium serif typography.
  */
-export function TauroLogo({ size = "sm", variant = "light", className, showText = true }: TauroLogoProps) {
+export function LylLogo({ size = "sm", variant = "light", className, showText = true }: LylLogoProps) {
   const { width, height } = sizeMap[size];
   const { primary, accent, mask } = colorMap[variant];
 
@@ -38,7 +38,7 @@ export function TauroLogo({ size = "sm", variant = "light", className, showText 
       width={width}
       height={height}
       className={cn("shrink-0", className)}
-      aria-label="Tauro Realty"
+      aria-label="LYL Realty Group"
       role="img"
     >
       {/* === BULL ICON WITH ZORRO MASK === */}
@@ -144,7 +144,7 @@ export function TauroLogo({ size = "sm", variant = "light", className, showText 
 
       {showText && (
         <>
-          {/* TAURO text — premium serif */}
+          {/* LYL text — premium serif */}
           <text
             x="120"
             y="116"
@@ -155,7 +155,7 @@ export function TauroLogo({ size = "sm", variant = "light", className, showText 
             fontSize="28"
             letterSpacing="5"
           >
-            TAURO
+            LYL
           </text>
 
           {/* REALTY subtitle */}
@@ -172,7 +172,7 @@ export function TauroLogo({ size = "sm", variant = "light", className, showText 
             REALTY
           </text>
 
-          {/* Decorative line under TAURO */}
+          {/* Decorative line under LYL */}
           <line x1="88" y1="120" x2="152" y2="120" stroke={accent} strokeWidth="1" opacity="0.5" />
         </>
       )}

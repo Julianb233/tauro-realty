@@ -83,8 +83,8 @@ export async function GET(request: NextRequest) {
         lastName: "",
         name: sub.first_name || "Newsletter Subscriber",
         email: sub.email,
-        tags: ["newsletter-subscriber", "tauro-lead", ...(sub.interests || []).map((i: string) => `newsletter-${i}`)],
-        source: "Tauro Newsletter",
+        tags: ["newsletter-subscriber", "lyl-realty-lead", ...(sub.interests || []).map((i: string) => `newsletter-${i}`)],
+        source: "LYL Realty Group Newsletter",
         customFields: {
           newsletter_interests: (sub.interests || []).join(", "),
           newsletter_source: sub.source || "footer",

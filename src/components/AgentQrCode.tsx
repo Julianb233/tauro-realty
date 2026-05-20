@@ -14,7 +14,7 @@ export default function AgentQrCode({ slug, agentName }: AgentQrCodeProps) {
   useEffect(() => {
     const url =
       (process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") ||
-        "https://taurorealty.com") +
+        "https://lylrealty.com") +
       `/agents/${slug}`;
 
     QRCode.toDataURL(url, {

@@ -5,9 +5,9 @@ import { Instagram } from "lucide-react";
 import FadeInView from "@/components/animations/FadeInView";
 import StaggerReveal from "@/components/animations/StaggerReveal";
 
-const INSTAGRAM_URL = "https://instagram.com/taurorealty";
+const INSTAGRAM_URL = "https://instagram.com/lylrealtygroup";
 
-// Curated property & lifestyle images representing Tauro's feed aesthetic
+// Curated property & lifestyle images representing LYL Realty Group's feed aesthetic
 const feedItems = [
   {
     src: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
@@ -31,7 +31,7 @@ const feedItems = [
   },
   {
     src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80",
-    alt: "Tauro luxury property exterior at dusk",
+    alt: "LYL Realty Group luxury property exterior at dusk",
   },
 ];
 
@@ -74,7 +74,7 @@ export default function InstagramFeed() {
                 Follow Along
               </p>
               <h2 className="mt-2 font-heading text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-                @taurorealty
+                @lylrealtygroup
               </h2>
               <p className="mx-auto mt-3 max-w-xl text-sm text-white/60 sm:mx-0 sm:mt-2 sm:text-base">
                 Luxury listings, neighborhood gems, and behind-the-scenes moments — live on Instagram.

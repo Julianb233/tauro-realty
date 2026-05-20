@@ -7,16 +7,20 @@ import { BLUR_LANDSCAPE } from "@/lib/blur-placeholder";
 export default async function NeighborhoodShowcase() {
   const homepageNeighborhoods = await loadHomepageNeighborhoods();
   return (
-    <section className="bg-cream py-12 sm:py-20">
+    <section className="bg-midnight py-12 text-white sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="font-label text-xs font-semibold uppercase tracking-[0.2em] text-gold sm:text-sm">Explore Philadelphia</p>
-          <h2 className="mt-2 font-heading text-2xl font-bold text-foreground sm:text-3xl md:text-4xl"><em>Premier</em> Neighborhoods</h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-foreground/70 sm:mt-4 sm:text-base">From the brownstones of Rittenhouse to the lofts of Fishtown — discover what makes each Philadelphia neighborhood unique.</p>
+          <p className="font-label text-xs font-bold uppercase tracking-[0.2em] text-gold sm:text-sm">
+            Explore Philadelphia
+          </p>
+          <h2 className="mt-2 font-heading text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+            <em className="text-gold">Premier</em> Neighborhoods
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-white/82 sm:mt-4 sm:text-base">From the brownstones of Rittenhouse to the lofts of Fishtown — discover what makes each Philadelphia neighborhood unique.</p>
         </div>
         <div className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
           {homepageNeighborhoods.map((hood) => (
-            <Link key={hood.slug} href={`/neighborhoods/${hood.slug}`} className="group depth-hover relative overflow-hidden rounded-xl bg-white shadow-sm border border-border/50 transition-all hover:border-gold/40 hover:shadow-lg">
+            <Link key={hood.slug} href={`/neighborhoods/${hood.slug}`} className="group depth-hover relative overflow-hidden rounded-xl border border-white/12 bg-white/[0.04] shadow-sm transition-all hover:border-gold/50 hover:bg-white/[0.06] hover:shadow-lg">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image src={hood.image} alt={hood.name} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" placeholder="blur" blurDataURL={BLUR_LANDSCAPE} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />

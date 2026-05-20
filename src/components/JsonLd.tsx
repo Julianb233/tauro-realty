@@ -1,7 +1,7 @@
 import { Property } from "@/data/properties";
 import { Agent } from "@/data/agents";
 import { Testimonial } from "@/data/testimonials";
-import { siteUrl } from "@/lib/site-config";
+import { siteBrand, siteUrl } from "@/lib/site-config";
 
 /* -------------------------------------------------------------------------- */
 /*  Organization / RealEstateAgent — global (rendered in layout)              */
@@ -44,37 +44,32 @@ export function OrganizationJsonLd({
     "@context": "https://schema.org",
     "@type": ["RealEstateAgent", "LocalBusiness"],
     "@id": `${siteUrl}/#organization`,
-    name: "Tauro | LYL Realty Group",
+    name: siteBrand.name,
     url: siteUrl,
     logo: {
       "@type": "ImageObject",
-      url: `${siteUrl}/tauro-logo.png`,
-      width: 512,
-      height: 512,
+      url: `${siteUrl}${siteBrand.logoPath}`,
+      width: 378,
+      height: 193,
     },
     image: `${siteUrl}/opengraph-image`,
-    description:
-      "Premium Philadelphia real estate brokerage serving Center City, Rittenhouse, Fishtown, and surrounding neighborhoods.",
-    telephone: "+12158394172",
-    email: "info@taurorealty.com",
+    description: siteBrand.description,
+    telephone: siteBrand.phone,
+    email: siteBrand.email,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "1500 Walnut St, Suite 500",
-      addressLocality: "Philadelphia",
-      addressRegion: "PA",
-      postalCode: "19102",
-      addressCountry: "US",
+      streetAddress: siteBrand.address.street,
+      addressLocality: siteBrand.address.city,
+      addressRegion: siteBrand.address.region,
+      postalCode: siteBrand.address.postalCode,
+      addressCountry: siteBrand.address.country,
     },
     geo: {
       "@type": "GeoCoordinates",
       latitude: 39.9496,
       longitude: -75.1652,
     },
-    sameAs: [
-      "https://www.instagram.com/taurorealty",
-      "https://www.linkedin.com/company/taurorealty",
-      "https://www.facebook.com/taurorealty",
-    ],
+    sameAs: Object.values(siteBrand.socials),
     areaServed: PHILADELPHIA_NEIGHBORHOODS.map((name) => ({
       "@type": "Place",
       name,
@@ -98,8 +93,8 @@ export function OrganizationJsonLd({
           "Thursday",
           "Friday",
         ],
-        opens: "09:00",
-        closes: "18:00",
+        opens: "09:30",
+        closes: "17:30",
       },
     ],
   };
@@ -238,7 +233,7 @@ export function RealEstateAgentJsonLd({ agent }: { agent: Agent }) {
     worksFor: {
       "@type": "RealEstateAgent",
       "@id": `${siteUrl}/#organization`,
-      name: "Tauro | LYL Realty Group",
+      name: siteBrand.name,
       url: siteUrl,
     },
     areaServed: agent.neighborhoods.map((name) => ({
@@ -269,7 +264,7 @@ export function WebSiteJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Tauro Realty",
+    name: siteBrand.name,
     url: siteUrl,
     publisher: {
       "@type": "RealEstateAgent",

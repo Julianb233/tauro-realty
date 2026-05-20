@@ -62,13 +62,13 @@ export function CallbackRequestForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-6 text-center">
-        <CheckCircle className="mx-auto size-10 text-emerald-600" />
+      <div className="rounded-xl border border-gold/30 bg-gold/10 p-6 text-center">
+        <CheckCircle className="mx-auto size-10 text-gold" />
         <h3 className="mt-3 font-heading text-lg font-bold text-foreground">
           We&apos;ll Call You Back
         </h3>
         <p className="mt-2 text-sm text-muted-foreground">
-          A Tauro agent will reach out to you shortly{preferredTime ? ` around ${preferredTime}` : ""}.
+          A LYL agent will reach out to you shortly{preferredTime ? ` around ${preferredTime}` : ""}.
         </p>
       </div>
     );

@@ -4,7 +4,7 @@ import { useCallback, useSyncExternalStore } from "react";
 import type { FilterState } from "@/components/PropertyFilters";
 import { defaultFilters } from "@/components/PropertyFilters";
 
-const STORAGE_KEY = "tauro_saved_searches";
+const STORAGE_KEY = "lyl_saved_searches";
 
 export type AlertFrequency = "none" | "daily" | "weekly";
 

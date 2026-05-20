@@ -8,7 +8,7 @@ export default async function AreasWeServe() {
   const neighborhoods = await loadNeighborhoods();
 
   return (
-    <section className="relative overflow-hidden bg-foreground py-20">
+    <section className="relative overflow-hidden bg-midnight py-20">
       {/* Subtle gold gradient accent */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,175,55,0.08),transparent_60%)]" />
 
@@ -18,11 +18,11 @@ export default async function AreasWeServe() {
           <p className="font-label text-sm font-semibold uppercase tracking-[0.2em] text-gold">
             Philadelphia Real Estate
           </p>
-          <h2 className="mt-2 font-heading text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="mt-2 font-heading text-3xl font-bold text-off-white sm:text-4xl">
             Areas We Serve
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-white/95">
-            From Center City high-rises to charming Chestnut Hill estates, Tauro
+          <p className="mx-auto mt-4 max-w-2xl text-off-white/90">
+            From Center City high-rises to charming Chestnut Hill estates, LYL Realty Group
             brings local expertise to every Philadelphia neighborhood.
           </p>
         </div>

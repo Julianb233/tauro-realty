@@ -219,7 +219,7 @@ export default async function BlogPostPage({
 
       {/* ── Article Content ───────────────────────────────────── */}
       <article className="bg-white py-16 lg:py-24">
-        <div className="prose-tauro mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div className="prose-lyl mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           {renderContentWithCharts(contentHtml)}
         </div>
       </article>

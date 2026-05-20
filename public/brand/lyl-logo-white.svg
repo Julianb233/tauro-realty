@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 108" role="img" aria-labelledby="title">
+  <title id="title">LYL Realty Group</title>
+  <rect width="256" height="108" fill="#1A1A2E"/>
+  <g fill="none" stroke="#C9A96E" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 24c-14 0-24 10-24 24 0 26 24 36 24 36s24-10 24-36c0-14-10-24-24-24Z" stroke-width="3"/>
+    <path d="M40 24c0 22 0 38 0 60" stroke-width="2.5"/>
+    <path d="M40 34c10-14 25-18 43-16-2 18-13 29-34 34" stroke-width="3"/>
+    <path d="M40 36C33 22 22 16 8 16c3 16 13 27 28 34" stroke-width="3"/>
+  </g>
+  <text x="88" y="59" fill="#FFFFFF" font-family="Georgia, serif" font-size="54" font-weight="700" letter-spacing="10">LYL</text>
+  <path d="M90 70h142" stroke="#C9A96E" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <text x="91" y="91" fill="#F8F6F1" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="6">REALTY GROUP</text>
+</svg>

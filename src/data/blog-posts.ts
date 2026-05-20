@@ -283,7 +283,7 @@ Once you accept an offer, the process moves through inspection, appraisal, and c
 - **Transfer taxes** --- Philadelphia's combined transfer tax is 4.278%, typically split between buyer and seller.
 - **Certificate of occupancy** --- Required in Philadelphia for most residential sales.
 
-## The Tauro Approach
+## The LYL Realty Group Approach
 
 We believe selling your home should feel like a partnership, not a transaction. From pricing strategy to closing coordination, our agents manage every detail so you can focus on your next chapter.`,
     author: "Damon Reeves",

@@ -119,17 +119,17 @@ export default function Error({
         <p className="text-sm text-gold-light/50">
           Need help? Call{" "}
           <a
-            href="tel:+12158394172"
+            href="tel:+12677738600"
             className="text-gold/80 underline decoration-gold/30 underline-offset-4 transition-colors hover:text-gold"
           >
-            (215) 839-4172
+            (267) 773-8600
           </a>
           {" "}or email{" "}
           <a
-            href="mailto:info@taurorealty.com"
+            href="mailto:info@lylrealty.com"
             className="text-gold/80 underline decoration-gold/30 underline-offset-4 transition-colors hover:text-gold"
           >
-            info@taurorealty.com
+            info@lylrealty.com
           </a>
         </p>
       </div>

@@ -5,29 +5,29 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms of Service for Tauro, a premium Philadelphia real estate brokerage. Read our policies on website usage, property listings, agent services, and client agreements.",
+    "Terms of Service for LYL Realty Group, a premium Philadelphia real estate brokerage. Read our policies on website usage, property listings, agent services, and client agreements.",
 };
 
 const sections = [
   {
     title: "1. Use of Website",
     content:
-      "By accessing and using the Tauro website, you agree to be bound by these Terms of Service. This website is intended to provide general information about real estate listings, brokerage services, and the Philadelphia real estate market. All content is for informational purposes only and does not constitute legal, financial, or real estate advice.",
+      "By accessing and using the LYL Realty Group website, you agree to be bound by these Terms of Service. This website is intended to provide general information about real estate listings, brokerage services, and the Philadelphia real estate market. All content is for informational purposes only and does not constitute legal, financial, or real estate advice.",
   },
   {
     title: "2. Property Information Disclaimer",
     content:
-      "Property listings, prices, descriptions, and photographs displayed on this website are believed to be accurate but are not guaranteed. Listing information is sourced from various providers and may change without notice. Tauro does not warrant the accuracy, completeness, or reliability of any property information. Buyers should independently verify all details before making purchasing decisions.",
+      "Property listings, prices, descriptions, and photographs displayed on this website are believed to be accurate but are not guaranteed. Listing information is sourced from various providers and may change without notice. LYL Realty Group does not warrant the accuracy, completeness, or reliability of any property information. Buyers should independently verify all details before making purchasing decisions.",
   },
   {
     title: "3. Lead Generation & Communications",
     content:
-      "By submitting your contact information through any form on this website, you consent to receive communications from Tauro and its agents regarding your real estate inquiry. This may include phone calls, emails, and text messages. You may opt out of communications at any time by contacting us directly.",
+      "By submitting your contact information through any form on this website, you consent to receive communications from LYL Realty Group and its agents regarding your real estate inquiry. This may include phone calls, emails, and text messages. You may opt out of communications at any time by contacting us directly.",
   },
   {
     title: "4. Intellectual Property",
     content:
-      "All content on this website, including text, graphics, logos, images, and software, is the property of Tauro or its licensors and is protected by copyright and trademark laws. You may not reproduce, distribute, or create derivative works from any content without prior written consent.",
+      "All content on this website, including text, graphics, logos, images, and software, is the property of LYL Realty Group or its licensors and is protected by copyright and trademark laws. You may not reproduce, distribute, or create derivative works from any content without prior written consent.",
   },
   {
     title: "5. User Conduct",
@@ -37,12 +37,12 @@ const sections = [
   {
     title: "6. Limitation of Liability",
     content:
-      "Tauro shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of this website or reliance on any information provided. This limitation applies to the fullest extent permitted by applicable law.",
+      "LYL Realty Group shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of this website or reliance on any information provided. This limitation applies to the fullest extent permitted by applicable law.",
   },
   {
     title: "7. Third-Party Links",
     content:
-      "This website may contain links to third-party websites or services. Tauro does not endorse or assume responsibility for the content, privacy policies, or practices of any third-party sites. You access third-party links at your own risk.",
+      "This website may contain links to third-party websites or services. LYL Realty Group does not endorse or assume responsibility for the content, privacy policies, or practices of any third-party sites. You access third-party links at your own risk.",
   },
   {
     title: "8. Governing Law",
@@ -52,12 +52,12 @@ const sections = [
   {
     title: "9. Changes to Terms",
     content:
-      "Tauro reserves the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting to this website. Your continued use of the website constitutes acceptance of any modifications.",
+      "LYL Realty Group reserves the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting to this website. Your continued use of the website constitutes acceptance of any modifications.",
   },
   {
     title: "10. Contact",
     content:
-      "If you have questions about these Terms of Service, please contact us at info@taurorealty.com or call (215) 839-4172.",
+      "If you have questions about these Terms of Service, please contact us at info@lylrealty.com or call (267) 773-8600.",
   },
 ];
 

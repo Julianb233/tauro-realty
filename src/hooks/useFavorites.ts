@@ -2,7 +2,7 @@
 
 import { useCallback, useSyncExternalStore } from "react";
 
-const STORAGE_KEY = "tauro_favorites";
+const STORAGE_KEY = "lyl_favorites";
 
 // ---------- shared external store so every component stays in sync ----------
 const listeners = new Set<() => void>();

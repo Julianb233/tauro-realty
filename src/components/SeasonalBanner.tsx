@@ -9,8 +9,6 @@ interface Season {
   description: string;
   cta: string;
   href: string;
-  gradient: string;
-  accent: string;
 }
 
 const SEASONS: { start: [number, number]; end: [number, number]; season: Season }[] = [
@@ -25,8 +23,6 @@ const SEASONS: { start: [number, number]; end: [number, number]; season: Season 
         "Philadelphia's spring market is heating up. Buyers are actively searching — list your home today to maximize your sale price.",
       cta: "Get Your Home Valuation",
       href: "/home-value",
-      gradient: "from-emerald-900/90 via-emerald-800/80 to-emerald-700/70",
-      accent: "bg-emerald-400",
     },
   },
   {
@@ -40,8 +36,6 @@ const SEASONS: { start: [number, number]; end: [number, number]; season: Season 
         "Long days mean more time for showings. Schedule a tour of Philadelphia's finest properties this summer.",
       cta: "Browse Properties",
       href: "/properties",
-      gradient: "from-amber-900/90 via-amber-800/80 to-orange-700/70",
-      accent: "bg-amber-400",
     },
   },
   {
@@ -55,8 +49,6 @@ const SEASONS: { start: [number, number]; end: [number, number]; season: Season 
         "Fall brings motivated sellers and less competition. It's a smart time to make your move in Philadelphia.",
       cta: "Search Homes",
       href: "/properties",
-      gradient: "from-orange-900/90 via-red-900/80 to-amber-800/70",
-      accent: "bg-orange-400",
     },
   },
   {
@@ -70,8 +62,6 @@ const SEASONS: { start: [number, number]; end: [number, number]; season: Season 
         "The holidays are the perfect time to plan your next move. Fewer buyers means better opportunities for you.",
       cta: "Explore Neighborhoods",
       href: "/neighborhoods",
-      gradient: "from-blue-900/90 via-indigo-900/80 to-slate-800/70",
-      accent: "bg-blue-400",
     },
   },
 ];
@@ -106,13 +96,12 @@ export default function SeasonalBanner() {
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
-      <div
-        className={`relative overflow-hidden rounded-2xl bg-gradient-to-r ${season.gradient} px-6 py-8 sm:px-10 sm:py-10`}
-      >
+      <div className="relative overflow-hidden rounded-2xl border border-gold/25 bg-gradient-to-br from-midnight via-[#211829] to-oxblood/70 px-6 py-8 shadow-xl shadow-black/20 sm:px-10 sm:py-10">
         {/* Decorative accent bar */}
-        <div className={`absolute left-0 top-0 h-full w-1 ${season.accent}`} />
+        <div className="absolute left-0 top-0 h-full w-1 bg-gold" />
+        <div className="absolute right-0 top-0 h-full w-1/3 bg-[radial-gradient(circle_at_top_right,rgba(201,169,110,0.2),transparent_58%)]" aria-hidden="true" />
 
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div className="max-w-xl">
             <span className="font-label inline-block text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
               {season.label}

@@ -8,7 +8,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Properties for Sale in Philadelphia",
   description:
-    "Browse luxury homes and properties for sale in Philadelphia. Filter by neighborhood, price, and features. Tauro Realty listings across Center City, Rittenhouse, and more.",
+    "Browse luxury homes and properties for sale in Philadelphia. Filter by neighborhood, price, and features. LYL Realty Group listings across Center City, Rittenhouse, and more.",
 };
 
 export const revalidate = 3600;

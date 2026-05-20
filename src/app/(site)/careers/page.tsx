@@ -115,7 +115,7 @@ const openPositions = [
     location: "Philadelphia, PA",
     department: "Operations",
     description:
-      "Keep the Tauro machine running smoothly. You will oversee daily office operations, coordinate agent onboarding, manage vendor relationships, and ensure our team has everything they need to deliver premium client experiences.",
+      "Keep the LYL Realty Group machine running smoothly. You will oversee daily office operations, coordinate agent onboarding, manage vendor relationships, and ensure our team has everything they need to deliver premium client experiences.",
     requirements: [
       "3+ years of office management experience",
       "Exceptional organizational and multitasking abilities",
@@ -210,16 +210,16 @@ export default function CareersPage() {
         </div>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-gold">
-            Careers at Tauro
+            Careers at LYL Realty Group
           </p>
           <h1 className="mt-3 font-heading text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
             Build Your Future{" "}
-            <span className="text-gold">with&nbsp;Tauro</span>
+            <span className="text-gold">with&nbsp;LYL Realty Group</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-white/90">
             We&apos;re building Philadelphia&apos;s most elite real estate team.
             If you&apos;re driven, client-focused, and ready to elevate your
-            career, Tauro is where you belong.
+            career, LYL Realty Group is where you belong.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
@@ -265,7 +265,7 @@ export default function CareersPage() {
               Open Positions
             </p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-foreground sm:text-4xl">
-              Find Your Role at Tauro
+              Find Your Role at LYL Realty Group
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
               We&apos;re growing fast and looking for exceptional talent to join
@@ -352,13 +352,13 @@ export default function CareersPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
-              Why Tauro
+              Why LYL Realty Group
             </p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-foreground sm:text-4xl">
               Benefits & Perks
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              From competitive compensation to professional development, Tauro
+              From competitive compensation to professional development, LYL Realty Group
               invests in every member of our team.
             </p>
           </div>
@@ -409,14 +409,14 @@ export default function CareersPage() {
                 <span className="text-gold">A Family</span>
               </h2>
               <p className="mt-4 text-white/90">
-                At Tauro, we believe the best work happens when people feel
+                At LYL Realty Group, we believe the best work happens when people feel
                 valued, supported, and inspired. Our culture blends ambitious
                 goals with genuine care — creating an environment where everyone
                 can thrive.
               </p>
               <p className="mt-3 text-white/90">
                 From team retreats and mentorship circles to Friday happy hours
-                and community service days, life at Tauro is about more than
+                and community service days, life at LYL Realty Group is about more than
                 closing deals. It&apos;s about building something meaningful
                 together.
               </p>
@@ -450,7 +450,7 @@ export default function CareersPage() {
               Apply Today
             </p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-foreground sm:text-4xl">
-              Start Your Journey with Tauro
+              Start Your Journey with LYL Realty Group
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
               Fill out the form below and a team leader will be in touch within
@@ -465,7 +465,7 @@ export default function CareersPage() {
                 Application Received
               </h3>
               <p className="mt-2 text-muted-foreground">
-                Thank you for your interest in joining Tauro! A team leader will
+                Thank you for your interest in joining LYL Realty Group! A team leader will
                 review your application and reach out within 2-3 business days.
               </p>
             </div>
@@ -547,7 +547,7 @@ export default function CareersPage() {
                       setFormData({ ...formData, phone: e.target.value })
                     }
                     className="mt-1.5 w-full rounded-lg border border-border/60 bg-card px-4 py-2.5 text-sm text-foreground outline-none transition-colors focus-visible:border-gold focus-visible:ring-1 focus-visible:ring-gold"
-                    placeholder="(215) 555-0100"
+                    placeholder="(267) 773-8600"
                   />
                 </div>
               </div>
@@ -619,7 +619,7 @@ export default function CareersPage() {
                     setFormData({ ...formData, message: e.target.value })
                   }
                   className="mt-1.5 w-full resize-none rounded-lg border border-border/60 bg-card px-4 py-2.5 text-sm text-foreground outline-none transition-colors focus-visible:border-gold focus-visible:ring-1 focus-visible:ring-gold"
-                  placeholder="Share your background, what excites you about Tauro, and what you'd bring to the team..."
+                  placeholder="Share your background, what excites you about LYL Realty Group, and what you'd bring to the team..."
                 />
               </div>
 

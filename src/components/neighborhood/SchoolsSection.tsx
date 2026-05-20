@@ -85,7 +85,7 @@ export function SchoolsSection({
                             ? "bg-purple-100 text-purple-700"
                             : school.type === "Charter"
                               ? "bg-blue-50 text-blue-700"
-                              : "bg-emerald-50 text-emerald-700"
+                              : "bg-gold/10 text-midnight"
                       }`}
                     >
                       {school.type}

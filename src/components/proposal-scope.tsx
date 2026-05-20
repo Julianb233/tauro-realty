@@ -11,7 +11,7 @@ const scopePillars = [
     icon: "🌐",
     title: "Custom Website",
     summary:
-      "Premium Next.js site with your Tauro brand, property listings, neighborhood pages, and lead capture.",
+      "Premium Next.js site with your LYL Realty Group brand, property listings, neighborhood pages, and lead capture.",
     items: [
       "8+ custom pages (Home, Properties, Agents, Neighborhoods, Contact, etc.)",
       "Property listing grid with filters and detail pages",

@@ -8,9 +8,9 @@ import {
 } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Sitemap | Tauro Realty",
+  title: "Sitemap | LYL Realty Group",
   description:
-    "Browse all pages on Tauro Realty. Find properties, neighborhoods, agents, resources, and more across Philadelphia's premier real estate brokerage.",
+    "Browse all pages on LYL Realty Group. Find properties, neighborhoods, agents, resources, and more across Philadelphia's premier real estate brokerage.",
 };
 
 const resourceLinks = [
@@ -23,10 +23,10 @@ const resourceLinks = [
   { href: "/book-tour", label: "Book a Tour" },
   { href: "/sell", label: "Sell Your Home" },
   { href: "/contact", label: "Contact Us" },
-  { href: "/about", label: "About Tauro" },
+  { href: "/about", label: "About LYL Realty Group" },
   { href: "/careers", label: "Careers" },
   { href: "/join", label: "Join Our Team" },
-  { href: "/why-join", label: "Why Join Tauro" },
+  { href: "/why-join", label: "Why Join LYL Realty Group" },
 ];
 
 const legalLinks = [
@@ -56,7 +56,7 @@ export default async function SitemapPage() {
             Sitemap
           </h1>
           <p className="mt-4 max-w-xl text-lg text-white/90">
-            A complete directory of every page on Tauro Realty.
+            A complete directory of every page on LYL Realty Group.
           </p>
         </div>
       </section>

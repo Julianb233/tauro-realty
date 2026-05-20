@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 156" width="480" height="312">
-  <!-- Tauro Realty — Zorro-inspired masked bull logo (light/white variant) -->
+  <!-- LYL Realty Group — Zorro-inspired masked bull logo (light/white variant) -->
   <g>
     <!-- Left horn -->
     <path d="M72 52 C60 28, 44 16, 32 14 C36 20, 42 32, 50 44 C56 52, 66 58, 80 58" fill="#FFFFFF"/>
@@ -31,8 +31,8 @@
     <!-- Zorro Z accent -->
     <path d="M170 28 L182 28 L170 42 L182 42" stroke="#C9A96E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
   </g>
-  <!-- TAURO text -->
-  <text x="120" y="116" text-anchor="middle" fill="#FFFFFF" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="28" letter-spacing="5">TAURO</text>
+  <!-- LYL text -->
+  <text x="120" y="116" text-anchor="middle" fill="#FFFFFF" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="28" letter-spacing="5">LYL</text>
   <!-- Decorative line -->
   <line x1="88" y1="120" x2="152" y2="120" stroke="#C9A96E" stroke-width="1" opacity="0.5"/>
   <!-- REALTY subtitle -->

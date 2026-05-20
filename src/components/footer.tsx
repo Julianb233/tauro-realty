@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Twitter, ArrowRight, Users } from "lucide-react";
+import { Mail, Phone, MapPin, Youtube, ArrowRight, Users } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { GoldShimmer } from "@/components/ui/gold-shimmer";
 import { GoogleReviewBadge } from "@/components/GoogleReviewBadge";
 import { BLUR_LANDSCAPE } from "@/lib/blur-placeholder";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { blogPosts } from "@/data/blog-posts";
+import { siteBrand } from "@/lib/site-config";
 
 const quickLinks = [
   { href: "/properties", label: "Properties" },
@@ -51,7 +52,7 @@ const neighborhoods = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-foreground">
+    <footer className="border-t border-white/10 bg-midnight text-white">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
@@ -60,7 +61,7 @@ export function Footer() {
               <Logo size="md" variant="light" />
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-white/90">
-              Premium real estate brokerage serving Philadelphia&apos;s most
+              {siteBrand.name} is a premium real estate brokerage serving Philadelphia&apos;s most
               sought-after neighborhoods.
             </p>
           </div>
@@ -123,32 +124,32 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+12158394172"
+                  href={`tel:${siteBrand.phone}`}
                   className="flex min-h-[44px] items-center gap-2 text-sm text-white/90 transition-colors hover:text-gold"
                 >
                   <Phone className="size-4 shrink-0" />
-                  (215) 839-4172
+                  {siteBrand.displayPhone}
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@taurorealty.com"
+                  href={`mailto:${siteBrand.email}`}
                   className="flex min-h-[44px] items-center gap-2 text-sm text-white/90 transition-colors hover:text-gold"
                 >
                   <Mail className="size-4 shrink-0" />
-                  <span className="break-all">info@taurorealty.com</span>
+                  <span className="break-all">{siteBrand.email}</span>
                 </a>
               </li>
               <li>
                 <span className="flex items-start gap-2 text-sm text-white/90">
                   <MapPin className="mt-0.5 size-4 shrink-0" />
-                  Philadelphia, PA
+                  {siteBrand.address.city}, {siteBrand.address.region}
                 </span>
               </li>
             </ul>
             {/* Office map placeholder */}
             <a
-              href="https://maps.google.com/?q=Philadelphia+PA"
+              href={`https://maps.google.com/?q=${encodeURIComponent(`${siteBrand.address.street}, ${siteBrand.address.city}, ${siteBrand.address.region} ${siteBrand.address.postalCode}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View our office location on Google Maps (opens in new tab)"
@@ -156,7 +157,7 @@ export function Footer() {
             >
               <div className="flex h-full flex-col items-center justify-center gap-2 text-xs text-white/90">
                 <MapPin className="size-5 text-gold" />
-                <span>Philadelphia, PA</span>
+                <span>{siteBrand.address.city}, {siteBrand.address.region}</span>
                 <span className="text-gold/70">View on Map</span>
               </div>
             </a>
@@ -289,7 +290,7 @@ export function Footer() {
             <div className="text-center sm:text-left">
               <p className="text-xs leading-relaxed text-white/90">
                 <span className="font-semibold text-white/90">Equal Housing Opportunity.</span>{" "}
-                Tauro Realty is committed to compliance with all federal, state, and local fair
+                {siteBrand.name} is committed to compliance with all federal, state, and local fair
                 housing laws. We do not discriminate on the basis of race, color, religion, sex,
                 handicap, familial status, national origin, sexual orientation, gender identity, or
                 any other protected class.
@@ -313,7 +314,7 @@ export function Footer() {
         <div className="mt-0 flex flex-col items-center justify-between gap-4 pt-6 sm:pt-8 md:flex-row">
           <div className="flex items-center gap-4">
             <p className="text-xs text-white/90">
-              &copy; {new Date().getFullYear()} Tauro. All rights reserved.
+              &copy; {new Date().getFullYear()} {siteBrand.name}. All rights reserved.
             </p>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-gold">
               Est. 2014 <span className="text-gold/40">|</span> 12+ Years
@@ -323,46 +324,13 @@ export function Footer() {
           <div className="flex items-center gap-1 sm:gap-3">
             <GoldShimmer>
               <a
-                href="https://instagram.com/taurorealty"
+                href={siteBrand.socials.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md p-2 text-white/90 transition-all duration-300 hover:text-gold hover:scale-110"
-                aria-label="Instagram"
+                aria-label="YouTube"
               >
-                <Instagram className="size-5" />
-              </a>
-            </GoldShimmer>
-            <GoldShimmer>
-              <a
-                href="https://facebook.com/taurorealty"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md p-2 text-white/90 transition-all duration-300 hover:text-gold hover:scale-110"
-                aria-label="Facebook"
-              >
-                <Facebook className="size-5" />
-              </a>
-            </GoldShimmer>
-            <GoldShimmer>
-              <a
-                href="https://linkedin.com/company/taurorealty"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md p-2 text-white/90 transition-all duration-300 hover:text-gold hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="size-5" />
-              </a>
-            </GoldShimmer>
-            <GoldShimmer>
-              <a
-                href="https://x.com/taurorealty"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md p-2 text-white/90 transition-all duration-300 hover:text-gold hover:scale-110"
-                aria-label="X (Twitter)"
-              >
-                <Twitter className="size-5" />
+                <Youtube className="size-5" />
               </a>
             </GoldShimmer>
           </div>

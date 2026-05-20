@@ -62,7 +62,7 @@ export default function HomepageCTAs() {
                 </p>
               </div>
               <h3 className="mt-2 font-heading text-2xl font-bold text-white sm:text-3xl">
-                List With Tauro
+                List With LYL
               </h3>
               <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/90">
                 Get a free home valuation, premium marketing, and an agent who

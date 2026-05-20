@@ -1,9 +1,9 @@
 /**
  * Cookie consent utilities.
- * Stores user preference in localStorage under "tauro-cookie-consent".
+ * Stores user preference in localStorage under "lyl-cookie-consent".
  */
 
-export const COOKIE_CONSENT_KEY = "tauro-cookie-consent";
+export const COOKIE_CONSENT_KEY = "lyl-cookie-consent";
 
 export type CookiePreferences = {
   essential: true; // always true

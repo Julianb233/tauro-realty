@@ -1,12 +1,13 @@
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { siteBrand } from "@/lib/site-config";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OGImage() {
-  const logoPath = join(process.cwd(), "public", "tauro-logo.png");
+  const logoPath = join(process.cwd(), "public", siteBrand.logoPath.replace(/^\//, ""));
   const logoBuffer = await readFile(logoPath);
   const logoBase64 = `data:image/png;base64,${logoBuffer.toString("base64")}`;
 
@@ -79,7 +80,7 @@ export default async function OGImage() {
               marginBottom: 16,
             }}
           >
-            TAURO
+            {siteBrand.shortName}
           </div>
 
           {/* Divider with diamond */}
@@ -124,7 +125,7 @@ export default async function OGImage() {
               textTransform: "uppercase" as const,
             }}
           >
-            Premium Philadelphia Real Estate
+            {siteBrand.category}
           </div>
         </div>
 

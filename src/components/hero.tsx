@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import HeroSearchBar from "@/components/HeroSearchBar";
 import HeroSlideshow from "@/components/HeroSlideshow";
+import { siteBrand } from "@/lib/site-config";
 
 const PHRASES = ["Find Your Place", "Discover Luxury", "Live Extraordinary"];
 const TYPE_SPEED = 80;
@@ -66,14 +67,15 @@ export default function Hero() {
       {/* Auto-rotating slideshow background */}
       <HeroSlideshow />
 
-      {/* Gradient overlay */}
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/20" />
+      {/* Brand overlay */}
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-midnight/88 via-midnight/66 to-midnight/50" />
+      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(201,169,110,0.18),transparent_34%),linear-gradient(115deg,rgba(26,26,46,0.76),rgba(139,0,0,0.18)_48%,rgba(26,26,46,0.72))]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-24 text-center sm:px-6 sm:py-32 lg:px-8">
         <p className="mb-4 font-label text-xs font-semibold uppercase tracking-[0.25em] text-gold sm:text-sm">
-          Premium Philadelphia Real Estate
+          {siteBrand.category}
         </p>
-        <h1 className="font-heading text-3xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="font-heading text-3xl font-bold leading-tight text-off-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.45)] sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="inline-flex items-baseline">
             <span>{typedText}</span>
             <span
@@ -84,9 +86,9 @@ export default function Hero() {
           <br />
           <em className="text-gold">in Philadelphia</em>
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-base text-white/90 sm:mt-6 sm:text-lg">
+        <p className="mx-auto mt-4 max-w-2xl text-base text-off-white/90 drop-shadow sm:mt-6 sm:text-lg">
           Discover luxury homes and condos across Philadelphia&apos;s most
-          coveted neighborhoods with Tauro&apos;s expert agents.
+          coveted neighborhoods with {siteBrand.name}&apos;s expert agents.
         </p>
 
         {/* Primary CTA */}
@@ -100,7 +102,7 @@ export default function Hero() {
           </Link>
           <Link
             href="/home-value"
-            className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-6 py-4 font-label text-sm font-medium uppercase tracking-wider text-white/90 backdrop-blur-sm transition-all duration-300 hover:border-gold/50 hover:text-gold"
+            className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-midnight/55 px-6 py-4 font-label text-sm font-medium uppercase tracking-wider text-off-white backdrop-blur-sm transition-all duration-300 hover:border-gold hover:text-gold"
           >
             Get Your Home Value
           </Link>

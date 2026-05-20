@@ -135,7 +135,7 @@ export function SellerInquiryForm() {
           Inquiry Received!
         </h3>
         <p className="mt-3 max-w-sm text-muted-foreground">
-          A Tauro agent will review your property details and contact you within
+          A LYL agent will review your property details and contact you within
           24 hours with a personalized market analysis.
         </p>
         <button
@@ -228,7 +228,7 @@ export function SellerInquiryForm() {
               autoComplete="tel"
               value={form.phone}
               onChange={handleChange}
-              placeholder="(215) 839-4172"
+              placeholder="(267) 773-8600"
               className="w-full rounded-lg border border-border/40 bg-white px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/20"
             />
           </div>

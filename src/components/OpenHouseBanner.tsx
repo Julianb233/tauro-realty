@@ -32,14 +32,14 @@ function generateIcs(property: Property): string {
   return [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//TAURO Realty//Open House//EN",
+    "PRODID:-//LYL Realty//Open House//EN",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
     "BEGIN:VEVENT",
     `DTSTART;TZID=America/Los_Angeles:${toIcsDateLocal(ev.date, ev.startTime)}`,
     `DTEND;TZID=America/Los_Angeles:${toIcsDateLocal(ev.date, ev.endTime)}`,
     `DTSTAMP:${stamp}`,
-    `UID:openhouse-${property.id}-${ev.date}@tauro.realty`,
+    `UID:openhouse-${property.id}-${ev.date}@lylrealty.com`,
     `SUMMARY:Open House: ${property.address}`,
     `LOCATION:${location}`,
     `DESCRIPTION:Open House for ${location}. View listing: ${url}`,
@@ -189,8 +189,8 @@ function RsvpModal({
 
         {success ? (
           <div className="text-center py-4">
-            <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600/20">
-              <Calendar className="h-7 w-7 text-emerald-400" />
+            <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-gold/15">
+              <Calendar className="h-7 w-7 text-gold" />
             </div>
             <h3 className="font-heading text-xl font-bold">You&apos;re on the list!</h3>
             <p className="mt-2 text-sm text-muted-foreground">

@@ -74,14 +74,14 @@ export default function SocialProof() {
       <AsSeenInStrip />
 
       {/* Awards & Recognition */}
-      <section className="bg-white py-12 sm:py-20">
+      <section className="bg-cream py-12 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeInView direction="up">
             <div className="text-center">
               <p className="font-label text-xs font-semibold uppercase tracking-[0.2em] text-gold sm:text-sm">
                 Excellence Recognized
               </p>
-              <h2 className="mt-2 font-heading text-2xl font-bold text-foreground sm:text-3xl md:text-4xl">
+              <h2 className="mt-2 font-heading text-2xl font-bold text-near-black sm:text-3xl md:text-4xl">
                 Awards &amp; Recognition
               </h2>
             </div>
@@ -94,15 +94,15 @@ export default function SocialProof() {
             {awards.map((award) => (
               <div
                 key={award.title}
-                className="group rounded-xl border border-border/50 bg-white p-6 text-center shadow-sm transition-colors hover:border-gold/40"
+                className="group rounded-xl border border-gold/25 bg-white p-6 text-center shadow-sm transition-colors hover:border-gold/55"
               >
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gold/10 text-gold transition-colors group-hover:bg-gold/20">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gold/15 text-gold-dark transition-colors group-hover:bg-gold/25">
                   <award.icon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-4 font-heading text-base font-semibold text-foreground">
+                <h3 className="mt-4 font-heading text-base font-semibold text-near-black">
                   {award.title}
                 </h3>
-                <p className="mt-1 text-xs text-foreground/60">
+                <p className="mt-1 text-xs font-medium text-gray-600">
                   {award.subtitle}
                 </p>
               </div>
@@ -123,7 +123,7 @@ export function AsSeenInStrip() {
     <section className="border-y border-border/30 bg-cream py-10 sm:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeInView direction="up">
-          <p className="text-center font-label text-xs font-semibold uppercase tracking-[0.2em] text-foreground/60">
+          <p className="text-center font-label text-xs font-semibold uppercase tracking-[0.2em] text-gray-600">
             As Featured In
           </p>
         </FadeInView>
@@ -131,7 +131,7 @@ export function AsSeenInStrip() {
           {mediaOutlets.map((outlet) => (
             <div
               key={outlet.name}
-              className="text-foreground/70 grayscale transition-all duration-300 hover:text-gold hover:grayscale-0"
+              className="text-near-black/75 grayscale transition-all duration-300 hover:text-gold-dark hover:grayscale-0"
             >
               <MediaLogo displayName={outlet.displayName} />
             </div>

@@ -46,7 +46,7 @@ function getResend(): Resend | null {
 }
 
 const EMAIL_FROM =
-  process.env.EMAIL_FROM || "Tauro Realty <noreply@taurorealty.com>";
+  process.env.EMAIL_FROM || "LYL Realty Group <noreply@lylrealty.com>";
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "admin@lylrealty.com";
 
 export type EmailResult = { success: boolean; error?: string };
@@ -67,7 +67,7 @@ export async function sendLeadConfirmation(
     await client.emails.send({
       from: EMAIL_FROM,
       to,
-      subject: "Thank you for reaching out to Tauro Realty",
+      subject: "Thank you for reaching out to LYL Realty Group",
       html,
     });
     return { success: true };
@@ -121,7 +121,7 @@ export async function sendApplicationConfirmation(
     await client.emails.send({
       from: EMAIL_FROM,
       to,
-      subject: "Your Tauro Realty application has been received",
+      subject: "Your LYL Realty Group application has been received",
       html,
     });
     return { success: true };
@@ -174,7 +174,7 @@ export async function sendNewsletterConfirmation(
     await client.emails.send({
       from: EMAIL_FROM,
       to,
-      subject: "Confirm your Tauro Realty newsletter subscription",
+      subject: "Confirm your LYL Realty Group newsletter subscription",
       html,
     });
     return { success: true };
@@ -201,7 +201,7 @@ export async function sendNewsletterWelcome(
     await client.emails.send({
       from: EMAIL_FROM,
       to,
-      subject: "Welcome to the Tauro Realty Newsletter",
+      subject: "Welcome to the LYL Realty Group Newsletter",
       html,
     });
     return { success: true };
@@ -229,7 +229,7 @@ export async function sendMonthlyNewsletter(
     await client.emails.send({
       from: EMAIL_FROM,
       to,
-      subject: `Tauro Realty - ${month} ${year} Philadelphia Real Estate Update`,
+      subject: `LYL Realty Group - ${month} ${year} Philadelphia Real Estate Update`,
       html,
     });
     return { success: true };

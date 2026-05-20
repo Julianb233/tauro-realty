@@ -39,7 +39,7 @@ html {
   --font-label: var(--font-montserrat);
 
   /* shadcn tokens */
-  /* Tauro brand colors */
+  /* LYL Realty Group brand colors */
   --color-midnight: #1A1A2E;
   --color-oxblood: #8B0000;
   --color-gold: #C9A96E;
@@ -675,12 +675,16 @@ html.a11y-font-xl {
 
 /* High contrast mode */
 html.a11y-high-contrast {
-  --background: #FFFFFF;
-  --foreground: #000000;
-  --muted-foreground: #333333;
-  --border: #000000;
-  --card: #FFFFFF;
-  --card-foreground: #000000;
+  --background: #1A1A2E;
+  --foreground: #F5F0E8;
+  --muted-foreground: #E8DEC8;
+  --border: #C9A96E;
+  --card: #24243A;
+  --card-foreground: #F5F0E8;
+  --popover: #24243A;
+  --popover-foreground: #F5F0E8;
+  --accent: #2E2E48;
+  --accent-foreground: #F5F0E8;
 }
 
 html.a11y-high-contrast img {

@@ -21,9 +21,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FaqAccordion } from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Seller's Guide | Tauro Realty",
+  title: "Seller's Guide | LYL Realty Group",
   description:
-    "The smart seller's guide to maximizing your Philadelphia home's value. Learn the selling process, staging tips, pricing strategy, and how Tauro Realty helps you get top dollar.",
+    "The smart seller's guide to maximizing your Philadelphia home's value. Learn the selling process, staging tips, pricing strategy, and how LYL Realty Group helps you get top dollar.",
 };
 
 const sellingSteps = [
@@ -38,7 +38,7 @@ const sellingSteps = [
     step: 2,
     title: "Choose Your Listing Agent",
     description:
-      "Partner with an agent who has deep expertise in your neighborhood. Tauro agents combine hyperlocal market knowledge with premium marketing strategies, ensuring your home reaches qualified buyers quickly. Our track record speaks for itself: $2.1B in total sales volume.",
+      "Partner with an agent who has deep expertise in your neighborhood. LYL agents combine hyperlocal market knowledge with premium marketing strategies, ensuring your home reaches qualified buyers quickly. Our track record speaks for itself: $2.1B in total sales volume.",
     timeline: "1–3 days",
   },
   {
@@ -52,14 +52,14 @@ const sellingSteps = [
     step: 4,
     title: "Prepare and Stage Your Home",
     description:
-      "First impressions drive offers. Address any deferred maintenance, declutter living spaces, and consider professional staging. Tauro coordinates staging consultations, minor repairs, and deep cleaning so your home shows at its absolute best from day one.",
+      "First impressions drive offers. Address any deferred maintenance, declutter living spaces, and consider professional staging. LYL Realty Group coordinates staging consultations, minor repairs, and deep cleaning so your home shows at its absolute best from day one.",
     timeline: "1–3 weeks",
   },
   {
     step: 5,
     title: "List and Market Your Property",
     description:
-      "Your home gets the full Tauro marketing treatment: professional photography, 3D virtual tours, drone footage, targeted social media advertising, and placement across Philadelphia's top listing portals. We create demand before showings even begin.",
+      "Your home gets the full LYL Realty Group marketing treatment: professional photography, 3D virtual tours, drone footage, targeted social media advertising, and placement across Philadelphia's top listing portals. We create demand before showings even begin.",
     timeline: "1–2 weeks",
   },
   {
@@ -111,7 +111,7 @@ const stagingTips = [
   },
 ];
 
-const tauroAdvantages = [
+const lylAdvantages = [
   {
     icon: TrendingUp,
     title: "Top Dollar Results",
@@ -122,7 +122,7 @@ const tauroAdvantages = [
     icon: Home,
     title: "Premium Marketing",
     description:
-      "Every Tauro listing receives professional photography, cinematic video tours, 3D Matterport walkthroughs, targeted social media campaigns, and placement on 500+ listing platforms. We don't just list your home, we launch it.",
+      "Every LYL Realty Group listing receives professional photography, cinematic video tours, 3D Matterport walkthroughs, targeted social media campaigns, and placement on 500+ listing platforms. We don't just list your home, we launch it.",
   },
   {
     icon: Shield,
@@ -134,7 +134,7 @@ const tauroAdvantages = [
     icon: Star,
     title: "Concierge Service",
     description:
-      "Selling a home involves dozens of moving parts. Tauro coordinates staging consultations, professional cleaning, minor repairs, photography scheduling, and open house logistics so you can focus on what matters most to you.",
+      "Selling a home involves dozens of moving parts. LYL Realty Group coordinates staging consultations, professional cleaning, minor repairs, photography scheduling, and open house logistics so you can focus on what matters most to you.",
   },
 ];
 
@@ -142,12 +142,12 @@ const sellerFaqs = [
   {
     question: "How do I know when it's the right time to sell?",
     answer:
-      "The best time to sell depends on your personal circumstances and market conditions. In Philadelphia, spring (March–May) and early fall (September–October) see the highest buyer activity. However, well-priced homes sell year-round. Key indicators include strong equity position, low local inventory, rising home values in your area, and personal readiness. A Tauro agent can provide a free market analysis to help you decide.",
+      "The best time to sell depends on your personal circumstances and market conditions. In Philadelphia, spring (March–May) and early fall (September–October) see the highest buyer activity. However, well-priced homes sell year-round. Key indicators include strong equity position, low local inventory, rising home values in your area, and personal readiness. A LYL agent can provide a free market analysis to help you decide.",
   },
   {
     question: "How much is my home worth?",
     answer:
-      "Your home's value depends on recent comparable sales, current market conditions, your property's condition, and location-specific factors. Online estimates (Zillow, Redfin) provide a rough starting point, but they can be off by 5–15%. A Tauro agent will prepare a detailed Comparative Market Analysis (CMA) based on actual sold data, pending sales, and hyperlocal market knowledge—at no cost or obligation.",
+      "Your home's value depends on recent comparable sales, current market conditions, your property's condition, and location-specific factors. Online estimates (Zillow, Redfin) provide a rough starting point, but they can be off by 5–15%. A LYL agent will prepare a detailed Comparative Market Analysis (CMA) based on actual sold data, pending sales, and hyperlocal market knowledge—at no cost or obligation.",
   },
   {
     question: "How long does it take to sell a home in Philadelphia?",
@@ -157,22 +157,22 @@ const sellerFaqs = [
   {
     question: "What are the costs of selling a home?",
     answer:
-      "Typical seller costs in Philadelphia include: agent commissions (5–6% of sale price), seller's transfer tax (2.075%), title insurance, any agreed-upon buyer credits or repairs, outstanding mortgage payoff, and potential capital gains tax. Your net proceeds can be estimated in advance—ask your Tauro agent for a detailed seller net sheet.",
+      "Typical seller costs in Philadelphia include: agent commissions (5–6% of sale price), seller's transfer tax (2.075%), title insurance, any agreed-upon buyer credits or repairs, outstanding mortgage payoff, and potential capital gains tax. Your net proceeds can be estimated in advance—ask your LYL agent for a detailed seller net sheet.",
   },
   {
     question: "Should I make repairs or renovations before listing?",
     answer:
-      "Focus on high-ROI improvements: fresh paint, updated lighting, clean landscaping, and fixing obvious maintenance issues (leaky faucets, broken hardware). Major renovations rarely recoup 100% of their cost. Your Tauro agent will do a walkthrough and recommend the specific improvements that will have the greatest impact on your sale price and timeline.",
+      "Focus on high-ROI improvements: fresh paint, updated lighting, clean landscaping, and fixing obvious maintenance issues (leaky faucets, broken hardware). Major renovations rarely recoup 100% of their cost. Your LYL agent will do a walkthrough and recommend the specific improvements that will have the greatest impact on your sale price and timeline.",
   },
   {
     question: "Do I need to stage my home?",
     answer:
-      "Staged homes consistently sell faster and for more money—studies show staged properties sell for 5–10% more than unstaged ones. At minimum, declutter, depersonalize, and deep clean. For vacant properties or homes that need extra visual appeal, Tauro can coordinate professional staging services tailored to your budget and target buyer demographic.",
+      "Staged homes consistently sell faster and for more money—studies show staged properties sell for 5–10% more than unstaged ones. At minimum, declutter, depersonalize, and deep clean. For vacant properties or homes that need extra visual appeal, LYL Realty Group can coordinate professional staging services tailored to your budget and target buyer demographic.",
   },
   {
     question: "What happens if my home doesn't sell?",
     answer:
-      "If your home isn't attracting offers, the most common culprit is pricing. Your Tauro agent will monitor showing feedback, online activity metrics, and comparable sales data to recommend strategic adjustments. Options include price adjustments, enhanced marketing, staging updates, or targeting a different buyer segment. We work with you until your home is sold.",
+      "If your home isn't attracting offers, the most common culprit is pricing. Your LYL agent will monitor showing feedback, online activity metrics, and comparable sales data to recommend strategic adjustments. Options include price adjustments, enhanced marketing, staging updates, or targeting a different buyer segment. We work with you until your home is sold.",
   },
 ];
 
@@ -193,7 +193,7 @@ export default function SellersGuidePage() {
             The Smart Seller&apos;s Guide to Maximizing Your Home&apos;s Value
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/80">
-            From pricing strategy to closing day, Tauro helps Philadelphia
+            From pricing strategy to closing day, LYL Realty Group helps Philadelphia
             sellers get top dollar with expert guidance and premium marketing at
             every step.
           </p>
@@ -227,7 +227,7 @@ export default function SellersGuidePage() {
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
               Selling your home doesn&apos;t have to be stressful. Here&apos;s
-              exactly what to expect when you list with Tauro.
+              exactly what to expect when you list with LYL Realty Group.
             </p>
           </div>
 
@@ -341,7 +341,7 @@ export default function SellersGuidePage() {
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
               Pricing is the single most important factor in how quickly your
-              home sells and how much you net. Here&apos;s how Tauro approaches
+              home sells and how much you net. Here&apos;s how LYL Realty Group approaches
               it.
             </p>
           </div>
@@ -396,7 +396,7 @@ export default function SellersGuidePage() {
                 Overpriced homes sit on the market, accumulate days on market,
                 and eventually sell for less than they would have at the correct
                 price. Buyers view stale listings with suspicion and submit
-                lowball offers. Tauro&apos;s data-first approach avoids this
+                lowball offers. LYL Realty Group&apos;s data-first approach avoids this
                 trap and positions your home to sell quickly at maximum value.
               </p>
             </div>
@@ -404,24 +404,24 @@ export default function SellersGuidePage() {
         </div>
       </section>
 
-      {/* -- Tauro's Value Proposition ------------------------------ */}
+      {/* -- LYL Realty Group's Value Proposition ------------------------------ */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
-              The Tauro Advantage
+              The LYL Realty Group Advantage
             </p>
             <h2 className="mt-2 font-heading text-3xl font-bold text-foreground sm:text-4xl">
-              The Tauro Selling Advantage
+              The LYL Realty Group Selling Advantage
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              When you list with Tauro, you get a team of Philadelphia real
+              When you list with LYL Realty Group, you get a team of Philadelphia real
               estate experts backed by proven results and premium service.
             </p>
           </div>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {tauroAdvantages.map((item) => (
+            {lylAdvantages.map((item) => (
               <div
                 key={item.title}
                 className="group rounded-xl border border-border/40 bg-white p-6 transition-all hover:border-gold/30 hover:shadow-lg"
@@ -545,18 +545,18 @@ export default function SellersGuidePage() {
                   T
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">Tauro Realty Team</p>
+                  <p className="text-sm font-semibold text-white">LYL Realty Group Team</p>
                   <p className="mt-0.5 text-xs text-white/50">Philadelphia&apos;s Premier Real Estate Experts</p>
                   <div className="mt-2 flex items-center gap-4">
                     <a
-                      href="tel:+12155551234"
+                      href="tel:+12677738600"
                       className="inline-flex items-center gap-1.5 text-xs text-gold transition-colors hover:text-gold-light"
                     >
                       <Phone className="size-3" />
                       Contact Us
                     </a>
                     <a
-                      href="mailto:info@taurorealty.com"
+                      href="mailto:info@lylrealty.com"
                       className="inline-flex items-center gap-1.5 text-xs text-gold transition-colors hover:text-gold-light"
                     >
                       <Mail className="size-3" />

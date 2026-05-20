@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!result) return { title: "Agent Not Found" };
   const { agent } = result;
   const title = `${agent.fullName} — ${agent.title}`;
-  const description = `${agent.fullName} is a ${agent.title} at Tauro Realty Philadelphia. ${agent.bio?.slice(0, 120) || "Contact for expert real estate guidance."}`;
+  const description = `${agent.fullName} is a ${agent.title} at LYL Realty Group Philadelphia. ${agent.bio?.slice(0, 120) || "Contact for expert real estate guidance."}`;
   return {
     title,
     description,

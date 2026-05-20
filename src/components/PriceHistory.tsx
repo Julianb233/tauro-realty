@@ -58,7 +58,7 @@ export default function PriceHistory({ history }: { history: PriceHistoryEntry[]
                       <span
                         className={`inline-block rounded-md px-2 py-0.5 text-xs font-semibold uppercase tracking-wide ${
                           entry.event === "Listed"
-                            ? "bg-emerald-600/20 text-emerald-400"
+                            ? "bg-gold/15 text-gold"
                             : entry.event === "Price Reduced"
                               ? "bg-orange-500/20 text-orange-400"
                               : entry.event === "Pending"

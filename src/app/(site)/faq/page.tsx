@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
-    "Get answers to common questions about buying and selling homes in Philadelphia. Tauro Realty covers financing, inspections, timelines, and the entire real estate process.",
+    "Get answers to common questions about buying and selling homes in Philadelphia. LYL Realty Group covers financing, inspections, timelines, and the entire real estate process.",
 };
 
 export const revalidate = 86400;

@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/JsonLd";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { loadTestimonials } from "@/lib/data";
-import { siteUrl } from "@/lib/site-config";
+import { siteBrand, siteUrl } from "@/lib/site-config";
 import "./globals.css";
 
 // Non-critical interactive widgets — lazy-loaded to reduce main bundle size
@@ -70,40 +70,37 @@ export const metadata: Metadata = {
     canonical: "./",
   },
   title: {
-    default: "Tauro | Premium Philadelphia Real Estate",
-    template: "%s | Tauro",
+    default: `${siteBrand.name} | ${siteBrand.category}`,
+    template: `%s | ${siteBrand.name}`,
   },
-  description:
-    "Tauro is a premium real estate brokerage serving Philadelphia. Find luxury homes, expert agents, and neighborhood guides across Center City, Rittenhouse, Fishtown, and more.",
+  description: siteBrand.description,
   keywords: [
     "Philadelphia real estate",
     "luxury homes Philadelphia",
     "real estate brokerage",
-    "Tauro",
     "LYL Realty Group",
+    "Loving Your Living",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Tauro Realty",
+    siteName: siteBrand.name,
     url: siteUrl,
-    title: "Tauro | Premium Philadelphia Real Estate",
-    description:
-      "Premium real estate brokerage serving Philadelphia. Luxury homes, expert agents, and neighborhood guides.",
+    title: `${siteBrand.name} | ${siteBrand.category}`,
+    description: siteBrand.description,
     images: [
       {
         url: `${siteUrl}/opengraph-image`,
         width: 1200,
         height: 630,
-        alt: "Tauro Realty — Premium Philadelphia Real Estate",
+        alt: `${siteBrand.name} — ${siteBrand.category}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tauro | Premium Philadelphia Real Estate",
-    description:
-      "Premium real estate brokerage serving Philadelphia. Luxury homes, expert agents, and neighborhood guides.",
+    title: `${siteBrand.name} | ${siteBrand.category}`,
+    description: siteBrand.description,
   },
 };
 
@@ -115,12 +112,12 @@ export default async function RootLayout({
   const testimonials = await loadTestimonials();
 
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" className="dark a11y-high-contrast" suppressHydrationWarning>
       <head>
-        {/* Force dark mode — light mode not production-ready */}
+        {/* Force dark high-contrast mode — light/low-contrast mode is not production-ready. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){document.documentElement.classList.add('dark');try{localStorage.setItem('tauro-theme','dark')}catch(e){}})()`,
+            __html: `(function(){document.documentElement.classList.add('dark','a11y-high-contrast');try{localStorage.setItem('lyl-theme','dark');var p=JSON.parse(localStorage.getItem('lyl-a11y-prefs')||'{}');if(p.highContrast!==false){p.highContrast=true;localStorage.setItem('lyl-a11y-prefs',JSON.stringify(p));}}catch(e){}})()`,
           }}
         />
         {/* Preconnect to critical external origins for faster LCP */}

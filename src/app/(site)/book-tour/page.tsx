@@ -7,7 +7,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "Book a Property Tour",
   description:
-    "Schedule a private showing of any Philadelphia property with a Tauro Realty agent. Tour luxury homes in Rittenhouse, Center City, Fishtown, and all Philadelphia neighborhoods.",
+    "Schedule a private showing of any Philadelphia property with a LYL Realty Group agent. Tour luxury homes in Rittenhouse, Center City, Fishtown, and all Philadelphia neighborhoods.",
 };
 
 export const revalidate = 3600;

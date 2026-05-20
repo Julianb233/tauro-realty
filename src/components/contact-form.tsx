@@ -231,7 +231,7 @@ export function ContactForm() {
           autoComplete="tel"
           value={form.phone}
           onChange={handleChange}
-          placeholder="(215) 555-0100"
+          placeholder="(267) 773-8600"
           className="w-full rounded-lg border border-border/40 bg-white px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/20 transition-all duration-300"
         />
         {errors.phone && (

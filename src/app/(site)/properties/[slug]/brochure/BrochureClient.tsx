@@ -6,10 +6,10 @@ import { QrCode } from "./QrCode";
 /* -------------------------------------------------------------------------- */
 /*  SVG Logo — Zorro-inspired masked bull (inline for print)                   */
 /* -------------------------------------------------------------------------- */
-function TauroLogo({ fill = "#C9A96E", size = 144 }: { fill?: string; size?: number }) {
+function LylLogoMark({ fill = "#C9A96E", size = 144 }: { fill?: string; size?: number }) {
   const height = (size / 240) * 100;
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width={size} height={height} aria-label="Tauro logo" role="img">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 100" width={size} height={height} aria-label="LYL Realty Group logo" role="img">
       <g>
         {/* Left horn */}
         <path d="M72 52 C60 28, 44 16, 32 14 C36 20, 42 32, 50 44 C56 52, 66 58, 80 58" fill={fill} />
@@ -94,7 +94,7 @@ export function BrochureClient({
 
             {/* Logo top-left */}
             <div className="absolute left-8 top-8 print:left-6 print:top-6">
-              <TauroLogo fill="#C9A96E" size={160} />
+              <LylLogoMark fill="#C9A96E" size={160} />
             </div>
 
             {/* Status badge */}
@@ -229,7 +229,7 @@ export function BrochureClient({
               {/* QR code + branding */}
               <div className="flex items-center gap-5">
                 <div className="text-right">
-                  <TauroLogo fill="#1A1A2E" size={120} />
+                  <LylLogoMark fill="#1A1A2E" size={120} />
                   <p className="mt-2 text-xs text-[#1A1A2E]/50">
                     Scan to view listing online
                   </p>
@@ -244,7 +244,7 @@ export function BrochureClient({
                 {property.address}, {property.city}, {property.state} {property.zip}
               </p>
               <p className="text-xs text-white/90">
-                taurorealty.com
+                lylrealty.com
               </p>
             </div>
           </div>

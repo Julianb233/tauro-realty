@@ -24,7 +24,7 @@ export function GoogleReviewBadge({
 
   return (
     <a
-      href="https://g.co/kgs/taurorealty"
+      href="https://g.co/kgs/lylrealty"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center gap-2 transition-opacity hover:opacity-80"
